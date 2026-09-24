@@ -1,0 +1,5 @@
+// Définit les custom properties des thèmes; le sombre vient après le clair
+// pour le surcharger à spécificité égale.
+
+@forward "light";
+@forward "dark";

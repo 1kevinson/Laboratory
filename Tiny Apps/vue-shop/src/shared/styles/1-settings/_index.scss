@@ -1,0 +1,10 @@
+// Couche Settings injectée dans chaque style SCSS : uniquement variables et exports.
+// Toute règle CSS ici serait dupliquée dans chaque composant.
+
+@forward "breakpoints";
+@forward "colors";
+@forward "motion";
+@forward "radius";
+@forward "spacing";
+@forward "typography";
+@forward "z-index";

@@ -1,0 +1,43 @@
+@use "../1-settings" as *;
+@use "../2-tools" as *;
+
+button,
+input,
+select,
+textarea,
+label {
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+button,
+[role="button"],
+label,
+select {
+  /* Signale les éléments interactifs. */
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+textarea {
+  /* Le redimensionnement horizontal casserait les grilles. */
+  resize: vertical;
+  min-height: 6rem;
+}
+
+/* Anneau de focus homogène sur tous les contrôles. */
+button,
+input,
+select,
+textarea,
+[tabindex]:not([tabindex="-1"]) {
+  @include focus-ring;
+}

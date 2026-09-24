@@ -1,0 +1,22 @@
+// Squelette plein écran avec header, contenu extensible et footer.
+.l-page-grid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__content {
+    grid-area: content;
+  }
+
+  &__footer {
+    grid-area: footer;
+  }
+}

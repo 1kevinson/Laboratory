@@ -1,0 +1,116 @@
+@use "../1-settings" as *;
+
+// Reset minimal avec garde-fous d'accessibilité et de stabilité du rendu.
+
+/* 1. Modèle de boîte prévisible */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Suppression des marges par défaut */
+* {
+  margin: 0;
+}
+
+/* 3. Racine du document */
+html {
+  /* Évite l'agrandissement automatique du texte par iOS sans bloquer le zoom. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  /* Réserve la gouttière pour éviter les décalages horizontaux. */
+  scrollbar-gutter: stable;
+}
+
+/* 4. Défilement fluide si les mouvements sont autorisés. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 5. Corps du document : police et rythme par défaut de l'application */
+body {
+  min-height: 100dvh;
+  font-family: $font-family-base;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-md;
+  line-height: $line-height-base;
+  color: $color-text-primary;
+  background-color: $color-background;
+
+  /* Lissage cohérent entre macOS et le reste */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Active ligatures et crénage — améliore le rendu sans coût de mise en page */
+  text-rendering: optimizeLegibility;
+}
+
+/* 6. Médias sans débordement ni espace inline résiduel. */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Les contrôles de formulaire héritent de la typographie */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* 8. Débordements de texte */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Césure améliorée (progressive enhancement — ignoré si non supporté) */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* 10. Une ancre ciblée ne doit pas se coller sous un en-tête collant */
+:target {
+  scroll-margin-block: $space-16;
+}
+
+/* 11. Contexte d'empilement racine. */
+#app {
+  isolation: isolate;
+}
+
+/* 12. Réduit les animations tout en conservant les événements de fin. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

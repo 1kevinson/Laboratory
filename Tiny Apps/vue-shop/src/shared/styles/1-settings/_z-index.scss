@@ -1,0 +1,12 @@
+// Échelle de z-index par paliers de 100, source unique pour tous les composants.
+
+$z-below: -1 !default; // derrière le flux (décorations)
+$z-base: 0 !default; // flux normal
+$z-raised: 100 !default; // carte survolée, élément actif
+$z-sticky: 200 !default; // en-tête collant, barre latérale
+$z-dropdown: 300 !default; // menu déroulant, autocomplétion
+$z-overlay: 400 !default; // voile d'arrière-plan
+$z-modal: 500 !default; // boîte de dialogue
+$z-toast: 600 !default; // notification
+$z-tooltip: 700 !default; // infobulle
+$z-skip-link: 800 !default; // lien d'évitement — toujours au-dessus de tout

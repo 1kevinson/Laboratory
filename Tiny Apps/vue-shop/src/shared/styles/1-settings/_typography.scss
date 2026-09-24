@@ -1,0 +1,55 @@
+// Familles, tailles, poids de police.
+// Les @font-face correspondants sont déclarés dans 3-generic/_fonts.scss.
+
+// Familles; le fallback remétriqué limite le décalage au chargement de Wotfard.
+
+$font-family-base:
+  "Wotfard",
+  "Wotfard Fallback",
+  system-ui,
+  -apple-system,
+  "Segoe UI",
+  Roboto,
+  sans-serif !default;
+
+$font-family-heading: $font-family-base !default;
+
+$font-family-mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace !default;
+
+// Seules les graisses 300 et 400 existent; les valeurs supérieures sont synthétisées.
+
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-heading: $font-weight-bold !default;
+
+// Échelle de tailles, ratio approximatif de 1.25.
+
+$font-size-xs: 0.75rem !default; // 12px
+$font-size-sm: 0.875rem !default; // 14px
+$font-size-md: 1rem !default; // 16px  ← base
+$font-size-lg: 1.25rem !default; // 20px
+$font-size-xl: 1.5rem !default; // 24px
+$font-size-2xl: 1.875rem !default; // 30px
+$font-size-3xl: 2.25rem !default; // 36px
+
+// Tailles fluides zoomables grâce au terme en rem dans `clamp()`.
+$font-size-fluid-xl: clamp(#{$font-size-lg}, 1rem + 1.2vw, #{$font-size-xl}) !default;
+$font-size-fluid-2xl: clamp(#{$font-size-xl}, 1rem + 2.2vw, #{$font-size-2xl}) !default;
+$font-size-fluid-3xl: clamp(#{$font-size-2xl}, 1rem + 3.4vw, #{$font-size-3xl}) !default;
+
+// Rythme vertical et espacement des lettres.
+
+$line-height-tight: 1.1 !default;
+$line-height-heading: 1.2 !default;
+$line-height-base: 1.5 !default;
+$line-height-loose: 1.75 !default;
+
+$letter-spacing-tight: -0.02em !default;
+$letter-spacing-normal: 0 !default;
+$letter-spacing-wide: 0.04em !default;
+
+// Largeur de ligne confortable à la lecture (~65 caractères).
+$measure-base: 65ch !default;

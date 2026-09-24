@@ -1,0 +1,48 @@
+@use "../1-settings" as *;
+
+p,
+ul,
+ol,
+blockquote,
+dl {
+  font-size: $font-size-md;
+  line-height: $line-height-base;
+  color: $color-text-primary;
+}
+
+ul,
+ol {
+  padding-left: $space-6;
+}
+
+blockquote {
+  padding-left: $space-4;
+  border-left: 3px solid $color-border;
+  color: $color-text-secondary;
+}
+
+small {
+  font-size: $font-size-sm;
+}
+
+strong,
+b {
+  font-weight: $font-weight-bold;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: $font-family-mono;
+  font-size: 0.9em;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $color-border;
+}

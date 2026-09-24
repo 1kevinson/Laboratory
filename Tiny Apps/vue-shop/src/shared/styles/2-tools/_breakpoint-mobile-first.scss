@@ -1,0 +1,18 @@
+@use "functions" as fn;
+
+// Mobile first par défaut : styles mobiles hors media query, puis enrichissement
+// via `from($breakpoint-md)` ou `between($breakpoint-sm, $breakpoint-lg)`.
+
+/// Applique le contenu à partir du breakpoint `$value` (inclus).
+@mixin from($value) {
+  @media (min-width: #{fn.em($value)}) {
+    @content;
+  }
+}
+
+/// Applique le contenu de `$from` inclus à `$to` exclu, sans chevauchement.
+@mixin between($from, $to) {
+  @media (min-width: #{fn.em($from)}) and (max-width: #{fn.em($to - 0.02px)}) {
+    @content;
+  }
+}

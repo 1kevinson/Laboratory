@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Annonce au navigateur que l'application gère les deux teintes. Posé ici
+         plutôt que dans le CSS seul : la valeur est prise en compte avant même
+         que la feuille de style ne soit analysée, ce qui évite l'éclair blanc
+         au chargement d'une page en thème sombre. -->
+    <meta name="color-scheme" content="light dark">
+
+    <title>Vue Shop</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

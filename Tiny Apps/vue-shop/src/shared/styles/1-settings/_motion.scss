@@ -1,0 +1,12 @@
+// Durées et courbes à utiliser dans `motion-safe` pour respecter
+// `prefers-reduced-motion`.
+
+$duration-instant: 75ms !default;
+$duration-fast: 150ms !default;
+$duration-base: 250ms !default;
+$duration-slow: 400ms !default;
+
+// `ease-out` pour les entrées, `ease-in` pour les sorties, `ease-in-out` pour les déplacements.
+$easing-out: cubic-bezier(0.22, 1, 0.36, 1) !default;
+$easing-in: cubic-bezier(0.64, 0, 0.78, 0) !default;
+$easing-in-out: cubic-bezier(0.65, 0, 0.35, 1) !default;

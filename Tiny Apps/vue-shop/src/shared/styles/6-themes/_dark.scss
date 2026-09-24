@@ -1,0 +1,14 @@
+@use "emit";
+
+// Suit le thème système sauf si `data-theme="light"` force le thème clair.
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include emit.dark-theme;
+  }
+}
+
+// Le choix sombre explicite l'emporte sur la préférence système.
+:root[data-theme="dark"] {
+  @include emit.dark-theme;
+}

@@ -1,0 +1,21 @@
+@use "../1-settings" as *;
+@use "../2-tools" as *;
+
+a {
+  color: $color-link;
+  text-decoration: underline;
+
+  /* Soulignement lisible autour des jambages descendants. */
+  text-decoration-thickness: max(1px, 0.0625em);
+  text-underline-offset: 0.15em;
+
+  @include motion-safe {
+    transition: color $duration-fast $easing-out;
+  }
+
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  @include focus-ring;
+}

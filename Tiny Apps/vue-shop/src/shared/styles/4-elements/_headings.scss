@@ -1,0 +1,37 @@
+@use "../1-settings" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-heading;
+  line-height: $line-height-heading;
+  letter-spacing: $letter-spacing-tight;
+  color: $color-text-primary;
+  /* `text-wrap: balance` est déjà posé pour h1–h6 par le reset (3-generic). */
+}
+
+/* Tailles fluides sans media query. */
+h1 {
+  font-size: $font-size-fluid-3xl;
+}
+
+h2 {
+  font-size: $font-size-fluid-2xl;
+}
+
+h3 {
+  font-size: $font-size-fluid-xl;
+}
+
+h4 {
+  font-size: $font-size-lg;
+}
+
+h5,
+h6 {
+  font-size: $font-size-md;
+}

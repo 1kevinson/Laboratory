@@ -1,0 +1,7 @@
+// Couche Tools injectée dans chaque style SCSS : fonctions et mixins uniquement.
+// Elle ne doit produire aucune règle CSS par elle-même.
+
+@forward "functions";
+@forward "mixins";
+@forward "breakpoint-mobile-first";
+@forward "breakpoint-web-first";

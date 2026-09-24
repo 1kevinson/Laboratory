@@ -1,0 +1,12 @@
+// Breakpoints en px à utiliser via `from()`, `until()` et `between()`.
+// Les mixins les convertissent en em et évitent les chevauchements.
+
+$breakpoint-xs: 480px !default; // grand téléphone
+$breakpoint-sm: 640px !default; // petite tablette / téléphone paysage
+$breakpoint-md: 768px !default; // tablette portrait
+$breakpoint-lg: 1024px !default; // tablette paysage / petit portable
+$breakpoint-xl: 1280px !default; // portable
+$breakpoint-2xl: 1536px !default; // grand écran
+
+// Base px -> em; les media queries suivent ainsi la taille de police utilisateur.
+$breakpoint-base: 16px !default;

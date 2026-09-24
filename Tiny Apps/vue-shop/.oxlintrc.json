@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["eslint", "typescript", "unicorn", "oxc", "vue", "vitest"],
+  "env": {
+    "browser": true
+  },
+  "categories": {
+    "correctness": "error"
+  },
+  // Warning VS CODE souligné en jaune
+  "rules": {
+    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "warn"
+  }
+}

@@ -1,0 +1,50 @@
+// Les primitives HSL alimentent les thèmes; les composants utilisent les tokens
+// sémantiques `var(--color-*)` définis en bas de ce fichier.
+
+// Primary (orange)
+$color-primary-light: hsl(32, 98%, 83%);
+$color-primary-base: hsl(25, 95%, 53%);
+$color-primary-dark: hsl(17, 88%, 40%);
+
+// Secondary (jaune)
+$color-secondary-light: hsl(48, 97%, 77%);
+$color-secondary-base: hsl(45, 93%, 47%);
+$color-secondary-dark: hsl(35, 92%, 33%);
+
+// Dark (noir)
+$color-dark-light: hsl(0, 0%, 32%);
+$color-dark-base: hsl(0, 0%, 16%);
+$color-dark-dark: hsl(0, 0%, 4%);
+
+// Light (blanc)
+$color-light-light: hsl(0, 0%, 100%);
+$color-light-base: hsl(0, 0%, 96%);
+$color-light-dark: hsl(0, 0%, 92%);
+
+// Feedback
+$color-danger-base: hsl(0, 72%, 51%);
+$color-success-base: hsl(142, 71%, 36%);
+
+// Tokens sémantiques consommés par les composants; aucun CSS n'est généré ici.
+
+$color-primary: var(--color-primary);
+$color-primary-hover: var(--color-primary-hover);
+$color-secondary: var(--color-secondary);
+
+$color-text-primary: var(--color-text-primary);
+$color-text-secondary: var(--color-text-secondary);
+$color-text-on-primary: var(--color-text-on-primary);
+
+$color-background: var(--color-background);
+$color-background-alt: var(--color-background-alt);
+$color-surface: var(--color-surface);
+
+$color-border: var(--color-border);
+
+$color-link: var(--color-link);
+$color-link-hover: var(--color-link-hover);
+
+$color-focus-ring: var(--color-focus-ring);
+
+$color-danger: var(--color-danger);
+$color-success: var(--color-success);

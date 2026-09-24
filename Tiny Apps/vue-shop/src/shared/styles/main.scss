@@ -1,0 +1,10 @@
+// Point d'entrée CSS global; l'ordre des forwards définit la cascade ITCSS.
+// Les couches qui émettent du CSS ne doivent pas être importées dans les composants.
+
+@forward "1-settings";
+@forward "2-tools";
+@forward "3-generic";
+@forward "4-elements";
+@forward "5-layouts";
+@forward "6-themes";
+@forward "7-utilities";

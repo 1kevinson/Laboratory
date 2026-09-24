@@ -1,0 +1,7 @@
+@use "emit";
+
+// Thème clair par défaut afin que chaque custom property soit toujours définie.
+
+:root {
+  @include emit.light-theme;
+}

@@ -1,0 +1,39 @@
+@use "../1-settings" as settings;
+
+@mixin light-theme {
+  color-scheme: light;
+  --color-primary: #{settings.$color-primary-base};
+  --color-primary-hover: #{settings.$color-primary-dark};
+  --color-secondary: #{settings.$color-secondary-base};
+  --color-text-primary: #{settings.$color-dark-base};
+  --color-text-secondary: #{settings.$color-dark-light};
+  --color-text-on-primary: #{settings.$color-light-light};
+  --color-background: #{settings.$color-light-light};
+  --color-background-alt: #{settings.$color-light-dark};
+  --color-surface: #{settings.$color-light-light};
+  --color-border: #{settings.$color-light-dark};
+  --color-link: #{settings.$color-primary-base};
+  --color-link-hover: #{settings.$color-primary-dark};
+  --color-focus-ring: #{settings.$color-primary-base};
+  --color-danger: #{settings.$color-danger-base};
+  --color-success: #{settings.$color-success-base};
+}
+
+@mixin dark-theme {
+  color-scheme: dark;
+  --color-primary: #{settings.$color-primary-base};
+  --color-primary-hover: #{settings.$color-primary-light};
+  --color-secondary: #{settings.$color-secondary-base};
+  --color-text-primary: #{settings.$color-light-base};
+  --color-text-secondary: hsl(0, 0%, 70%);
+  --color-text-on-primary: #{settings.$color-dark-dark};
+  --color-background: #{settings.$color-dark-dark};
+  --color-background-alt: #{settings.$color-dark-base};
+  --color-surface: hsl(0, 0%, 10%);
+  --color-border: hsl(0, 0%, 24%);
+  --color-link: #{settings.$color-primary-light};
+  --color-link-hover: #{settings.$color-secondary-light};
+  --color-focus-ring: #{settings.$color-primary-light};
+  --color-danger: hsl(0, 80%, 68%);
+  --color-success: hsl(142, 60%, 55%);
+}

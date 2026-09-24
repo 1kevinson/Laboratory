@@ -1,0 +1,11 @@
+@use "functions" as fn;
+
+// Desktop first réservé aux simplifications mobiles et comportements purement desktop.
+// Ne pas piloter une même propriété avec `from()` et `until()`.
+
+/// Applique le contenu avant `$value`; 0.02px évite le chevauchement avec `from()`.
+@mixin until($value) {
+  @media (max-width: #{fn.em($value - 0.02px)}) {
+    @content;
+  }
+}

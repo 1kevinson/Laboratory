@@ -1,0 +1,9 @@
+@use "../1-settings" as *;
+
+// Largeur et gouttières partagées par le header, le contenu et le footer.
+.l-container {
+  width: 100%;
+  max-width: 80rem; // 1280px
+  margin-inline: auto;
+  padding-inline: $space-4;
+}

@@ -1,0 +1,29 @@
+@use "../2-tools" as *;
+
+// `!important` garantit que ces utilitaires absolus gagnent sur les styles scoped Vue.
+
+/// Masque visuellement tout en restant annoncé par les lecteurs d'écran.
+.u-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/// Masque l'élément jusqu'à sa réception du focus clavier.
+.u-visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

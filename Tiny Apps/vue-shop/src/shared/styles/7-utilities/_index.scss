@@ -1,0 +1,4 @@
+// Dernière couche ITCSS : utilitaires transversaux à responsabilité unique.
+// Les styles propres à un composant restent dans son `<style scoped>`.
+
+@forward "accessibility";

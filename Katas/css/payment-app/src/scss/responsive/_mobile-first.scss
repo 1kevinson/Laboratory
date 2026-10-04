@@ -1,0 +1,38 @@
+@use "sass:map";
+
+// ============================================================
+// Mobile-first — base styles target the smallest screen,
+// each breakpoint ADDS styles from that width and up (min-width).
+//
+//   .card {
+//     padding: 1rem;                          // all screens
+//     @include mobile-first(tablet-portrait) {
+//       padding: 2rem;                        // >= 768px
+//     }
+//   }
+// ============================================================
+
+$-breakpoints: (
+  // Large phones & small phones in landscape
+  phone-large: 480px,
+  // iPad portrait, small tablets — layout starts to use 2 columns
+  tablet-portrait: 768px,
+  // iPad landscape, small laptops — full navigation, sidebars appear
+  tablet-landscape: 1024px,
+  // Standard laptops (13"–15") — main target for desktop layouts
+  laptop: 1280px,
+  // External monitors (Full HD) — cap line lengths, add side gutters
+  desktop: 1440px,
+  // Large / ultra-wide monitors (2K and above)
+  widescreen: 1920px
+);
+
+@mixin mobile-first($name) {
+  @if not map.has-key($-breakpoints, $name) {
+    @error "Unknown mobile-first breakpoint `#{$name}`. Available: #{map.keys($-breakpoints)}.";
+  }
+
+  @media (min-width: map.get($-breakpoints, $name)) {
+    @content;
+  }
+}

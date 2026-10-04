@@ -1,0 +1,29 @@
+// ============================================================
+// 7-1 pattern × ITCSS — specificity grows top → bottom
+// ============================================================
+// 1. Settings & Tools — no CSS output
+@use "abstracts";
+
+// 2. Responsive — mobile-first (min-width) & desktop-first (max-width) mixins, no CSS output
+@use "responsive";
+
+// 3. Vendors
+@use "vendors";
+
+// 4. Generic & Elements
+@use "base";
+
+// 5. Objects — layout (l-xxx)
+@use "layout";
+
+// 6. Components (c-xxx)
+@use "components";
+
+// 7. Page-scoped
+@use "pages";
+
+// 8. Themes
+@use "themes";
+
+// 9. Utilities (u-xxx) — last so they always win
+@use "utils";

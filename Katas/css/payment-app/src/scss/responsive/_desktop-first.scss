@@ -1,0 +1,42 @@
+@use "sass:map";
+
+// ============================================================
+// Desktop-first — base styles target the largest screen,
+// each breakpoint OVERRIDES styles for that width and down (max-width).
+//
+//   .card {
+//     padding: 2rem;                          // all screens
+//     @include desktop-first(tablet-portrait) {
+//       padding: 1rem;                        // <= 767.98px
+//     }
+//   }
+//
+// Each value is the first width of the NEXT size up, so
+// "laptop" means "below 1280px" and never overlaps a larger query.
+// ============================================================
+
+$-breakpoints: (
+  // Below 1920px — anything smaller than a widescreen monitor
+  widescreen: 1920px,
+  // Below 1440px — anything smaller than a Full HD external monitor
+  desktop: 1440px,
+  // Below 1280px — laptops and smaller
+  laptop: 1280px,
+  // Below 1024px — iPad landscape and smaller: collapse sidebars
+  tablet-landscape: 1024px,
+  // Below 768px — iPad portrait and smaller: single column layout
+  tablet-portrait: 768px,
+  // Below 480px — phones: stack everything, enlarge touch targets
+  phone-large: 480px
+);
+
+@mixin desktop-first($name) {
+  @if not map.has-key($-breakpoints, $name) {
+    @error "Unknown desktop-first breakpoint `#{$name}`. Available: #{map.keys($-breakpoints)}.";
+  }
+
+  // 0.02px avoids overlapping a mobile-first min-width query at the same value
+  @media (max-width: (map.get($-breakpoints, $name) - 0.02px)) {
+    @content;
+  }
+}

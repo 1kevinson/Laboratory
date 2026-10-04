@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+@use "../responsive" as *;
+
+.l-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: $space-md;
+
+  @include mobile-first(tablet-portrait) {
+    padding-inline: $space-lg;
+  }
+}

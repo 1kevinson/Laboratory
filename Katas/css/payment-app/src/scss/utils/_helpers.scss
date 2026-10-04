@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+// Text
+.u-text-center { text-align: center; }
+.u-text-right  { text-align: right; }
+.u-text-muted  { color: $color-muted; }
+
+// Spacing (margin-top scale)
+.u-mt-0  { margin-top: 0 !important; }
+.u-mt-sm { margin-top: $space-sm !important; }
+.u-mt-md { margin-top: $space-md !important; }
+.u-mt-lg { margin-top: $space-lg !important; }
+.u-mt-xl { margin-top: $space-xl !important; }
+
+// Visibility
+.u-hidden  { display: none !important; }
+.u-sr-only { @include sr-only; }

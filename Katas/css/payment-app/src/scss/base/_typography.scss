@@ -10,13 +10,43 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: $line-height-tight;
   font-weight: 600;
 }
 
-h1 { font-size: $font-size-2xl; }
-h2 { font-size: $font-size-xl; }
-h3 { font-size: $font-size-lg; }
+h1 {
+  font-size: $font-size-2xl;
+}
+h2 {
+  font-size: $font-size-xl;
+}
+h3 {
+  font-size: $font-size-lg;
+}
 
-p { color: $color-muted; }
+p {
+  color: $color-muted;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("../fonts/wotfard/regular/wotfard-regular-webfont.woff2")
+    format("woff2");
+  font-weight: $font-weight-regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Wotfard";
+  src: url("../fonts/wotfard/light/wotfard-light-webfont.woff2") format("woff2");
+  font-weight: $font-weight-light;
+  font-style: normal;
+  font-display: swap;
+}

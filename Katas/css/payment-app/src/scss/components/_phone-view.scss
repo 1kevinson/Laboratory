@@ -1,0 +1,106 @@
+@use "../abstracts" as *;
+
+.c-phone-view {
+  background-color: $color-bg-green;
+  border-radius: 25px;
+
+  &-first {
+    padding-inline: $space-md;
+    padding-block: $space-lg;
+
+    & .hello {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-text {
+        max-width: 9.25em;
+        font-weight: bolder;
+        font-size: 1.15rem;
+      }
+
+      &-bell {
+        position: relative;
+        border-radius: 50%;
+        background-color: $color-surface;
+        height: $space-2xl;
+        width: $space-2xl;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & .badge {
+          width: $space-sm;
+          height: $space-sm;
+          border-radius: 50%;
+          background-color: rgb(247, 40, 40);
+          position: absolute;
+          top: 1px;
+          right: $space-xs;
+        }
+
+        & .icon svg {
+          width: 18px;
+          height: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    & .select-text {
+      max-width: 11.5em;
+      font-size: 1.1rem;
+      margin-block-start: 0.5rem;
+    }
+
+    & .select-box {
+      display: flex;
+      justify-content: space-between;
+      height: 24%;
+      padding-inline: 0.25rem;
+      --border-select-box: 35px;
+
+      &-1,
+      &-2 {
+        border-radius: var(--border-select-box);
+        width: 47.5%;
+
+        & .avatar img {
+          height: 95px;
+          width: 95px;
+        }
+
+        & .footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          & .icon {
+            padding: 5px;
+            border-radius: 50%;
+            & svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+
+      &-1 {
+        background-color: rgba(252, 214, 251, 0.724);
+
+        & .footer .icon {
+          background-color: rgba(255, 238, 238, 0.65);
+        }
+      }
+      &-2 {
+        background-color: rgba(3, 73, 96, 0.724);
+
+        & .footer .icon {
+          background-color: rgba(238, 248, 255, 0.65);
+        }
+      }
+    }
+  }
+}

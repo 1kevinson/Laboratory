@@ -1,0 +1,18 @@
+@use "../abstracts" as *;
+
+.l-phone-view {
+  &-first {
+    grid-area: phone-first;
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
+
+  &-second {
+    grid-area: phone-second;
+  }
+
+  &-third {
+    grid-area: phone-third;
+  }
+}

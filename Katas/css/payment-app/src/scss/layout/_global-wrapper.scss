@@ -5,8 +5,8 @@
   height: 100vh;
 
   display: grid;
-  grid-template-columns: 1fr repeat(3, minmax(350px, 1fr)) 1fr;
-  grid-template-rows: 1fr 625px 1fr;
+  grid-template-columns: 1fr repeat(3, 350px) 1fr;
+  grid-template-rows: 1fr 700px 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 5px;
   grid-template-areas:

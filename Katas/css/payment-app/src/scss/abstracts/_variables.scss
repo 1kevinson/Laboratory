@@ -12,12 +12,33 @@ $color-text: #1d1d1f;
 $color-muted: #6e6e73;
 $color-border: #d2d2d7;
 
+// Palette — mental health screens
+$color-pink: #f3d2f1;
+$color-pink-strong: #ebb8e7;
+$color-teal-dark: #0d4a5b;
+$color-lavender: #d9d6f6;
+$color-lavender-strong: #c3bff0;
+$color-violet: #d2c4f3;
+$color-violet-strong: #6f4fc2;
+$color-plum: #a97ea8;
+$color-sky: #d3e8f0;
+$color-sky-strong: #c3dde8;
+$color-mint: #d7ecd9;
+$color-mint-strong: #9fd39f;
+$color-lemon: #eef5a8;
+$color-ink: #1b2a33;
+$color-overlay-light: rgba(255, 255, 255, 0.55);
+$color-overlay-dark: rgba(27, 42, 51, 0.07);
+
 // Typography
 $font-family-base: "Wotfard", sans-serif;
 $font-family-mono: "SF Mono", Menlo, Consolas, monospace;
 $font-weight-light: 300;
 $font-weight-regular: 400;
+$font-weight-bold: 700;
 
+$font-size-2xs: 0.625rem;
+$font-size-xs: 0.75rem;
 $font-size-sm: 0.875rem;
 $font-size-base: 1rem;
 $font-size-lg: 1.25rem;
@@ -28,6 +49,7 @@ $line-height-base: 1.5;
 $line-height-tight: 1.2;
 
 // Spacing scale
+$space-2xs: 0.125rem;
 $space-xs: 0.25rem;
 $space-sm: 0.5rem;
 $space-md: 1rem;
@@ -39,7 +61,20 @@ $space-2xl: 3rem;
 $radius-sm: 4px;
 $radius-md: 8px;
 $radius-lg: 12px;
+$radius-xl: 18px;
+$radius-2xl: 24px;
 $radius-full: 9999px;
+
+// Sizes
+$phone-width: 350px;
+$phone-height: 700px;
+$phone-radius: 25px;
+$size-control-sm: 1.75rem;
+$size-control-md: 2.25rem;
+$size-control-lg: 2.75rem;
+
+// Motion
+$transition-base: 150ms ease-out;
 
 // Z-index
 $z-base: 1;

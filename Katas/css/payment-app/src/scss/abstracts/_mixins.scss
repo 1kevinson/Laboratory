@@ -1,3 +1,4 @@
+@use "sass:list";
 @use "variables" as *;
 
 @mixin flex-center {
@@ -23,4 +24,100 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@mixin circle($size) {
+  @include flex-center;
+  flex-shrink: 0;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin button-reset {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+@mixin focus-ring($offset: 2px) {
+  &:focus-visible {
+    outline: 2px solid $color-teal-dark;
+    outline-offset: $offset;
+  }
+}
+
+@mixin pill($background: $color-surface) {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-xs;
+  padding-block: 0.375rem;
+  padding-inline: 0.75rem;
+  border-radius: $radius-full;
+  background-color: $background;
+  font-size: $font-size-xs;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@mixin card($background: $color-surface, $radius: $radius-2xl) {
+  border-radius: $radius;
+  background-color: $background;
+}
+
+// Horizontal scroller that bleeds into the parent's inline padding
+@mixin scroll-x($gap: $space-sm, $bleed: $space-md) {
+  display: flex;
+  gap: $gap;
+  margin-inline-end: -$bleed;
+  padding-inline-end: $bleed;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > * {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
+// Bars are the direct children; heights come from a Sass list
+@mixin bar-chart($heights, $gap: 3px, $radius: $radius-sm) {
+  display: flex;
+  align-items: flex-end;
+  gap: $gap;
+
+  > * {
+    flex: 1;
+    border-radius: $radius $radius 2px 2px;
+  }
+
+  @for $i from 1 through list.length($heights) {
+    > :nth-child(#{$i}) {
+      height: list.nth($heights, $i);
+    }
+  }
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+  overflow: hidden;
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
 }

@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="/src/scss/main.scss" />
   </head>
   <body>
+    <svg class="u-hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-chevron-left" viewBox="0 0 24 24">
+        <path d="m15 18-6-6 6-6" />
+      </symbol>
+      <symbol id="icon-arrow-left" viewBox="0 0 24 24">
+        <path d="m12 19-7-7 7-7" />
+        <path d="M19 12H5" />
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </symbol>
+      <symbol id="icon-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.3-4.3" />
+      </symbol>
+      <symbol id="icon-plus" viewBox="0 0 24 24">
+        <path d="M5 12h14" />
+        <path d="M12 5v14" />
+      </symbol>
+      <symbol id="icon-circle-play" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <polygon points="10 8 16 12 10 16 10 8" />
+      </symbol>
+      <symbol id="icon-mic" viewBox="0 0 24 24">
+        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+        <path d="M12 19v3" />
+      </symbol>
+      <symbol id="icon-circle-help" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+        <path d="M12 17h.01" />
+      </symbol>
+    </svg>
     <div class="l-global-wrapper c-global-wrapper">
       <div class="c-phone-view l-phone-view-first c-phone-view-first">
         <div class="hello">
@@ -95,23 +130,231 @@
             </div>
           </div>
         </div>
-        <div class="stress-indicator">
+        <section class="stress-indicator" aria-labelledby="stress-indicator-title">
           <div class="header">
-            <div class="icon"></div>
-            <div class="text"></div>
-            <div class="type"></div>
+            <span class="icon" aria-hidden="true">😶</span>
+            <h2 class="text" id="stress-indicator-title">Stress indicator</h2>
+            <span class="type">Low</span>
           </div>
-          <div class="chart"></div>
+          <div class="chart" role="img" aria-label="Stress level trending low over the last weeks">
+            <div class="chart-bars">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </section>
+        <nav class="links" aria-label="Relax plans">
+          <ul role="list">
+            <li><a href="#my-relax-plan" aria-current="page">My relax plan</a></li>
+            <li><a href="#explore-plans">Explore plans</a></li>
+            <li><a href="#popular-plans">Popular plans</a></li>
+          </ul>
+        </nav>
+        <ul class="footer-boxes" role="list" id="my-relax-plan">
+          <li class="footer-boxes-1">
+            <h3 class="title">Meditation</h3>
+            <p class="count">18 practices</p>
+            <span class="illustration" role="img" aria-label="Candle">🕯️</span>
+          </li>
+          <li class="footer-boxes-2">
+            <h3 class="title">Relax balance</h3>
+            <p class="count">11 practices</p>
+            <span class="illustration" role="img" aria-label="Balanced stones">🪨</span>
+          </li>
+          <li class="footer-boxes-3">
+            <h3 class="title">Mindfulness</h3>
+            <p class="count">11 practices</p>
+            <span class="illustration" role="img" aria-label="Lotus flower">🪷</span>
+          </li>
+        </ul>
+      </div>
+      <div class="c-phone-view l-phone-view-second c-phone-view-second">
+        <header class="c-app-bar c-app-bar--divided">
+          <a class="c-app-bar-back" href="#" aria-label="Back">
+            <svg class="c-icon" aria-hidden="true"><use href="#icon-chevron-left" /></svg>
+          </a>
+          <h2 class="c-app-bar-title">Mental Health</h2>
+        </header>
+        <div class="advice">
+          <span class="advice-tag">Day advice</span>
+          <div class="advice-nav">
+            <button class="advice-nav-button" type="button" aria-label="Previous advice">
+              <svg class="c-icon" aria-hidden="true"><use href="#icon-arrow-left" /></svg>
+            </button>
+            <button class="advice-nav-button" type="button" aria-label="Next advice">
+              <svg class="c-icon" aria-hidden="true"><use href="#icon-arrow-right" /></svg>
+            </button>
+          </div>
         </div>
-        <div class="links"></div>
-        <div class="footer-boxes">
-          <div class="footer-boxes-1"></div>
-          <div class="footer-boxes-2"></div>
-          <div class="footer-boxes-3"></div>
+        <figure class="quote">
+          <blockquote class="quote-text">
+            <p>“Patience is the companion of wisdom.”</p>
+          </blockquote>
+          <span class="quote-illustration" role="img" aria-label="Lotus in a bowl">🪷</span>
+          <figcaption class="quote-author">— Saint Augustine</figcaption>
+        </figure>
+        <form class="search" role="search" action="#">
+          <label class="u-sr-only" for="search-practices">Search practices</label>
+          <svg class="c-icon" aria-hidden="true"><use href="#icon-search" /></svg>
+          <input class="search-input" id="search-practices" type="search" name="q" placeholder="Search" />
+        </form>
+        <ul class="categories" role="list" aria-label="Categories">
+          <li class="categories-item categories-item--meditation">
+            <span aria-hidden="true">🕯️</span> Meditation
+          </li>
+          <li class="categories-item categories-item--relax">
+            <span aria-hidden="true">🪷</span> Relax
+          </li>
+          <li class="categories-item categories-item--sleep">
+            <span aria-hidden="true">😴</span> Sleep
+          </li>
+          <li class="categories-item categories-item--balance">
+            <span aria-hidden="true">🪨</span> Balance
+          </li>
+        </ul>
+        <section class="things" aria-labelledby="things-title">
+          <h3 class="things-title" id="things-title">Things you can do</h3>
+          <ul class="things-list" role="list">
+            <li class="things-item things-item--detox">
+              <span class="things-item-icon" aria-hidden="true">🧠</span>
+              <h4 class="things-item-title">Mind Detox</h4>
+              <p class="things-item-text">Turn off all screens for 10 minutes</p>
+              <button class="things-item-play" type="button" aria-label="Start Mind Detox">
+                <svg class="c-icon" aria-hidden="true"><use href="#icon-circle-play" /></svg>
+              </button>
+            </li>
+            <li class="things-item things-item--gratitude">
+              <span class="things-item-icon" aria-hidden="true">✴️</span>
+              <h4 class="things-item-title">Gratitude Notes</h4>
+              <p class="things-item-text">Write down three things you are grateful for today.</p>
+              <button class="things-item-play" type="button" aria-label="Start Gratitude Notes">
+                <svg class="c-icon" aria-hidden="true"><use href="#icon-circle-play" /></svg>
+              </button>
+            </li>
+            <li class="things-item things-item--breath">
+              <span class="things-item-icon" aria-hidden="true">🌿</span>
+              <h4 class="things-item-title">Conscious Breath</h4>
+              <p class="things-item-text">Write down three things you are grateful for today.</p>
+              <button class="things-item-play" type="button" aria-label="Start Conscious Breath">
+                <svg class="c-icon" aria-hidden="true"><use href="#icon-circle-play" /></svg>
+              </button>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="c-phone-view l-phone-view-third c-phone-view-third">
+        <header class="c-app-bar">
+          <a class="c-app-bar-back" href="#" aria-label="Back">
+            <svg class="c-icon" aria-hidden="true"><use href="#icon-chevron-left" /></svg>
+          </a>
+          <h2 class="c-app-bar-title">Mental Health</h2>
+        </header>
+        <fieldset class="periods">
+          <legend class="u-sr-only">Period</legend>
+          <label class="periods-option">
+            <input class="u-sr-only" type="radio" name="period" value="day" />
+            Day
+          </label>
+          <label class="periods-option">
+            <input class="u-sr-only" type="radio" name="period" value="week" checked />
+            Week
+          </label>
+          <label class="periods-option">
+            <input class="u-sr-only" type="radio" name="period" value="month" />
+            Month
+          </label>
+        </fieldset>
+        <fieldset class="dates">
+          <legend class="u-sr-only">Day of the week</legend>
+          <label class="dates-option">
+            <input class="u-sr-only" type="radio" name="date" value="21" />21
+          </label>
+          <label class="dates-option">
+            <input class="u-sr-only" type="radio" name="date" value="22" checked />22
+          </label>
+          <label class="dates-option">
+            <input class="u-sr-only" type="radio" name="date" value="23" />23
+          </label>
+          <label class="dates-option">
+            <input class="u-sr-only" type="radio" name="date" value="24" />24
+          </label>
+          <label class="dates-option">
+            <input class="u-sr-only" type="radio" name="date" value="25" />25
+          </label>
+          <label class="dates-option">
+            <input class="u-sr-only" type="radio" name="date" value="26" />26
+          </label>
+          <label class="dates-option">
+            <input class="u-sr-only" type="radio" name="date" value="27" />27
+          </label>
+        </fieldset>
+        <section class="next-task" aria-labelledby="next-task-title">
+          <div class="next-task-header">
+            <h3 class="next-task-title" id="next-task-title">Next task</h3>
+            <button class="next-task-add" type="button" aria-label="Add a task">
+              <svg class="c-icon" aria-hidden="true"><use href="#icon-plus" /></svg>
+            </button>
+          </div>
+          <article class="task">
+            <time class="task-date" datetime="2026-10-22T12:30">
+              <span class="task-date-day">22</span>
+              <span class="task-date-weekday">Mon</span>
+            </time>
+            <p class="task-title">12:30pm, Improve stillness</p>
+            <a class="task-practice" href="#">
+              <span aria-hidden="true">🧠</span>
+              Mind Detox
+              <svg class="c-icon" aria-hidden="true"><use href="#icon-circle-play" /></svg>
+            </a>
+          </article>
+        </section>
+        <form class="quiz" action="#" aria-labelledby="quiz-question">
+          <div class="quiz-header">
+            <svg class="c-icon" aria-hidden="true"><use href="#icon-circle-help" /></svg>
+            <p class="quiz-name">Yes or No Quiz</p>
+            <p class="quiz-progress">Question 1 of 10</p>
+          </div>
+          <label class="quiz-question" id="quiz-question" for="quiz-answer">
+            What helps you sleep better?
+          </label>
+          <div class="quiz-field">
+            <input class="quiz-input" id="quiz-answer" type="text" name="answer" placeholder="Write an answer" autocomplete="off" />
+            <button class="quiz-mic" type="button" aria-label="Answer with voice">
+              <svg class="c-icon" aria-hidden="true"><use href="#icon-mic" /></svg>
+            </button>
+          </div>
+          <ul class="quiz-suggestions" role="list" aria-label="Suggestions">
+            <li class="quiz-suggestion">Activity</li>
+            <li class="quiz-suggestion">Tea</li>
+            <li class="quiz-suggestion">Meditation</li>
+            <li class="quiz-suggestion">Pray</li>
+            <li class="quiz-suggestion">Reading</li>
+          </ul>
+        </form>
+        <div class="stats">
+          <section class="stats-card stats-card--sleep" aria-labelledby="sleep-title">
+            <h3 class="stats-card-title" id="sleep-title">
+              <span class="stats-card-icon" aria-hidden="true">🌙</span>
+              Sleep Duration
+            </h3>
+            <div class="stats-card-chart" role="img" aria-label="Sleep phases during the night"></div>
+            <p class="stats-card-value">
+              <data value="452">7<small>h</small> 32<small>m</small></data>
+            </p>
+          </section>
+          <section class="stats-card stats-card--stress" aria-labelledby="stress-title">
+            <h3 class="stats-card-title" id="stress-title">
+              <span class="stats-card-icon" aria-hidden="true">😶</span>
+              Stress Indicator
+            </h3>
+            <div class="stats-card-chart" role="img" aria-label="Stress level over the week">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p class="stats-card-value">Low</p>
+          </section>
         </div>
       </div>
-      <div class="c-phone-view l-phone-view-second c-phone-view-second"></div>
-      <div class="c-phone-view l-phone-view-third c-phone-view-third"></div>
     </div>
   </body>
 </html>

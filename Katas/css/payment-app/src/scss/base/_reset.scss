@@ -59,8 +59,22 @@ h6 {
   text-wrap: balance;
 }
 
+/* 9. Remove list styles on lists explicitly announced as lists */
+ul[role="list"],
+ol[role="list"] {
+  padding: 0;
+  list-style: none;
+}
+
+/* 10. Strip default fieldset chrome */
+fieldset {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
 /*
-  9. Create a root stacking context
+  11. Create a root stacking context
 */
 #root,
 #__next {

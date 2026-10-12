@@ -1,0 +1,290 @@
+@use "../abstracts" as *;
+
+$-stress-bars: (55%, 50%, 62%, 88%, 60%, 45%);
+
+$-sleep-chart: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 52" preserveAspectRatio="none"><path d="M1 9H18V43H34V27H48V9H62V43H78V9H92V43H109" fill="none" stroke="#{$color-muted}" stroke-opacity=".45" vector-effect="non-scaling-stroke"/><g fill="#{$color-violet}"><rect x="0" y="5" width="18" height="8" rx="1"/><rect x="48" y="5" width="14" height="8" rx="1"/><rect x="78" y="5" width="14" height="8" rx="1"/></g><rect x="34" y="23" width="14" height="8" rx="1" fill="#{$color-border}"/><g fill="#{$color-mint-strong}"><rect x="18" y="39" width="16" height="8" rx="1"/><rect x="62" y="39" width="16" height="8" rx="1"/><rect x="92" y="39" width="18" height="8" rx="1"/></g></svg>';
+
+.c-phone-view-third {
+  padding-inline: $space-md;
+  padding-block: $space-lg;
+
+  & .periods,
+  & .dates {
+    display: flex;
+    justify-content: space-between;
+    gap: $space-xs;
+
+    &-option {
+      position: relative;
+      font-size: $font-size-xs;
+      cursor: pointer;
+      transition:
+        background-color $transition-base,
+        color $transition-base;
+
+      &:has(:focus-visible) {
+        outline: 2px solid $color-teal-dark;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  & .periods-option {
+    @include flex-center;
+    flex: 1;
+    height: $size-control-md;
+    border: 1px solid $color-overlay-dark;
+    border-radius: $radius-full;
+
+    &:hover {
+      background-color: $color-overlay-light;
+    }
+
+    &:has(:checked) {
+      border-color: transparent;
+      background-color: $color-pink;
+    }
+  }
+
+  & .dates-option {
+    @include circle($size-control-md);
+    background-color: $color-surface;
+
+    &:hover {
+      background-color: $color-pink;
+    }
+
+    &:has(:checked) {
+      background-color: $color-teal-dark;
+      color: $color-surface;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  & .next-task {
+    @include card($color-overlay-light, $radius-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    padding: $space-sm;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: $space-xs;
+    }
+
+    &-title {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+    }
+
+    &-add {
+      @include button-reset;
+      @include circle($size-control-sm);
+      @include focus-ring;
+      background-color: $color-pink;
+      font-size: $font-size-sm;
+    }
+  }
+
+  & .task {
+    @include card($color-surface, $radius-xl);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "date title"
+      "date practice";
+    align-items: center;
+    gap: $space-xs $space-sm;
+    padding: $space-sm;
+
+    &-date {
+      grid-area: date;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-self: stretch;
+      width: 3.5rem;
+      border-radius: $radius-lg;
+      background-color: $color-bg;
+      line-height: 1.1;
+
+      &-day {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+      }
+
+      &-weekday {
+        font-size: $font-size-2xs;
+      }
+    }
+
+    &-title {
+      grid-area: title;
+      color: $color-text;
+      font-size: $font-size-xs;
+    }
+
+    &-practice {
+      @include pill($color-lavender);
+      @include focus-ring;
+      grid-area: practice;
+      color: $color-text;
+      text-decoration: none;
+
+      & .c-icon {
+        margin-inline-start: auto;
+      }
+    }
+  }
+
+  & .quiz {
+    @include card($color-pink, $radius-2xl);
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    padding: $space-sm $space-md $space-md;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: $space-xs;
+      font-size: $font-size-xs;
+    }
+
+    &-name {
+      color: $color-text;
+    }
+
+    &-progress {
+      margin-inline-start: auto;
+      font-size: $font-size-2xs;
+    }
+
+    &-question {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+    }
+
+    &-field {
+      display: flex;
+      align-items: center;
+      gap: $space-sm;
+      height: $size-control-lg;
+      padding-inline: $space-md $space-xs;
+      border-radius: $radius-full;
+      background-color: $color-surface;
+
+      &:focus-within {
+        outline: 2px solid $color-teal-dark;
+        outline-offset: 2px;
+      }
+    }
+
+    &-input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      background: none;
+      font-size: $font-size-xs;
+
+      // Focus is rendered by the parent through :focus-within
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $color-muted;
+      }
+    }
+
+    &-mic {
+      @include button-reset;
+      @include circle($size-control-sm + $space-xs);
+      @include focus-ring;
+      background-color: $color-ink;
+      color: $color-surface;
+      font-size: $font-size-sm;
+    }
+
+    &-suggestions {
+      @include scroll-x($space-xs, $space-md);
+    }
+
+    &-suggestion {
+      @include pill($color-overlay-light);
+      color: $color-muted;
+      font-size: $font-size-2xs;
+    }
+  }
+
+  & .stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex: 1;
+    gap: $space-sm;
+    min-height: 0;
+
+    &-card {
+      @include card($color-surface, $radius-2xl);
+      display: flex;
+      flex-direction: column;
+      gap: $space-sm;
+      min-height: 0;
+      padding: $space-sm $space-md $space-md;
+
+      &-title {
+        display: flex;
+        align-items: center;
+        gap: $space-xs;
+        font-size: $font-size-2xs;
+        font-weight: $font-weight-regular;
+      }
+
+      &-icon {
+        @include circle(1.5rem);
+        background-color: $color-pink;
+        font-size: $font-size-xs;
+      }
+
+      &-chart {
+        flex: 1;
+        min-height: 2.5rem;
+      }
+
+      &-value {
+        color: $color-text;
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+
+        & small {
+          font-size: $font-size-sm;
+          font-weight: $font-weight-regular;
+        }
+      }
+
+      &--sleep .stats-card-chart {
+        background: svg-url($-sleep-chart) center / 100% min(100%, 3.5rem) no-repeat;
+      }
+
+      &--stress .stats-card-chart {
+        @include bar-chart($-stress-bars, 4px, $radius-md);
+
+        > * {
+          background-color: $color-lavender-strong;
+        }
+      }
+    }
+  }
+
+  @include reduced-motion {
+    & .periods-option,
+    & .dates-option {
+      transition: none;
+    }
+  }
+}

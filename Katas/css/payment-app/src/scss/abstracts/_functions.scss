@@ -1,6 +1,32 @@
 @use "sass:math";
+@use "sass:map";
+@use "sass:string";
 
 // px → rem (assumes 16px root)
 @function rem($px, $base: 16) {
   @return math.div($px, $base) * 1rem;
+}
+
+$-svg-escapes: (
+  "<": "%3C",
+  ">": "%3E",
+  "#": "%23",
+  '"': "'",
+);
+
+// Inline SVG markup → data URI usable in `background-image`
+@function svg-url($svg) {
+  $encoded: "";
+
+  @for $i from 1 through string.length($svg) {
+    $char: string.slice($svg, $i, $i);
+
+    @if map.has-key($-svg-escapes, $char) {
+      $char: map.get($-svg-escapes, $char);
+    }
+
+    $encoded: $encoded + $char;
+  }
+
+  @return url("data:image/svg+xml,#{$encoded}");
 }

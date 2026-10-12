@@ -2,15 +2,40 @@
 @use "../responsive" as *;
 
 .l-global-wrapper {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
 
   display: grid;
-  grid-template-columns: 1fr repeat(3, 350px) 1fr;
-  grid-template-rows: 1fr 700px 1fr;
+  grid-template-columns: 1fr repeat(3, $phone-width) 1fr;
+  grid-template-rows: 1fr $phone-height 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 5px;
   grid-template-areas:
     ". . . . ."
     ". phone-first phone-second phone-third ."
     ". . . . .";
+
+  // Not enough room for three phones side by side
+  @include desktop-first(laptop) {
+    grid-template-columns: 1fr repeat(2, $phone-width) 1fr;
+    grid-template-rows: $space-lg repeat(2, $phone-height) $space-lg;
+    grid-row-gap: 20px;
+    grid-template-areas:
+      ". . . ."
+      ". phone-first phone-second ."
+      ". phone-third . ."
+      ". . . .";
+  }
+
+  @include desktop-first(tablet-portrait) {
+    grid-template-columns: 1fr minmax(0, $phone-width) 1fr;
+    grid-template-rows: $space-sm repeat(3, $phone-height) $space-sm;
+    grid-column-gap: $space-sm;
+    grid-template-areas:
+      ". . ."
+      ". phone-first ."
+      ". phone-second ."
+      ". phone-third ."
+      ". . .";
+  }
 }

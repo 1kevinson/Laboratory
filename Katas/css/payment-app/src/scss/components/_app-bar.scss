@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+.c-app-bar {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+
+  &-back {
+    @include circle($size-control-lg + $space-sm);
+    @include focus-ring;
+    background-color: $color-surface;
+    color: $color-text;
+    font-size: $font-size-lg;
+    transition: transform $transition-base;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &-title {
+    flex: 1;
+    padding-inline-end: $size-control-lg + $space-sm + $space-md;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    text-align: center;
+  }
+
+  &--divided &-title {
+    padding-block: $space-sm;
+    border-inline-start: 2px solid $color-overlay-dark;
+  }
+
+  @include reduced-motion {
+    &-back {
+      transition: none;
+    }
+  }
+}

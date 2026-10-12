@@ -1,0 +1,247 @@
+@use "../abstracts" as *;
+
+$-stress-bars: (45%, 22%, 30%, 42%, 48%, 55%, 68%, 50%, 54%, 92%, 86%, 76%, 44%, 52%, 64%);
+
+$-stress-wave: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0 44C25 40 45 26 75 22S115 44 140 12S175 30 200 16" fill="none" stroke="#{$color-plum}" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>';
+
+.c-phone-view-first {
+  padding-inline: $space-md;
+  padding-block: $space-lg;
+
+  & .hello {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      max-width: 9.25em;
+      font-weight: bolder;
+      font-size: 1.15rem;
+    }
+
+    &-bell {
+      position: relative;
+      border-radius: 50%;
+      background-color: $color-surface;
+      height: $space-2xl;
+      width: $space-2xl;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & .badge {
+        width: $space-sm;
+        height: $space-sm;
+        border-radius: 50%;
+        background-color: rgb(247, 40, 40);
+        position: absolute;
+        top: 1px;
+        right: $space-xs;
+      }
+
+      & .icon svg {
+        width: 18px;
+        height: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  & .select-text {
+    max-width: 11.5em;
+    font-size: 1.1rem;
+    margin-block-start: 0.5rem;
+  }
+
+  & .select-box {
+    display: flex;
+    justify-content: space-between;
+    height: 24%;
+    padding-inline: 0.25rem;
+    --border-select-box: 35px;
+
+    &-1,
+    &-2 {
+      border-radius: var(--border-select-box);
+      width: 47.5%;
+
+      & .avatar img {
+        height: 95px;
+        width: 95px;
+      }
+
+      & .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        & .icon {
+          padding: 5px;
+          border-radius: 50%;
+          & svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    &-1 {
+      background-color: rgba(252, 214, 251, 0.724);
+
+      & .footer .icon {
+        background-color: rgba(255, 238, 238, 0.65);
+      }
+    }
+    &-2 {
+      background-color: rgba(3, 73, 96, 0.724);
+
+      & .footer .icon {
+        background-color: rgba(238, 248, 255, 0.65);
+      }
+    }
+  }
+
+  & .stress-indicator {
+    @include card($color-surface, $radius-2xl);
+    padding: $space-sm $space-md $space-md;
+
+    & .header {
+      display: flex;
+      align-items: center;
+      gap: $space-sm;
+
+      & .icon {
+        @include flex-center;
+        width: $size-control-sm;
+        height: $size-control-sm;
+        border-radius: $radius-md;
+        background-color: $color-pink;
+        font-size: $font-size-sm;
+      }
+
+      & .text {
+        flex: 1;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-regular;
+      }
+
+      & .type {
+        @include pill($color-bg);
+        font-size: $font-size-2xs;
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    & .chart {
+      position: relative;
+      height: 4.5rem;
+      margin-block-start: $space-sm;
+      padding-block-end: $space-sm;
+      // Three baseline segments under the bars
+      background:
+        linear-gradient($color-border, $color-border) left bottom / 31% 1px no-repeat,
+        linear-gradient($color-border, $color-border) center bottom / 31% 1px no-repeat,
+        linear-gradient($color-border, $color-border) right bottom / 31% 1px no-repeat;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 $space-sm;
+        background: svg-url($-stress-wave) center / 100% 100% no-repeat;
+      }
+
+      &-bars {
+        @include bar-chart($-stress-bars);
+        position: relative;
+        height: 100%;
+
+        > :nth-child(-n + 5) {
+          background-color: $color-plum;
+        }
+
+        > :nth-child(n + 6):nth-child(-n + 10) {
+          background-color: $color-lavender-strong;
+        }
+
+        > :nth-child(n + 11) {
+          background-color: $color-sky-strong;
+        }
+      }
+    }
+  }
+
+  & .links ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .links a {
+    @include focus-ring;
+    display: block;
+    padding-block: $space-2xs;
+    border-block-end: 2px solid transparent;
+    color: $color-text;
+    font-size: $font-size-sm;
+    text-decoration: none;
+    transition: border-color $transition-base;
+
+    &:hover {
+      border-color: $color-overlay-dark;
+    }
+
+    &[aria-current="page"] {
+      border-color: $color-pink-strong;
+      font-weight: $font-weight-bold;
+    }
+
+    @include reduced-motion {
+      transition: none;
+    }
+  }
+
+  & .footer-boxes {
+    @include scroll-x($space-sm, $space-md);
+    flex: 1;
+    min-height: 0;
+
+    &-1,
+    &-2,
+    &-3 {
+      display: flex;
+      flex-direction: column;
+      width: 6.5rem;
+      padding: $space-md $space-sm $space-sm;
+      border-radius: $radius-2xl;
+
+      & .title {
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+      }
+
+      & .count {
+        font-size: $font-size-2xs;
+      }
+
+      & .illustration {
+        align-self: center;
+        margin-block-start: auto;
+        font-size: 3rem;
+        line-height: 1;
+      }
+    }
+
+    &-1 {
+      background-color: $color-pink;
+    }
+
+    &-2 {
+      background-color: $color-lavender;
+    }
+
+    &-3 {
+      background-color: $color-sky;
+    }
+  }
+}

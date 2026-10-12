@@ -1,0 +1,222 @@
+@use "../abstracts" as *;
+
+.c-phone-view-second {
+  padding-inline: $space-md;
+  padding-block: $space-lg;
+
+  & .advice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-tag {
+      @include pill($color-pink);
+      padding-block: $space-sm;
+    }
+
+    &-nav {
+      display: flex;
+      gap: $space-xs;
+
+      &-button {
+        @include button-reset;
+        @include circle($size-control-sm);
+        @include focus-ring;
+        background-color: $color-overlay-dark;
+        font-size: $font-size-sm;
+        transition: background-color $transition-base;
+
+        &:hover {
+          background-color: $color-surface;
+        }
+      }
+    }
+  }
+
+  & .quote {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "text illustration"
+      "author author";
+    align-items: center;
+    gap: $space-sm;
+
+    &-text {
+      grid-area: text;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      line-height: 1.15;
+
+      & p {
+        color: inherit;
+      }
+    }
+
+    &-illustration {
+      grid-area: illustration;
+      font-size: 4rem;
+      line-height: 1;
+    }
+
+    &-author {
+      grid-area: author;
+      padding-block-start: $space-sm;
+      border-block-start: 1px solid $color-overlay-dark;
+      font-size: $font-size-xs;
+    }
+  }
+
+  & .search {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    height: $size-control-lg + $space-xs;
+    padding-inline: $space-md;
+    border-radius: $radius-full;
+    background-color: $color-surface;
+
+    &:focus-within {
+      outline: 2px solid $color-teal-dark;
+      outline-offset: 2px;
+    }
+
+    &-input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      background: none;
+      font-size: $font-size-xs;
+
+      // Focus is rendered by the parent through :focus-within
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $color-muted;
+      }
+    }
+  }
+
+  & .categories {
+    @include scroll-x($space-xs, $space-md);
+
+    &-item {
+      @include pill;
+      padding-block: $space-sm;
+
+      &--meditation {
+        background-color: $color-lemon;
+      }
+
+      &--relax {
+        background-color: $color-mint;
+      }
+
+      &--sleep {
+        background-color: $color-violet;
+      }
+
+      &--balance {
+        background-color: $color-sky;
+      }
+    }
+  }
+
+  & .things {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: $space-sm;
+    min-height: 0;
+
+    &-title {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: $space-sm;
+      min-height: 0;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &-item {
+      @include card($color-surface, $radius-xl);
+      display: grid;
+      flex-shrink: 0;
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas:
+        "icon title play"
+        "icon text play";
+      align-items: center;
+      column-gap: $space-sm;
+      padding: $space-sm;
+
+      &-icon {
+        @include flex-center;
+        grid-area: icon;
+        width: 3rem;
+        height: 3rem;
+        border-radius: $radius-lg;
+        font-size: $font-size-xl;
+      }
+
+      &-title {
+        grid-area: title;
+        align-self: end;
+        font-size: $font-size-xs;
+      }
+
+      &-text {
+        @include line-clamp(2);
+        grid-area: text;
+        align-self: start;
+        font-size: $font-size-2xs;
+      }
+
+      &-play {
+        @include button-reset;
+        @include focus-ring;
+        grid-area: play;
+        border-radius: 50%;
+        color: $color-ink;
+        font-size: $font-size-xl;
+        transition: transform $transition-base;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      &--detox .things-item-icon {
+        background-color: $color-lavender;
+      }
+
+      &--gratitude .things-item-icon {
+        background-color: $color-sky;
+      }
+
+      &--breath .things-item-icon {
+        background-color: $color-mint;
+      }
+    }
+  }
+
+  @include reduced-motion {
+    & .advice-nav-button,
+    & .things-item-play {
+      transition: none;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 570" width="1100" height="570" role="img" aria-labelledby="title">
+<title id="title">Component states in pure CSS: the DOM carries the state, CSS reacts</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="mbbbbbb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#bbbbbb"/></marker><marker id="mbbbbbbs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#bbbbbb"/></marker></defs>
+<rect width="1100" height="570" rx="16" fill="#ffffff"/>
+<text x="40" y="38" class="title" text-anchor="start">States without JavaScript: the DOM holds the state, CSS only reacts</text>
+<rect x="20" y="60" width="255" height="234" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="32" y="72" width="231" height="100" rx="10" fill="#f5f6f8"/>
+<circle cx="97" cy="122" r="20" fill="#e4e6ea" stroke="#e4e6ea" stroke-width="0"/>
+<line x1="127" y1="122" x2="162" y2="122" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<circle cx="197" cy="122" r="21" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<path d="M204 128 l0 17 l4.5 -4 l3 7 l3 -1.3 l-3 -6.7 l6 0 Z" fill="#ffffff" stroke="#1f1f1f" stroke-width="1"/>
+<text x="36" y="198" class="t15" text-anchor="start">:hover</text>
+<text x="36" y="220" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.c-app-bar-back</tspan><tspan style="fill:#8a5cd1">:hover</tspan></text>
+<text x="36" y="236" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#5c5c5c">  transform: scale(1.05);</tspan></text>
+<text x="36" y="262" class="xs" text-anchor="start">the pointer is over it</text>
+<text x="36" y="278" class="xs" text-anchor="start">mouse only, never the only cue</text>
+<rect x="290" y="60" width="255" height="234" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="302" y="72" width="231" height="100" rx="10" fill="#f5f6f8"/>
+<rect x="324" y="110" width="44" height="24" rx="5" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.4"/>
+<text x="346" y="127" class="xs" text-anchor="middle">Tab</text>
+<line x1="376" y1="122" x2="414" y2="122" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<circle cx="462" cy="122" r="20" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<circle cx="462" cy="122" r="26" fill="none" stroke="#0d4a5b" stroke-width="2"/>
+<text x="306" y="198" class="t15" text-anchor="start">:focus-visible</text>
+<text x="306" y="220" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">@include</tspan><tspan> focus-ring;</tspan></text>
+<text x="306" y="236" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#5c5c5c">  outline: 2px solid $teal-dark;</tspan></text>
+<text x="306" y="262" class="xs" text-anchor="start">keyboard focus only</text>
+<text x="306" y="278" class="xs" text-anchor="start">never remove without a replacement</text>
+<rect x="560" y="60" width="255" height="234" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="572" y="72" width="231" height="100" rx="10" fill="#f5f6f8"/>
+<text x="617" y="126" class="t13" text-anchor="middle">Plan</text>
+<text x="687" y="126" class="lbl" text-anchor="middle">Stats</text>
+<text x="757" y="126" class="lbl" text-anchor="middle">Tips</text>
+<rect x="597" y="134" width="40" height="3" rx="1.5" fill="#ebb8e7"/>
+<text x="576" y="198" class="t15" text-anchor="start">[aria-current]</text>
+<text x="576" y="220" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.links a</tspan><tspan style="fill:#8a5cd1">[aria-current=&quot;page&quot;]</tspan></text>
+<text x="576" y="236" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#5c5c5c">  border-color + font-weight</tspan></text>
+<text x="576" y="262" class="xs" text-anchor="start">the state is written in the HTML</text>
+<text x="576" y="278" class="xs" text-anchor="start">screen readers announce it too</text>
+<rect x="830" y="60" width="255" height="234" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="842" y="72" width="231" height="100" rx="10" fill="#f5f6f8"/>
+<rect x="852" y="108" width="66" height="28" rx="14" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+<text x="885" y="126" class="sm" text-anchor="middle">Day</text>
+<rect x="925" y="108" width="66" height="28" rx="14" fill="#f3d2f1"/>
+<text x="958" y="126" class="sm" text-anchor="middle">Week</text>
+<rect x="998" y="108" width="66" height="28" rx="14" fill="none" stroke="#d5d5d5" stroke-width="1"/>
+<text x="1031" y="126" class="sm" text-anchor="middle">Month</text>
+<text x="846" y="198" class="t15" text-anchor="start">:has(:checked)</text>
+<text x="846" y="220" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.periods-option</tspan><tspan style="fill:#8a5cd1">:has(:checked)</tspan></text>
+<text x="846" y="236" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#5c5c5c">  background-color: $color-pink;</tspan></text>
+<text x="846" y="262" class="xs" text-anchor="start">a real radio input holds the state</text>
+<text x="846" y="278" class="xs" text-anchor="start">its label reacts, zero JS</text>
+<rect x="20" y="308" width="255" height="234" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="32" y="320" width="231" height="100" rx="10" fill="#f5f6f8"/>
+<rect x="52" y="352" width="190" height="36" rx="18" fill="#ffffff" stroke="#c9c9c9" stroke-width="0"/>
+<rect x="47" y="347" width="200" height="46" rx="23" fill="none" stroke="#0d4a5b" stroke-width="2"/>
+<circle cx="74" cy="368" r="6" fill="none" stroke="#666" stroke-width="1.6"/>
+<line x1="78" y1="372" x2="83" y2="377" stroke="#666" stroke-width="1.6"/>
+<line x1="94" y1="360" x2="94" y2="380" stroke="#1f1f1f" stroke-width="1.5"/>
+<text x="100" y="375" class="xs" text-anchor="start">Search</text>
+<text x="36" y="446" class="t15" text-anchor="start">:focus-within</text>
+<text x="36" y="468" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.search</tspan><tspan style="fill:#8a5cd1">:focus-within</tspan></text>
+<text x="36" y="484" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#5c5c5c">  outline: 2px solid $teal-dark;</tspan></text>
+<text x="36" y="510" class="xs" text-anchor="start">the parent reacts when a child</text>
+<text x="36" y="526" class="xs" text-anchor="start">(the input) has focus</text>
+<rect x="290" y="308" width="255" height="234" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="302" y="320" width="231" height="100" rx="10" fill="#f5f6f8"/>
+<circle cx="338" cy="370" r="7" fill="none" stroke="#999" stroke-width="1.3"/>
+<circle cx="338" cy="370" r="7" fill="none" stroke="#999" stroke-dasharray="2 2"/>
+<text x="338" y="398" class="xs" text-anchor="middle">hidden radio</text>
+<line x1="348" y1="370" x2="398" y2="370" stroke="#999" stroke-width="1.2" stroke-dasharray="3 3"/>
+<rect x="406" y="356" width="90" height="28" rx="14" fill="#f3d2f1"/>
+<rect x="401" y="351" width="100" height="38" rx="19" fill="none" stroke="#0d4a5b" stroke-width="2"/>
+<text x="451" y="375" class="sm" text-anchor="middle">Week</text>
+<text x="306" y="446" class="t15" text-anchor="start">:has(:focus-visible)</text>
+<text x="306" y="468" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.periods-option</tspan><tspan style="fill:#8a5cd1">:has(:focus-visible)</tspan></text>
+<text x="306" y="484" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#5c5c5c">  outline on the label</tspan></text>
+<text x="306" y="510" class="xs" text-anchor="start">the radio is visually hidden</text>
+<text x="306" y="526" class="xs" text-anchor="start">so the ring goes on its label</text>
+<rect x="560" y="308" width="255" height="234" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="572" y="320" width="231" height="100" rx="10" fill="#f5f6f8"/>
+<circle cx="637" cy="370" r="22" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<line x1="668" y1="370" x2="702" y2="370" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<circle cx="737" cy="370" r="18" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<text x="737" y="404" class="code-2xs" text-anchor="middle" style="fill:#8a8a8a">scale(0.95)</text>
+<text x="576" y="446" class="t15" text-anchor="start">:active</text>
+<text x="576" y="468" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.c-app-bar-back</tspan><tspan style="fill:#8a5cd1">:active</tspan></text>
+<text x="576" y="484" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#5c5c5c">  transform: scale(0.95);</tspan></text>
+<text x="576" y="510" class="xs" text-anchor="start">while it is pressed</text>
+<text x="576" y="526" class="xs" text-anchor="start">a small tactile feedback</text>
+<rect x="830" y="308" width="255" height="234" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="842" y="320" width="231" height="100" rx="10" fill="#f5f6f8"/>
+<circle cx="882" cy="370" r="9" fill="#8a5cd1" stroke="#8a5cd1" stroke-width="0"/>
+<line x1="898" y1="370" x2="1018" y2="370" stroke="#bbbbbb" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#mbbbbbb)"/>
+<circle cx="1034" cy="370" r="9" fill="#8a5cd1" stroke="#8a5cd1" stroke-width="0"/>
+<line x1="948" y1="356" x2="968" y2="384" stroke="#e04848" stroke-width="2.2"/>
+<line x1="968" y1="356" x2="948" y2="384" stroke="#e04848" stroke-width="2.2"/>
+<text x="958" y="404" class="xs" text-anchor="middle">jump, no animation</text>
+<text x="846" y="446" class="t15" text-anchor="start">reduced motion</text>
+<text x="846" y="468" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">@include</tspan><tspan> reduced-motion { … }</tspan></text>
+<text x="846" y="484" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#5c5c5c">  transition: none;</tspan></text>
+<text x="846" y="510" class="xs" text-anchor="start">@media (prefers-reduced-motion)</text>
+<text x="846" y="526" class="xs" text-anchor="start">respect the OS setting</text>
+</svg>

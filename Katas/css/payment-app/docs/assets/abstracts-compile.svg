@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" width="1120" height="560" role="img" aria-labelledby="title">
+<title id="title">abstracts/ emits no CSS: tokens, mixins and functions only exist at compile time</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m1f1f1f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker><marker id="m1f1f1fs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="mcfcfcf" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#cfcfcf"/></marker><marker id="mcfcfcfs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#cfcfcf"/></marker></defs>
+<rect width="1120" height="560" rx="16" fill="#ffffff"/>
+<text x="30" y="40" class="title" text-anchor="start">1 · abstracts/ — the tools</text>
+<text x="30" y="60" class="sm" text-anchor="start">tokens, mixins, functions</text>
+<text x="400" y="40" class="title" text-anchor="start">2 · a consumer partial</text>
+<text x="400" y="60" class="sm" text-anchor="start">it @use-s the tools</text>
+<text x="820" y="40" class="title" text-anchor="start">3 · compiled main.css</text>
+<text x="820" y="60" class="sm" text-anchor="start">what the browser receives</text>
+<rect x="30" y="80" width="300" height="102" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="46" y="104" class="xs" text-anchor="start">_variables.scss</text>
+<text x="46" y="126" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#1f8a99">$space-sm</tspan><tspan>: 0.5rem;</tspan></text>
+<text x="46" y="144" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#1f8a99">$size-control-lg</tspan><tspan>: 2.75rem;</tspan></text>
+<text x="46" y="162" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#1f8a99">$color-surface</tspan><tspan>: #ffffff;</tspan></text>
+<rect x="30" y="196" width="300" height="156" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="46" y="220" class="xs" text-anchor="start">_mixins.scss</text>
+<text x="46" y="242" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">@mixin</tspan><tspan> circle($size) {</tspan></text>
+<text x="46" y="260" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#8a5cd1">@include</tspan><tspan> flex-center;</tspan></text>
+<text x="46" y="278" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  flex-shrink: 0;</tspan></text>
+<text x="46" y="296" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  width: $size; height: $size;</tspan></text>
+<text x="46" y="314" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  border-radius: 50%;</tspan></text>
+<text x="46" y="332" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<rect x="30" y="366" width="300" height="102" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="46" y="390" class="xs" text-anchor="start">_functions.scss</text>
+<text x="46" y="412" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">@function</tspan><tspan> rem($px, $base: 16) {</tspan></text>
+<text x="46" y="430" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#8a5cd1">@return</tspan><tspan> math.div($px, $base) * 1rem;</tspan></text>
+<text x="46" y="448" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<rect x="30" y="484" width="300" height="34" rx="17" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.5"/>
+<text x="180" y="506" class="t13" text-anchor="middle" style="fill:#3fa874">compiled alone → 0 bytes of CSS</text>
+<rect x="400" y="80" width="360" height="156" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="416" y="104" class="xs" text-anchor="start">components/_app-bar.scss (simplified)</text>
+<text x="416" y="126" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">@use</tspan><tspan> &quot;../abstracts&quot; </tspan><tspan style="fill:#8a5cd1">as</tspan><tspan> *;</tspan></text>
+<text x="416" y="144" class="code-xs" text-anchor="start" xml:space="preserve"><tspan></tspan></text>
+<text x="416" y="162" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.c-app-bar-back</tspan><tspan> {</tspan></text>
+<text x="416" y="180" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#8a5cd1">@include</tspan><tspan> circle(</tspan><tspan style="fill:#1f8a99">$size-control-lg</tspan><tspan> + </tspan><tspan style="fill:#1f8a99">$space-sm</tspan><tspan>);</tspan></text>
+<text x="416" y="198" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  background-color: </tspan><tspan style="fill:#1f8a99">$color-surface</tspan><tspan>;</tspan></text>
+<text x="416" y="216" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<line x1="334" y1="131" x2="396" y2="150" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<line x1="334" y1="274" x2="396" y2="180" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<line x1="334" y1="417" x2="396" y2="210" stroke="#cfcfcf" stroke-width="1.4" stroke-dasharray="4 4" marker-end="url(#mcfcfcf)"/>
+<text x="368" y="446" class="xs" text-anchor="middle" style="fill:#8a8a8a">not used</text>
+<text x="368" y="460" class="xs" text-anchor="middle" style="fill:#8a8a8a">→ no CSS</text>
+<rect x="400" y="262" width="360" height="128" rx="10" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.5"/>
+<text x="416" y="288" class="t13" text-anchor="start">What happens at compile time</text>
+<text x="416" y="312" class="sm" text-anchor="start">• $tokens are replaced by their values</text>
+<text x="416" y="330" class="sm" text-anchor="start">• @include pastes the mixin&#x27;s declarations</text>
+<text x="416" y="348" class="sm" text-anchor="start">• functions are evaluated to plain values</text>
+<text x="416" y="366" class="sm" text-anchor="start">• nothing from abstracts/ survives as-is</text>
+<rect x="400" y="406" width="360" height="62" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="416" y="432" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a8a8a">$ </tspan><tspan>sass src/scss/abstracts/_index.scss</tspan></text>
+<text x="416" y="454" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a8a8a">→ </tspan><tspan style="fill:#3fa874">(empty output) ✓</tspan></text>
+<line x1="764" y1="158" x2="816" y2="158" stroke="#1f1f1f" stroke-width="2" marker-end="url(#m1f1f1f)"/>
+<text x="790" y="148" class="xs" text-anchor="middle">sass</text>
+<rect x="820" y="80" width="270" height="228" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="836" y="104" class="xs" text-anchor="start">main.css</text>
+<text x="836" y="126" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.c-app-bar-back</tspan><tspan> {</tspan></text>
+<text x="836" y="144" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  display: flex;</tspan></text>
+<text x="836" y="162" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  align-items: center;</tspan></text>
+<text x="836" y="180" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  justify-content: center;</tspan></text>
+<text x="836" y="198" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  flex-shrink: 0;</tspan></text>
+<text x="836" y="216" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  width: 3.25rem;</tspan></text>
+<text x="836" y="234" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  height: 3.25rem;</tspan></text>
+<text x="836" y="252" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  border-radius: 50%;</tspan></text>
+<text x="836" y="270" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  background-color: </tspan><tspan style="fill:#1f8a99">#ffffff</tspan><tspan>;</tspan></text>
+<text x="836" y="288" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<rect x="820" y="326" width="12" height="12" rx="3" fill="#8a5cd1"/>
+<text x="840" y="336" class="xs" text-anchor="start">pasted by @include circle(…)</text>
+<rect x="820" y="346" width="12" height="12" rx="3" fill="#1f8a99"/>
+<text x="840" y="356" class="xs" text-anchor="start">a token, now a literal value</text>
+<text x="820" y="386" class="code-xs" text-anchor="start">3.25rem = 2.75rem + 0.5rem</text>
+<text x="820" y="402" class="xs" text-anchor="start">(the math is done by Sass)</text>
+<text x="560" y="546" class="sub" text-anchor="middle">abstracts/ is the recipe book · components/ are the dishes · main.css is what gets served</text>
+</svg>

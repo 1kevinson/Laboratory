@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 470" width="1160" height="470" role="img" aria-labelledby="title">
+<title id="title">grid-template-areas: from ASCII art to placed phones</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style></defs>
+<rect width="1160" height="470" rx="16" fill="#ffffff"/>
+<rect x="24" y="40" width="470" height="308" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="40" y="64" class="xs" text-anchor="start">layout/_global-wrapper.scss + layout/_phone-view.scss</text>
+<text x="40" y="86" class="code-sm" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.l-global-wrapper</tspan><tspan> {</tspan></text>
+<text x="40" y="106" class="code-sm" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  display</tspan><tspan>: grid;</tspan></text>
+<text x="40" y="126" class="code-sm" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  grid-template-columns</tspan><tspan>: 1fr repeat(3, $phone-width) 1fr;</tspan></text>
+<text x="40" y="146" class="code-sm" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  grid-template-rows</tspan><tspan>: 1fr $phone-height 1fr;</tspan></text>
+<text x="40" y="166" class="code-sm" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">  grid-template-areas</tspan><tspan>:</tspan></text>
+<text x="40" y="186" class="code-sm" text-anchor="start" xml:space="preserve"><tspan>    &quot;. . . . .&quot;</tspan></text>
+<text x="40" y="206" class="code-sm" text-anchor="start" xml:space="preserve"><tspan>    &quot;. </tspan><tspan style="fill:#3fa874;font-weight:800">phone-first</tspan><tspan> </tspan><tspan style="fill:#3b74d4;font-weight:800">phone-second</tspan><tspan> </tspan><tspan style="fill:#e0703f;font-weight:800">phone-third</tspan><tspan> .&quot;</tspan></text>
+<text x="40" y="226" class="code-sm" text-anchor="start" xml:space="preserve"><tspan>    &quot;. . . . .&quot;;</tspan></text>
+<text x="40" y="246" class="code-sm" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<text x="40" y="266" class="code-sm" text-anchor="start" xml:space="preserve"><tspan></tspan></text>
+<text x="40" y="286" class="code-sm" text-anchor="start" xml:space="preserve"><tspan style="fill:#3fa874">.l-phone-view-first</tspan><tspan>  { </tspan><tspan style="fill:#8a5cd1">grid-area</tspan><tspan>: </tspan><tspan style="fill:#3fa874;font-weight:800">phone-first</tspan><tspan>; }</tspan></text>
+<text x="40" y="306" class="code-sm" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.l-phone-view-second</tspan><tspan> { </tspan><tspan style="fill:#8a5cd1">grid-area</tspan><tspan>: </tspan><tspan style="fill:#3b74d4;font-weight:800">phone-second</tspan><tspan>; }</tspan></text>
+<text x="40" y="326" class="code-sm" text-anchor="start" xml:space="preserve"><tspan style="fill:#e0703f">.l-phone-view-third</tspan><tspan>  { </tspan><tspan style="fill:#8a5cd1">grid-area</tspan><tspan>: </tspan><tspan style="fill:#e0703f;font-weight:800">phone-third</tspan><tspan>; }</tspan></text>
+<rect x="540" y="70" width="60" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="570.0" y="95.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<text x="570.0" y="58" class="code-2xs" text-anchor="middle">1fr</text>
+<rect x="610" y="70" width="120" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="670.0" y="95.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<text x="670.0" y="58" class="code-2xs" text-anchor="middle">$phone-width</text>
+<rect x="740" y="70" width="120" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="800.0" y="95.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<text x="800.0" y="58" class="code-2xs" text-anchor="middle">$phone-width</text>
+<rect x="870" y="70" width="120" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="930.0" y="95.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<text x="930.0" y="58" class="code-2xs" text-anchor="middle">$phone-width</text>
+<rect x="1000" y="70" width="60" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="1030.0" y="95.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<text x="1030.0" y="58" class="code-2xs" text-anchor="middle">1fr</text>
+<text x="1070" y="94.0" class="code-2xs" text-anchor="start">1fr</text>
+<rect x="540" y="118" width="60" height="200" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="570.0" y="223.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<rect x="610" y="118" width="120" height="200" rx="8" fill="#e1f2e9" stroke="#3fa874" stroke-width="2.5"/>
+<text x="670.0" y="222.0" class="code-xs" text-anchor="middle">phone-first</text>
+<rect x="740" y="118" width="120" height="200" rx="8" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2.5"/>
+<text x="800.0" y="222.0" class="code-xs" text-anchor="middle">phone-second</text>
+<rect x="870" y="118" width="120" height="200" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="2.5"/>
+<text x="930.0" y="222.0" class="code-xs" text-anchor="middle">phone-third</text>
+<rect x="1000" y="118" width="60" height="200" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="1030.0" y="223.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<text x="1070" y="222.0" class="code-2xs" text-anchor="start">$phone-height</text>
+<rect x="540" y="326" width="60" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="570.0" y="351.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<rect x="610" y="326" width="120" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="670.0" y="351.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<rect x="740" y="326" width="120" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="800.0" y="351.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<rect x="870" y="326" width="120" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="930.0" y="351.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<rect x="1000" y="326" width="60" height="40" rx="4" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="1030.0" y="351.0" class="t15" text-anchor="middle" style="fill:#8a8a8a">.</text>
+<text x="1070" y="350.0" class="code-2xs" text-anchor="start">1fr</text>
+<text x="540" y="390" class="sm" text-anchor="start">• one string = one row, one word = one cell</text>
+<text x="540" y="411" class="sm" text-anchor="start">• the same name in neighbouring cells = one area (must stay a rectangle)</text>
+<text x="540" y="432" class="sm" text-anchor="start">• &quot;.&quot; = an empty cell · every string must have the same number of cells</text>
+</svg>

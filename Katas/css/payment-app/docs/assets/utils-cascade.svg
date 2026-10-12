@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" width="1100" height="540" role="img" aria-labelledby="title">
+<title id="title">Why utilities carry !important: two cascade races on the same element</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style></defs>
+<rect width="1100" height="540" rx="16" fill="#ffffff"/>
+<text x="550" y="40" class="code" text-anchor="middle" xml:space="preserve"><tspan style="fill:#8a8a8a">&lt;h2 class=&quot;</tspan><tspan style="fill:#d4589f">hello-text</tspan><tspan> </tspan><tspan style="fill:#e04848">u-text-center</tspan><tspan> </tspan><tspan style="fill:#e04848">u-mt-0</tspan><tspan>&quot;&gt;</tspan></text>
+<text x="550" y="66" class="sub" text-anchor="middle">The cascade decides in this order:  ① !important  →  ② specificity  →  ③ source order</text>
+<text x="40" y="104" class="t15" text-anchor="start">margin-top</text>
+<text x="40" y="130" class="xs" text-anchor="start">layer</text>
+<text x="150" y="130" class="xs" text-anchor="start">rule</text>
+<text x="700" y="130" class="xs" text-anchor="start">specificity</text>
+<text x="810" y="130" class="xs" text-anchor="start">order</text>
+<text x="900" y="130" class="xs" text-anchor="start">result</text>
+<rect x="30" y="140" width="1040" height="36" rx="8" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.2"/>
+<rect x="40" y="149" width="96" height="18" rx="9" fill="#3fa874"/>
+<text x="88.0" y="161.5" class="tag" text-anchor="middle" fill="#fff" style="fill:#fff">base</text>
+<text x="150" y="163" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">*</tspan><tspan> { margin: 0; }</tspan></text>
+<text x="700" y="163" class="code-xs" text-anchor="start">(0,0,0)</text>
+<text x="810" y="163" class="code-xs" text-anchor="start">4th</text>
+<text x="900" y="163" class="sm" text-anchor="start" style="fill:#e04848">✗ loses</text>
+<rect x="30" y="184" width="1040" height="36" rx="8" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.2"/>
+<rect x="40" y="193" width="96" height="18" rx="9" fill="#8a5cd1"/>
+<text x="88.0" y="205.5" class="tag" text-anchor="middle" fill="#fff" style="fill:#fff">components</text>
+<text x="150" y="207" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.c-phone-view-first .hello-text</tspan><tspan> { margin-top: 1rem; }</tspan></text>
+<text x="700" y="207" class="code-xs" text-anchor="start">(0,2,0)</text>
+<text x="810" y="207" class="code-xs" text-anchor="start">6th</text>
+<text x="900" y="207" class="sm" text-anchor="start" style="fill:#e04848">✗ loses</text>
+<rect x="30" y="228" width="1040" height="36" rx="8" fill="#f1f9f4" stroke="#3fa874" stroke-width="1.6"/>
+<rect x="40" y="237" width="96" height="18" rx="9" fill="#e04848"/>
+<text x="88.0" y="249.5" class="tag" text-anchor="middle" fill="#fff" style="fill:#fff">utils</text>
+<text x="150" y="251" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.u-mt-0</tspan><tspan> { margin-top: 0 </tspan><tspan style="fill:#e04848">!important</tspan><tspan>; }</tspan></text>
+<text x="700" y="251" class="code-xs" text-anchor="start">(0,1,0) + !</text>
+<text x="810" y="251" class="code-xs" text-anchor="start">9th</text>
+<text x="900" y="251" class="sm" text-anchor="start" style="fill:#3fa874">✓ wins — importance</text>
+<text x="40" y="290" class="t15" text-anchor="start">text-align</text>
+<text x="40" y="316" class="xs" text-anchor="start">layer</text>
+<text x="150" y="316" class="xs" text-anchor="start">rule</text>
+<text x="700" y="316" class="xs" text-anchor="start">specificity</text>
+<text x="810" y="316" class="xs" text-anchor="start">order</text>
+<text x="900" y="316" class="xs" text-anchor="start">result</text>
+<rect x="30" y="326" width="1040" height="36" rx="8" fill="#f1f9f4" stroke="#3fa874" stroke-width="1.6"/>
+<rect x="40" y="335" width="96" height="18" rx="9" fill="#8a5cd1"/>
+<text x="88.0" y="347.5" class="tag" text-anchor="middle" fill="#fff" style="fill:#fff">components</text>
+<text x="150" y="349" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.c-phone-view-first .hello-text</tspan><tspan> { text-align: left; }</tspan></text>
+<text x="700" y="349" class="code-xs" text-anchor="start">(0,2,0)</text>
+<text x="810" y="349" class="code-xs" text-anchor="start">6th</text>
+<text x="900" y="349" class="sm" text-anchor="start" style="fill:#3fa874">✓ wins — specificity</text>
+<rect x="30" y="370" width="1040" height="36" rx="8" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.2"/>
+<rect x="40" y="379" width="96" height="18" rx="9" fill="#e04848"/>
+<text x="88.0" y="391.5" class="tag" text-anchor="middle" fill="#fff" style="fill:#fff">utils</text>
+<text x="150" y="393" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.u-text-center</tspan><tspan> { text-align: center; }</tspan></text>
+<text x="700" y="393" class="code-xs" text-anchor="start">(0,1,0)</text>
+<text x="810" y="393" class="code-xs" text-anchor="start">9th</text>
+<text x="900" y="393" class="sm" text-anchor="start" style="fill:#e04848">✗ loses — later, but lighter</text>
+<rect x="30" y="440" width="1040" height="76" rx="12" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.4"/>
+<text x="50" y="466" class="t13" text-anchor="start">Takeaway</text>
+<text x="50" y="488" class="sm" text-anchor="start">A utility without !important only wins against selectors of equal weight. Any nested component selector beats it.</text>
+<text x="50" y="506" class="sm" text-anchor="start">→ every u-* class gets !important, does one job, and !important appears nowhere else. (component declarations above are illustrative)</text>
+</svg>

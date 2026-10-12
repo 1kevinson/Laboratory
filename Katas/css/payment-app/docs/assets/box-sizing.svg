@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 450" width="1100" height="450" role="img" aria-labelledby="title">
+<title id="title">box-sizing: content-box vs border-box</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m1f1f1f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker><marker id="m1f1f1fs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker></defs>
+<rect width="1100" height="450" rx="16" fill="#ffffff"/>
+<text x="280" y="40" class="title" text-anchor="middle" style="fill:#e04848">content-box — the browser default</text>
+<text x="280" y="62" class="sm" text-anchor="middle">width = the content only</text>
+<text x="280" y="88" class="code-xs" text-anchor="middle" xml:space="preserve"><tspan>width: 200px;  padding: 20px;  border: 4px solid;</tspan></text>
+<rect x="81.6" y="120" width="396.8" height="176" rx="6" fill="#cf9a00"/>
+<rect x="88.0" y="126.4" width="384.0" height="163.2" rx="3" fill="#e1f2e9"/>
+<rect x="120.0" y="158.4" width="320.0" height="99.19999999999999" rx="3" fill="#e3ecf8" stroke="#3b74d4" stroke-width="1.6"/>
+<text x="280" y="213.0" class="t13" text-anchor="middle" style="fill:#3b74d4">content 200px</text>
+<text x="122.0" y="148.8" class="xs" text-anchor="start" style="fill:#3fa874">padding 20</text>
+<line x1="81.6" y1="322" x2="478.4" y2="322" stroke="#1f1f1f" stroke-width="1.6" marker-end="url(#m1f1f1f)" marker-start="url(#m1f1f1fs)"/>
+<line x1="81.6" y1="304" x2="81.6" y2="332" stroke="#8a8a8a" stroke-width="1.2"/>
+<line x1="478.4" y1="304" x2="478.4" y2="332" stroke="#8a8a8a" stroke-width="1.2"/>
+<text x="280" y="354" class="t13" text-anchor="middle" style="fill:#e04848">rendered width: 248px = 200 + 2×20 + 2×4</text>
+<text x="820" y="40" class="title" text-anchor="middle" style="fill:#3fa874">border-box — reset rule n°1</text>
+<text x="820" y="62" class="sm" text-anchor="middle">width = content + padding + border</text>
+<text x="820" y="88" class="code-xs" text-anchor="middle" xml:space="preserve"><tspan>width: 200px;  padding: 20px;  border: 4px solid;</tspan></text>
+<rect x="660.0" y="120" width="320.0" height="176" rx="6" fill="#cf9a00"/>
+<rect x="666.4" y="126.4" width="307.2" height="163.2" rx="3" fill="#e1f2e9"/>
+<rect x="698.4" y="158.4" width="243.2" height="99.19999999999999" rx="3" fill="#e3ecf8" stroke="#3b74d4" stroke-width="1.6"/>
+<text x="820" y="213.0" class="t13" text-anchor="middle" style="fill:#3b74d4">content 152px</text>
+<text x="700.4" y="148.8" class="xs" text-anchor="start" style="fill:#3fa874">padding 20</text>
+<line x1="660.0" y1="322" x2="980.0" y2="322" stroke="#1f1f1f" stroke-width="1.6" marker-end="url(#m1f1f1f)" marker-start="url(#m1f1f1fs)"/>
+<line x1="660.0" y1="304" x2="660.0" y2="332" stroke="#8a8a8a" stroke-width="1.2"/>
+<line x1="980.0" y1="304" x2="980.0" y2="332" stroke="#8a8a8a" stroke-width="1.2"/>
+<text x="820" y="354" class="t13" text-anchor="middle" style="fill:#3fa874">rendered width: 200px — what you wrote is what you get</text>
+<rect x="390" y="390" width="16" height="16" rx="3" fill="#cf9a00"/>
+<rect x="390" y="390" width="16" height="16" rx="3" fill="none" stroke="#bdbdbd"/>
+<text x="414" y="403" class="sm" text-anchor="start">border</text>
+<rect x="510" y="390" width="16" height="16" rx="3" fill="#e1f2e9"/>
+<rect x="510" y="390" width="16" height="16" rx="3" fill="none" stroke="#bdbdbd"/>
+<text x="534" y="403" class="sm" text-anchor="start">padding</text>
+<rect x="630" y="390" width="16" height="16" rx="3" fill="#e3ecf8"/>
+<rect x="630" y="390" width="16" height="16" rx="3" fill="none" stroke="#bdbdbd"/>
+<text x="654" y="403" class="sm" text-anchor="start">content</text>
+<text x="550" y="436" class="sub" text-anchor="middle">base/_reset.scss sets border-box on *, ::before, ::after → sizes add up, grids don&#x27;t overflow</text>
+</svg>

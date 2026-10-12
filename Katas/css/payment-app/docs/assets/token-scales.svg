@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 545" width="1100" height="545" role="img" aria-labelledby="title">
+<title id="title">Design token scales: spacing, font sizes and radii</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style></defs>
+<rect width="1100" height="545" rx="16" fill="#ffffff"/>
+<rect x="20" y="20" width="350" height="470" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="385" y="20" width="330" height="470" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="730" y="20" width="350" height="470" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<text x="40" y="54" class="title" text-anchor="start">Spacing</text>
+<text x="40" y="74" class="sm" text-anchor="start">$space-*  ·  margin, padding, gap</text>
+<text x="40" y="112" class="code-xs" text-anchor="start">$space-2xs</text>
+<text x="40" y="128" class="xs" text-anchor="start">0.125rem · 2px</text>
+<rect x="170" y="102" width="7.0" height="20" rx="3" fill="#3b74d4"/>
+<text x="40" y="164" class="code-xs" text-anchor="start">$space-xs</text>
+<text x="40" y="180" class="xs" text-anchor="start">0.25rem · 4px</text>
+<rect x="170" y="154" width="14.0" height="20" rx="3" fill="#3b74d4"/>
+<text x="40" y="216" class="code-xs" text-anchor="start">$space-sm</text>
+<text x="40" y="232" class="xs" text-anchor="start">0.5rem · 8px</text>
+<rect x="170" y="206" width="28.0" height="20" rx="3" fill="#3b74d4"/>
+<text x="40" y="268" class="code-xs" text-anchor="start">$space-md</text>
+<text x="40" y="284" class="xs" text-anchor="start">1rem · 16px</text>
+<rect x="170" y="258" width="56.0" height="20" rx="3" fill="#3b74d4"/>
+<text x="40" y="320" class="code-xs" text-anchor="start">$space-lg</text>
+<text x="40" y="336" class="xs" text-anchor="start">1.5rem · 24px</text>
+<rect x="170" y="310" width="84.0" height="20" rx="3" fill="#3b74d4"/>
+<text x="40" y="372" class="code-xs" text-anchor="start">$space-xl</text>
+<text x="40" y="388" class="xs" text-anchor="start">2rem · 32px</text>
+<rect x="170" y="362" width="112.0" height="20" rx="3" fill="#3b74d4"/>
+<text x="40" y="424" class="code-xs" text-anchor="start">$space-2xl</text>
+<text x="40" y="440" class="xs" text-anchor="start">3rem · 48px</text>
+<rect x="170" y="414" width="168.0" height="20" rx="3" fill="#3b74d4"/>
+<text x="405" y="54" class="title" text-anchor="start">Font sizes</text>
+<text x="405" y="74" class="sm" text-anchor="start">$font-size-*  ·  type ramp</text>
+<text x="405" y="112" class="code-xs" text-anchor="start">$font-size-2xs</text>
+<text x="405" y="128" class="xs" text-anchor="start">0.625rem · 10px</text>
+<text x="640" y="122" text-anchor="middle" style="font:600 10px -apple-system, Segoe UI, Inter, sans-serif;fill:#1f1f1f">Aa</text>
+<text x="405" y="164" class="code-xs" text-anchor="start">$font-size-xs</text>
+<text x="405" y="180" class="xs" text-anchor="start">0.75rem · 12px</text>
+<text x="640" y="174" text-anchor="middle" style="font:600 12px -apple-system, Segoe UI, Inter, sans-serif;fill:#1f1f1f">Aa</text>
+<text x="405" y="216" class="code-xs" text-anchor="start">$font-size-sm</text>
+<text x="405" y="232" class="xs" text-anchor="start">0.875rem · 14px</text>
+<text x="640" y="226" text-anchor="middle" style="font:600 14px -apple-system, Segoe UI, Inter, sans-serif;fill:#1f1f1f">Aa</text>
+<text x="405" y="268" class="code-xs" text-anchor="start">$font-size-base</text>
+<text x="405" y="284" class="xs" text-anchor="start">1rem · 16px</text>
+<text x="640" y="278" text-anchor="middle" style="font:600 16px -apple-system, Segoe UI, Inter, sans-serif;fill:#1f1f1f">Aa</text>
+<text x="405" y="320" class="code-xs" text-anchor="start">$font-size-lg</text>
+<text x="405" y="336" class="xs" text-anchor="start">1.25rem · 20px</text>
+<text x="640" y="330" text-anchor="middle" style="font:600 20px -apple-system, Segoe UI, Inter, sans-serif;fill:#1f1f1f">Aa</text>
+<text x="405" y="372" class="code-xs" text-anchor="start">$font-size-xl</text>
+<text x="405" y="388" class="xs" text-anchor="start">1.5rem · 24px</text>
+<text x="640" y="382" text-anchor="middle" style="font:600 24px -apple-system, Segoe UI, Inter, sans-serif;fill:#1f1f1f">Aa</text>
+<text x="405" y="424" class="code-xs" text-anchor="start">$font-size-2xl</text>
+<text x="405" y="440" class="xs" text-anchor="start">2.25rem · 36px</text>
+<text x="640" y="434" text-anchor="middle" style="font:600 36px -apple-system, Segoe UI, Inter, sans-serif;fill:#1f1f1f">Aa</text>
+<text x="750" y="54" class="title" text-anchor="start">Radii</text>
+<text x="750" y="74" class="sm" text-anchor="start">$radius-*  ·  corners</text>
+<rect x="795" y="100" width="70" height="70" rx="4" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="830" y="192" class="code-xs" text-anchor="middle">$radius-sm</text>
+<text x="830" y="208" class="xs" text-anchor="middle">4px</text>
+<rect x="955" y="100" width="70" height="70" rx="8" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="990" y="192" class="code-xs" text-anchor="middle">$radius-md</text>
+<text x="990" y="208" class="xs" text-anchor="middle">8px</text>
+<rect x="795" y="230" width="70" height="70" rx="12" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="830" y="322" class="code-xs" text-anchor="middle">$radius-lg</text>
+<text x="830" y="338" class="xs" text-anchor="middle">12px</text>
+<rect x="955" y="230" width="70" height="70" rx="18" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="990" y="322" class="code-xs" text-anchor="middle">$radius-xl</text>
+<text x="990" y="338" class="xs" text-anchor="middle">18px</text>
+<rect x="795" y="360" width="70" height="70" rx="24" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="830" y="452" class="code-xs" text-anchor="middle">$radius-2xl</text>
+<text x="830" y="468" class="xs" text-anchor="middle">24px</text>
+<rect x="955" y="360" width="70" height="70" rx="35" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="990" y="452" class="code-xs" text-anchor="middle">$radius-full</text>
+<text x="990" y="468" class="xs" text-anchor="middle">9999px → pill / circle</text>
+<text x="500" y="522" class="sub" text-anchor="end">Pick a step on the scale, never invent a magic number:</text>
+<text x="512" y="522" class="code-sm" text-anchor="start" xml:space="preserve"><tspan style="fill:#3fa874">gap: $space-sm; ✓</tspan><tspan>     </tspan><tspan style="fill:#e04848">gap: 7px; ✗</tspan></text>
+</svg>

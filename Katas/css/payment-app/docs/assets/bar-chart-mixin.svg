@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" width="1100" height="500" role="img" aria-labelledby="title">
+<title id="title">bar-chart(): a Sass list becomes nth-child heights in a flex row</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+<rect width="1100" height="500" rx="16" fill="#ffffff"/>
+<text x="30" y="40" class="title" text-anchor="start">1 · data + call</text>
+<text x="440" y="40" class="title" text-anchor="start">2 · compiled (loop unrolled)</text>
+<text x="790" y="40" class="title" text-anchor="start">3 · rendered</text>
+<rect x="30" y="60" width="384" height="138" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="46" y="84" class="xs" text-anchor="start">components/_phone-view-third.scss</text>
+<text x="46" y="106" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#1f8a99">$-stress-bars</tspan><tspan>: (55%, 50%, 62%, 88%, 60%, 45%);</tspan></text>
+<text x="46" y="124" class="code-xs" text-anchor="start" xml:space="preserve"><tspan></tspan></text>
+<text x="46" y="142" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">&amp;--stress .stats-card-chart</tspan><tspan> {</tspan></text>
+<text x="46" y="160" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#8a5cd1">@include</tspan><tspan> bar-chart(</tspan><tspan style="fill:#1f8a99">$-stress-bars</tspan><tspan>, 4px, $radius-md);</tspan></text>
+<text x="46" y="178" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<rect x="30" y="220" width="384" height="228" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="46" y="244" class="xs" text-anchor="start">abstracts/_mixins.scss</text>
+<text x="46" y="266" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">@mixin</tspan><tspan> bar-chart($heights, $gap: 3px, …) {</tspan></text>
+<text x="46" y="284" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  display: flex;  align-items: flex-end;</tspan></text>
+<text x="46" y="302" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  gap: $gap;</tspan></text>
+<text x="46" y="320" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  &gt; * { flex: 1; border-radius: …; }</tspan></text>
+<text x="46" y="338" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#8a5cd1">@for</tspan><tspan> $i </tspan><tspan style="fill:#8a5cd1">from</tspan><tspan> 1 </tspan><tspan style="fill:#8a5cd1">through</tspan><tspan> list.length($heights) {</tspan></text>
+<text x="46" y="356" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>    &gt; :nth-child(#{$i}) {</tspan></text>
+<text x="46" y="374" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>      height: list.nth($heights, $i);</tspan></text>
+<text x="46" y="392" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>    }</tspan></text>
+<text x="46" y="410" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  }</tspan></text>
+<text x="46" y="428" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<rect x="440" y="60" width="310" height="264" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="456" y="84" class="xs" text-anchor="start">main.css (selectors shortened)</text>
+<text x="456" y="106" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.chart</tspan><tspan> {</tspan></text>
+<text x="456" y="124" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  display: flex;</tspan></text>
+<text x="456" y="142" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  align-items: flex-end;</tspan></text>
+<text x="456" y="160" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  gap: 4px;</tspan></text>
+<text x="456" y="178" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<text x="456" y="196" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.chart &gt; *</tspan><tspan> { flex: 1; … }</tspan></text>
+<text x="456" y="214" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.chart &gt; :nth-child(1)</tspan><tspan> { height: </tspan><tspan style="fill:#1f8a99">55%</tspan><tspan>; }</tspan></text>
+<text x="456" y="232" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.chart &gt; :nth-child(2)</tspan><tspan> { height: </tspan><tspan style="fill:#1f8a99">50%</tspan><tspan>; }</tspan></text>
+<text x="456" y="250" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.chart &gt; :nth-child(3)</tspan><tspan> { height: </tspan><tspan style="fill:#1f8a99">62%</tspan><tspan>; }</tspan></text>
+<text x="456" y="268" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.chart &gt; :nth-child(4)</tspan><tspan> { height: </tspan><tspan style="fill:#1f8a99">88%</tspan><tspan>; }</tspan></text>
+<text x="456" y="286" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.chart &gt; :nth-child(5)</tspan><tspan> { height: </tspan><tspan style="fill:#1f8a99">60%</tspan><tspan>; }</tspan></text>
+<text x="456" y="304" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.chart &gt; :nth-child(6)</tspan><tspan> { height: </tspan><tspan style="fill:#1f8a99">45%</tspan><tspan>; }</tspan></text>
+<line x1="418" y1="140" x2="436" y2="140" stroke="#8a8a8a" stroke-width="1.8" marker-end="url(#m8a8a8a)"/>
+<line x1="754" y1="200" x2="786" y2="200" stroke="#8a8a8a" stroke-width="1.8" marker-end="url(#m8a8a8a)"/>
+<rect x="790" y="60" width="280" height="290" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<line x1="800" y1="90" x2="1060" y2="90" stroke="#9a9a9a" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="1060" y="82" class="xs" text-anchor="end">100% of the chart height</text>
+<rect x="806.0" y="184.5" width="34.67" height="115.5" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="823.335" y="176.5" class="xs" text-anchor="middle">55%</text>
+<text x="823.335" y="318" class="code-xs" text-anchor="middle">1</text>
+<rect x="848.67" y="195.0" width="34.67" height="105.0" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="866.005" y="187.0" class="xs" text-anchor="middle">50%</text>
+<text x="866.005" y="318" class="code-xs" text-anchor="middle">2</text>
+<rect x="891.34" y="169.8" width="34.67" height="130.2" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="908.6750000000001" y="161.8" class="xs" text-anchor="middle">62%</text>
+<text x="908.6750000000001" y="318" class="code-xs" text-anchor="middle">3</text>
+<rect x="934.01" y="115.19999999999999" width="34.67" height="184.8" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="951.345" y="107.19999999999999" class="xs" text-anchor="middle">88%</text>
+<text x="951.345" y="318" class="code-xs" text-anchor="middle">4</text>
+<rect x="976.6800000000001" y="174.0" width="34.67" height="126.0" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="994.0150000000001" y="166.0" class="xs" text-anchor="middle">60%</text>
+<text x="994.0150000000001" y="318" class="code-xs" text-anchor="middle">5</text>
+<rect x="1019.35" y="205.5" width="34.67" height="94.5" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="1036.685" y="197.5" class="xs" text-anchor="middle">45%</text>
+<text x="1036.685" y="318" class="code-xs" text-anchor="middle">6</text>
+<line x1="800" y1="300" x2="1060" y2="300" stroke="#1f1f1f" stroke-width="1.6"/>
+<text x="930" y="340" class="code-2xs" text-anchor="middle">:nth-child(n)</text>
+<text x="790" y="384" class="sm" text-anchor="start">flex: 1 → every bar gets an equal width</text>
+<text x="790" y="406" class="sm" text-anchor="start">gap: 4px → the gutters between bars</text>
+<text x="790" y="428" class="sm" text-anchor="start">align-items: flex-end → bars grow from the bottom</text>
+<text x="790" y="450" class="sm" text-anchor="start">change the list → the chart changes, no HTML edit</text>
+</svg>

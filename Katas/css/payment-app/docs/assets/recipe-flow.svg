@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 680" width="1100" height="680" role="img" aria-labelledby="title">
+<title id="title">The recipe: from mockup to SCSS in ten steps</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+<rect width="1100" height="680" rx="16" fill="#ffffff"/>
+<text x="40" y="40" class="title" text-anchor="start">The recipe: from mockup to SCSS in 10 steps</text>
+<rect x="40" y="64" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="41" y="74" width="5" height="76" rx="2.5" fill="#3b74d4"/>
+<circle cx="78" cy="96" r="16" fill="#3b74d4" stroke="#3b74d4" stroke-width="0"/>
+<text x="78" y="101" class="t13" text-anchor="middle" style="fill:#fff">1</text>
+<text x="106" y="101" class="t15" text-anchor="start">Squint at the mockup</text>
+<text x="106" y="124" class="sm" text-anchor="start">blur your eyes: find the canvas and its big regions</text>
+<text x="106" y="146" class="code-2xs" text-anchor="start" style="fill:#3b74d4">→ a sketch, no code yet</text>
+<line x1="285" y1="162" x2="285" y2="174" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<rect x="40" y="176" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="41" y="186" width="5" height="76" rx="2.5" fill="#3b74d4"/>
+<circle cx="78" cy="208" r="16" fill="#3b74d4" stroke="#3b74d4" stroke-width="0"/>
+<text x="78" y="213" class="t13" text-anchor="middle" style="fill:#fff">2</text>
+<text x="106" y="213" class="t15" text-anchor="start">Draw the box tree</text>
+<text x="106" y="236" class="sm" text-anchor="start">canvas → regions → blocks → elements</text>
+<text x="106" y="258" class="code-2xs" text-anchor="start" style="fill:#3b74d4">→ paper or a notes file</text>
+<line x1="285" y1="274" x2="285" y2="286" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<rect x="40" y="288" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="41" y="298" width="5" height="76" rx="2.5" fill="#3b74d4"/>
+<circle cx="78" cy="320" r="16" fill="#3b74d4" stroke="#3b74d4" stroke-width="0"/>
+<text x="78" y="325" class="t13" text-anchor="middle" style="fill:#fff">3</text>
+<text x="106" y="325" class="t15" text-anchor="start">Ask two questions per box</text>
+<text x="106" y="348" class="sm" text-anchor="start">1D or 2D? content-out or layout-in? → flex or grid</text>
+<text x="106" y="370" class="code-2xs" text-anchor="start" style="fill:#3b74d4">→ mark every box F or G</text>
+<line x1="285" y1="386" x2="285" y2="398" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<rect x="40" y="400" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="41" y="410" width="5" height="76" rx="2.5" fill="#cf9a00"/>
+<circle cx="78" cy="432" r="16" fill="#cf9a00" stroke="#cf9a00" stroke-width="0"/>
+<text x="78" y="437" class="t13" text-anchor="middle" style="fill:#fff">4</text>
+<text x="106" y="437" class="t15" text-anchor="start">Extract the tokens</text>
+<text x="106" y="460" class="sm" text-anchor="start">colors, spaces, radii, font sizes, fixed sizes</text>
+<text x="106" y="482" class="code-2xs" text-anchor="start" style="fill:#cf9a00">→ abstracts/_variables.scss</text>
+<line x1="285" y1="498" x2="285" y2="510" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<rect x="40" y="512" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="41" y="522" width="5" height="76" rx="2.5" fill="#cf9a00"/>
+<circle cx="78" cy="544" r="16" fill="#cf9a00" stroke="#cf9a00" stroke-width="0"/>
+<text x="78" y="549" class="t13" text-anchor="middle" style="fill:#fff">5</text>
+<text x="106" y="549" class="t15" text-anchor="start">Name the boxes</text>
+<text x="106" y="572" class="sm" text-anchor="start">l- for placement &amp; flow · c- for skin &amp; content</text>
+<text x="106" y="594" class="code-2xs" text-anchor="start" style="fill:#cf9a00">→ class names in index.html</text>
+<rect x="570" y="64" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="571" y="74" width="5" height="76" rx="2.5" fill="#3fa874"/>
+<circle cx="608" cy="96" r="16" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="608" y="101" class="t13" text-anchor="middle" style="fill:#fff">6</text>
+<text x="636" y="101" class="t15" text-anchor="start">Build the outer grid</text>
+<text x="636" y="124" class="sm" text-anchor="start">named areas first, then one template per breakpoint</text>
+<text x="636" y="146" class="code-2xs" text-anchor="start" style="fill:#3fa874">→ layout/_global-wrapper.scss</text>
+<line x1="815" y1="162" x2="815" y2="174" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<rect x="570" y="176" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="571" y="186" width="5" height="76" rx="2.5" fill="#3fa874"/>
+<circle cx="608" cy="208" r="16" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="608" y="213" class="t13" text-anchor="middle" style="fill:#fff">7</text>
+<text x="636" y="213" class="t15" text-anchor="start">Build the l- flows</text>
+<text x="636" y="236" class="sm" text-anchor="start">flex columns, gaps, the grid-area of each region</text>
+<text x="636" y="258" class="code-2xs" text-anchor="start" style="fill:#3fa874">→ layout/_phone-view.scss</text>
+<line x1="815" y1="274" x2="815" y2="286" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<rect x="570" y="288" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="571" y="298" width="5" height="76" rx="2.5" fill="#3fa874"/>
+<circle cx="608" cy="320" r="16" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="608" y="325" class="t13" text-anchor="middle" style="fill:#fff">8</text>
+<text x="636" y="325" class="t15" text-anchor="start">Skin the c- components</text>
+<text x="636" y="348" class="sm" text-anchor="start">padding, colors, radii; nest &amp; .part internals</text>
+<text x="636" y="370" class="code-2xs" text-anchor="start" style="fill:#3fa874">→ components/_*.scss</text>
+<line x1="815" y1="386" x2="815" y2="398" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<rect x="570" y="400" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="571" y="410" width="5" height="76" rx="2.5" fill="#8a5cd1"/>
+<circle cx="608" cy="432" r="16" fill="#8a5cd1" stroke="#8a5cd1" stroke-width="0"/>
+<text x="608" y="437" class="t13" text-anchor="middle" style="fill:#fff">9</text>
+<text x="636" y="437" class="t15" text-anchor="start">Add states &amp; responsive</text>
+<text x="636" y="460" class="sm" text-anchor="start">:hover :focus-visible :has(:checked) + bp mixins</text>
+<text x="636" y="482" class="code-2xs" text-anchor="start" style="fill:#8a5cd1">→ same files, still no JS</text>
+<line x1="815" y1="498" x2="815" y2="510" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#m8a8a8a)"/>
+<rect x="570" y="512" width="490" height="96" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="571" y="522" width="5" height="76" rx="2.5" fill="#8a5cd1"/>
+<circle cx="608" cy="544" r="16" fill="#8a5cd1" stroke="#8a5cd1" stroke-width="0"/>
+<text x="608" y="549" class="t13" text-anchor="middle" style="fill:#fff">10</text>
+<text x="636" y="549" class="t15" text-anchor="start">Audit</text>
+<text x="636" y="572" class="sm" text-anchor="start">specificity graph, no margin on c- roots, a11y, build</text>
+<text x="636" y="594" class="code-2xs" text-anchor="start" style="fill:#8a5cd1">→ npx vite build ✓</text>
+<path d="M530 560 H550 V112 H566" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="330" y="646" width="14" height="14" rx="3" fill="#3b74d4"/>
+<text x="350" y="658" class="xs" text-anchor="start">SEE</text>
+<rect x="450" y="646" width="14" height="14" rx="3" fill="#cf9a00"/>
+<text x="470" y="658" class="xs" text-anchor="start">PREPARE</text>
+<rect x="570" y="646" width="14" height="14" rx="3" fill="#3fa874"/>
+<text x="590" y="658" class="xs" text-anchor="start">BUILD</text>
+<rect x="690" y="646" width="14" height="14" rx="3" fill="#8a5cd1"/>
+<text x="710" y="658" class="xs" text-anchor="start">POLISH</text>
+</svg>

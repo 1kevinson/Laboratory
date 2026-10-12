@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 620" width="1140" height="620" role="img" aria-labelledby="title">
+<title id="title">Theming: Sass tokens to CSS custom properties, switched by the OS or a no-JS toggle</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m1f1f1f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker><marker id="m1f1f1fs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker></defs>
+<rect width="1140" height="620" rx="16" fill="#ffffff"/>
+<text x="20" y="44" class="t15" text-anchor="start">1 · Sass tokens</text>
+<text x="20" y="64" class="sm" text-anchor="start">compile time · frozen</text>
+<rect x="20" y="80" width="262" height="80" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="36" y="104" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#1f8a99">$color-surface</tspan><tspan>: #ffffff;</tspan></text>
+<text x="36" y="122" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#1f8a99">$color-text</tspan><tspan>: #1d1d1f;</tspan></text>
+<text x="36" y="140" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#1f8a99">$color-ink</tspan><tspan>: #1b2a33;</tspan></text>
+<line x1="284" y1="120" x2="298" y2="120" stroke="#1f1f1f" stroke-width="1.6" marker-end="url(#m1f1f1f)"/>
+<text x="300" y="44" class="t15" text-anchor="start">2 · Bridge to custom props</text>
+<text x="300" y="64" class="sm" text-anchor="start">themes/_default.scss</text>
+<rect x="300" y="80" width="262" height="98" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="316" y="104" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">:root</tspan><tspan> {</tspan></text>
+<text x="316" y="122" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#8a5cd1">--surface</tspan><tspan>: #{$color-surface};</tspan></text>
+<text x="316" y="140" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#8a5cd1">--text</tspan><tspan>: #{$color-text};</tspan></text>
+<text x="316" y="158" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<line x1="564" y1="120" x2="578" y2="120" stroke="#1f1f1f" stroke-width="1.6" marker-end="url(#m1f1f1f)"/>
+<text x="580" y="44" class="t15" text-anchor="start">3 · Switch at runtime</text>
+<text x="580" y="64" class="sm" text-anchor="start">OS setting or no-JS toggle</text>
+<rect x="580" y="80" width="262" height="134" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="596" y="104" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">@media</tspan><tspan> (prefers-color-scheme: dark) {</tspan></text>
+<text x="596" y="122" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#3b74d4">:root</tspan><tspan> { </tspan><tspan style="fill:#8a5cd1">--surface</tspan><tspan>: #{$color-ink}; }</tspan></text>
+<text x="596" y="140" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<text x="596" y="158" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">:root:has(#theme-dark:checked)</tspan><tspan> {</tspan></text>
+<text x="596" y="176" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#8a5cd1">--surface</tspan><tspan>: #{$color-ink};</tspan></text>
+<text x="596" y="194" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<line x1="844" y1="120" x2="858" y2="120" stroke="#1f1f1f" stroke-width="1.6" marker-end="url(#m1f1f1f)"/>
+<text x="860" y="44" class="t15" text-anchor="start">4 · Components read vars</text>
+<text x="860" y="64" class="sm" text-anchor="start">components/*.scss</text>
+<rect x="860" y="80" width="262" height="98" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="876" y="104" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.c-card</tspan><tspan> {</tspan></text>
+<text x="876" y="122" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>  background: </tspan><tspan style="fill:#8a5cd1">var(--surface)</tspan><tspan>;</tspan></text>
+<text x="876" y="140" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>  color: </tspan><tspan style="fill:#8a5cd1">var(--text)</tspan><tspan>;</tspan></text>
+<text x="876" y="158" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<rect x="20" y="236" width="1100" height="40" rx="10" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.4"/>
+<text x="570" y="261" class="sm" text-anchor="middle">Sass variables are gone after compilation. Custom properties live in the browser, inherit, and can change at runtime.</text>
+<text x="20" y="316" class="t15" text-anchor="start">A theme toggle with zero JavaScript</text>
+<rect x="20" y="330" width="520" height="120" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="36" y="354" class="xs" text-anchor="start">the checkbox holds the state, :has() reads it</text>
+<text x="36" y="376" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>&lt;input type=&quot;checkbox&quot; id=&quot;theme-dark&quot; class=&quot;u-sr-only&quot;&gt;</tspan></text>
+<text x="36" y="394" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>&lt;label for=&quot;theme-dark&quot;&gt;Dark mode&lt;/label&gt;</tspan></text>
+<text x="36" y="412" class="code-xs" text-anchor="start" xml:space="preserve"><tspan></tspan></text>
+<text x="36" y="430" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">:root:has(#theme-dark:checked)</tspan><tspan> { … }</tspan></text>
+<rect x="20" y="476" width="520" height="110" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.4"/>
+<rect x="50" y="506" width="52" height="28" rx="14" fill="#d5d5d5" stroke="#bdbdbd" stroke-width="0"/>
+<circle cx="62" cy="520" r="10" fill="#ffffff" stroke="#c9c9c9" stroke-width="0"/>
+<text x="114" y="525" class="sm" text-anchor="start">unchecked → light</text>
+<rect x="300" y="506" width="52" height="28" rx="14" fill="#1b2a33" stroke="#1f2a33" stroke-width="0"/>
+<circle cx="340" cy="520" r="10" fill="#ffffff" stroke="#c9c9c9" stroke-width="0"/>
+<text x="364" y="525" class="sm" text-anchor="start">checked → dark</text>
+<text x="280" y="566" class="xs" text-anchor="middle">state does not survive a reload without JS: pair it with prefers-color-scheme</text>
+<rect x="580" y="330" width="260" height="256" rx="18" fill="#d9eeee" stroke="#bdbdbd" stroke-width="1.4"/>
+<rect x="600" y="360" width="220" height="120" rx="16" fill="#ffffff" stroke="#bdbdbd" stroke-width="1"/>
+<text x="620" y="398" style="font:700 16px -apple-system, Segoe UI, Inter, sans-serif;fill:#1d1d1f">Mind Detox</text>
+<text x="620" y="422" style="font:400 12px -apple-system, Segoe UI, Inter, sans-serif;fill:#6e6e73">Turn off all screens</text>
+<rect x="620" y="440" width="70" height="22" rx="11" fill="#f3d2f1"/>
+<text x="710" y="520" class="code-xs" text-anchor="middle">.c-card · light</text>
+<text x="710" y="544" class="xs" text-anchor="middle">same CSS, other values</text>
+<rect x="860" y="330" width="260" height="256" rx="18" fill="#0f1a20" stroke="#bdbdbd" stroke-width="1.4"/>
+<rect x="880" y="360" width="220" height="120" rx="16" fill="#1b2a33" stroke="#bdbdbd" stroke-width="1"/>
+<text x="900" y="398" style="font:700 16px -apple-system, Segoe UI, Inter, sans-serif;fill:#ffffff">Mind Detox</text>
+<text x="900" y="422" style="font:400 12px -apple-system, Segoe UI, Inter, sans-serif;fill:#a9b4bb">Turn off all screens</text>
+<rect x="900" y="440" width="70" height="22" rx="11" fill="#6f4fc2"/>
+<text x="990" y="520" class="code-xs" text-anchor="middle" style="fill:#e6edf0">.c-card · dark</text>
+<text x="990" y="544" class="xs" text-anchor="middle" style="fill:#a9b4bb">same CSS, other values</text>
+</svg>

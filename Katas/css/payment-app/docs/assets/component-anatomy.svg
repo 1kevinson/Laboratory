@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" width="1100" height="600" role="img" aria-labelledby="title">
+<title id="title">Anatomy of a component: block, element, modifier and state</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style></defs>
+<rect width="1100" height="600" rx="16" fill="#ffffff"/>
+<text x="40" y="40" class="title" text-anchor="start">Anatomy of a component</text>
+<text x="40" y="60" class="sm" text-anchor="start">.things-item from screen 2, drawn at 2×</text>
+<text x="60" y="88" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">grid-template-columns</tspan><tspan>: auto 1fr auto;</tspan></text>
+<text x="60" y="104" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">grid-template-areas</tspan><tspan>: &quot;icon title play&quot; &quot;icon text play&quot;;</tspan></text>
+<rect x="60" y="118" width="560" height="150" rx="36" fill="#ffffff" stroke="#c9c9c9" stroke-width="2"/>
+<line x1="172" y1="126" x2="172" y2="260" stroke="#b5b5b5" stroke-width="1.2" stroke-dasharray="4 4"/>
+<line x1="188" y1="126" x2="188" y2="260" stroke="#b5b5b5" stroke-width="1.2" stroke-dasharray="4 4"/>
+<line x1="528" y1="126" x2="528" y2="260" stroke="#b5b5b5" stroke-width="1.2" stroke-dasharray="4 4"/>
+<line x1="544" y1="126" x2="544" y2="260" stroke="#b5b5b5" stroke-width="1.2" stroke-dasharray="4 4"/>
+<line x1="70" y1="193" x2="610" y2="193" stroke="#b5b5b5" stroke-width="1.2" stroke-dasharray="4 4"/>
+<rect x="79" y="148" width="90" height="90" rx="24" fill="#d9d6f6"/>
+<text x="124" y="207" text-anchor="middle" style="font:40px -apple-system, Segoe UI, Inter, sans-serif">🧠</text>
+<text x="192" y="184" class="t15" text-anchor="start">Mind Detox</text>
+<text x="192" y="216" class="sm" text-anchor="start">Turn off all screens for 10 minutes</text>
+<text x="524" y="140" class="code-2xs" text-anchor="end" style="fill:#8a8a8a">title</text>
+<text x="524" y="256" class="code-2xs" text-anchor="end" style="fill:#8a8a8a">text</text>
+<circle cx="574" cy="193" r="22" fill="none" stroke="#1f1f1f" stroke-width="2"/>
+<path d="M567 182 L584 193 L567 204 Z" fill="#1f1f1f" stroke="#1f1f1f" stroke-width="1"/>
+<circle cx="40" cy="130" r="11" fill="#3b74d4" stroke="#3b74d4" stroke-width="0"/>
+<text x="40" y="134" class="t13" text-anchor="middle" style="fill:#fff">1</text>
+<path d="M51 130 H62" fill="none" stroke="#3b74d4" stroke-width="1.6"/>
+<circle cx="84" cy="152" r="10" fill="#e0703f" stroke="#e0703f" stroke-width="0"/>
+<text x="84" y="156" class="t13" text-anchor="middle" style="fill:#fff">3</text>
+<circle cx="602" cy="166" r="10" fill="#8a5cd1" stroke="#8a5cd1" stroke-width="0"/>
+<text x="602" y="170" class="t13" text-anchor="middle" style="fill:#fff">4</text>
+<line x1="124" y1="270" x2="124" y2="300" stroke="#3fa874" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="124" cy="312" r="10" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="124" y="316" class="t13" text-anchor="middle" style="fill:#fff">2</text>
+<text x="124" y="342" class="code-xs" text-anchor="middle" style="fill:#3fa874">.things-item-icon</text>
+<line x1="330" y1="226" x2="330" y2="300" stroke="#3fa874" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="330" cy="312" r="10" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="330" y="316" class="t13" text-anchor="middle" style="fill:#fff">2</text>
+<text x="330" y="342" class="code-xs" text-anchor="middle" style="fill:#3fa874">.things-item-title / -text</text>
+<line x1="574" y1="270" x2="574" y2="300" stroke="#3fa874" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="574" cy="312" r="10" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="574" y="316" class="t13" text-anchor="middle" style="fill:#fff">2</text>
+<text x="574" y="342" class="code-xs" text-anchor="middle" style="fill:#3fa874">.things-item-play</text>
+<rect x="660" y="84" width="420" height="72" rx="12" fill="#ffffff" stroke="#3b74d4" stroke-width="1.5"/>
+<circle cx="684" cy="108" r="11" fill="#3b74d4" stroke="#3b74d4" stroke-width="0"/>
+<text x="684" y="112" class="t13" text-anchor="middle" style="fill:#fff">1</text>
+<text x="704" y="113" class="t13" text-anchor="start" style="fill:#3b74d4">BLOCK</text>
+<text x="704" y="132" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.things-item</tspan></text>
+<text x="704" y="148" class="xs" text-anchor="start">the root: skin, padding, grid of its parts</text>
+<rect x="660" y="166" width="420" height="72" rx="12" fill="#ffffff" stroke="#3fa874" stroke-width="1.5"/>
+<circle cx="684" cy="190" r="11" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="684" y="194" class="t13" text-anchor="middle" style="fill:#fff">2</text>
+<text x="704" y="195" class="t13" text-anchor="start" style="fill:#3fa874">ELEMENT</text>
+<text x="704" y="214" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3fa874">.things-item-icon · -title · -text · -play</tspan></text>
+<text x="704" y="230" class="xs" text-anchor="start">a part that only lives inside its block</text>
+<rect x="660" y="248" width="420" height="72" rx="12" fill="#ffffff" stroke="#e0703f" stroke-width="1.5"/>
+<circle cx="684" cy="272" r="11" fill="#e0703f" stroke="#e0703f" stroke-width="0"/>
+<text x="684" y="276" class="t13" text-anchor="middle" style="fill:#fff">3</text>
+<text x="704" y="277" class="t13" text-anchor="start" style="fill:#e0703f">MODIFIER</text>
+<text x="704" y="296" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#e0703f">.things-item--detox</tspan></text>
+<text x="704" y="312" class="xs" text-anchor="start">a variant, set next to the block class</text>
+<rect x="660" y="330" width="420" height="72" rx="12" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.5"/>
+<circle cx="684" cy="354" r="11" fill="#8a5cd1" stroke="#8a5cd1" stroke-width="0"/>
+<text x="684" y="358" class="t13" text-anchor="middle" style="fill:#fff">4</text>
+<text x="704" y="359" class="t13" text-anchor="start" style="fill:#8a5cd1">STATE</text>
+<text x="704" y="378" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">:hover · :focus-visible · [aria-current] · :has()</tspan></text>
+<text x="704" y="394" class="xs" text-anchor="start">a temporary condition read from the DOM</text>
+<rect x="40" y="424" width="520" height="156" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="56" y="448" class="xs" text-anchor="start">index.html</text>
+<text x="56" y="470" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>&lt;li class=&quot;</tspan><tspan style="fill:#3b74d4">things-item</tspan><tspan> </tspan><tspan style="fill:#e0703f">things-item--detox</tspan><tspan>&quot;&gt;</tspan></text>
+<text x="56" y="488" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  &lt;span class=&quot;</tspan><tspan style="fill:#3fa874">things-item-icon</tspan><tspan>&quot;&gt;🧠&lt;/span&gt;</tspan></text>
+<text x="56" y="506" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  &lt;h4 class=&quot;</tspan><tspan style="fill:#3fa874">things-item-title</tspan><tspan>&quot;&gt;Mind Detox&lt;/h4&gt;</tspan></text>
+<text x="56" y="524" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  &lt;p class=&quot;</tspan><tspan style="fill:#3fa874">things-item-text</tspan><tspan>&quot;&gt;Turn off all screens…&lt;/p&gt;</tspan></text>
+<text x="56" y="542" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  &lt;button class=&quot;</tspan><tspan style="fill:#3fa874">things-item-play</tspan><tspan>&quot; aria-label=&quot;…&quot;&gt;…&lt;/button&gt;</tspan></text>
+<text x="56" y="560" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>&lt;/li&gt;</tspan></text>
+<rect x="580" y="424" width="500" height="156" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="596" y="448" class="xs" text-anchor="start">components/_phone-view-second.scss (simplified)</text>
+<text x="596" y="470" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">&amp; .things-item</tspan><tspan> {                    </tspan><tspan style="fill:#8a8a8a">// 1 block</tspan></text>
+<text x="596" y="488" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  display: grid;  grid-template-areas: …;</tspan></text>
+<text x="596" y="506" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#3fa874">&amp;-icon</tspan><tspan> { grid-area: icon; }        </tspan><tspan style="fill:#8a8a8a">// 2 element</tspan></text>
+<text x="596" y="524" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#e0703f">&amp;--detox .things-item-icon</tspan><tspan> { … }  </tspan><tspan style="fill:#8a8a8a">// 3 modifier</tspan></text>
+<text x="596" y="542" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#3fa874">&amp;-play</tspan><tspan> { </tspan><tspan style="fill:#8a5cd1">&amp;:hover</tspan><tspan> { … } }         </tspan><tspan style="fill:#8a8a8a">// 4 state</tspan></text>
+<text x="596" y="560" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+</svg>

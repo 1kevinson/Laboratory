@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 440" width="1100" height="440" role="img" aria-labelledby="title">
+<title id="title">pages/: page-scoped overrides hooked on a body class</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+<rect width="1100" height="440" rx="16" fill="#ffffff"/>
+<text x="40" y="40" class="title" text-anchor="start">pages/ = rules that exist on one page only</text>
+<rect x="40" y="64" width="300" height="250" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.6"/>
+<rect x="41" y="65" width="298" height="26" rx="11" fill="#f0f0f0"/>
+<circle cx="56" cy="78" r="4" fill="#d0d0d0" stroke="#d0d0d0" stroke-width="0"/>
+<circle cx="70" cy="78" r="4" fill="#d0d0d0" stroke="#d0d0d0" stroke-width="0"/>
+<circle cx="84" cy="78" r="4" fill="#d0d0d0" stroke="#d0d0d0" stroke-width="0"/>
+<text x="190" y="82" class="xs" text-anchor="middle">Home</text>
+<text x="54" y="114" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#d4589f">&lt;body class=&quot;p-home&quot;&gt;</tspan></text>
+<rect x="54" y="128" width="272" height="78" rx="12" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<rect x="70" y="142" width="240" height="44" rx="6" fill="none" stroke="#d4589f" stroke-width="1.2" stroke-dasharray="4 3"/>
+<rect x="78" y="152" width="150" height="9" rx="4" fill="#c9b8ef"/>
+<rect x="78" y="170" width="100" height="7" rx="3" fill="#ddd2f6"/>
+<text x="320" y="198" class="code-2xs" text-anchor="end" style="fill:#8a8a8a">.c-card</text>
+<rect x="54" y="216" width="272" height="78" rx="12" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<rect x="70" y="230" width="240" height="44" rx="6" fill="none" stroke="#d4589f" stroke-width="1.2" stroke-dasharray="4 3"/>
+<rect x="78" y="240" width="150" height="9" rx="4" fill="#c9b8ef"/>
+<rect x="78" y="258" width="100" height="7" rx="3" fill="#ddd2f6"/>
+<text x="320" y="286" class="code-2xs" text-anchor="end" style="fill:#8a8a8a">.c-card</text>
+<rect x="360" y="64" width="300" height="250" rx="12" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.6"/>
+<rect x="361" y="65" width="298" height="26" rx="11" fill="#f0f0f0"/>
+<circle cx="376" cy="78" r="4" fill="#d0d0d0" stroke="#d0d0d0" stroke-width="0"/>
+<circle cx="390" cy="78" r="4" fill="#d0d0d0" stroke="#d0d0d0" stroke-width="0"/>
+<circle cx="404" cy="78" r="4" fill="#d0d0d0" stroke="#d0d0d0" stroke-width="0"/>
+<text x="510" y="82" class="xs" text-anchor="middle">Settings</text>
+<text x="374" y="114" class="code-2xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#5c5c5c">&lt;body class=&quot;p-settings&quot;&gt;</tspan></text>
+<rect x="374" y="128" width="272" height="78" rx="12" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<rect x="386" y="144" width="150" height="9" rx="4" fill="#c9b8ef"/>
+<rect x="386" y="162" width="100" height="7" rx="3" fill="#ddd2f6"/>
+<text x="640" y="198" class="code-2xs" text-anchor="end" style="fill:#8a8a8a">.c-card</text>
+<rect x="374" y="216" width="272" height="78" rx="12" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<rect x="386" y="232" width="150" height="9" rx="4" fill="#c9b8ef"/>
+<rect x="386" y="250" width="100" height="7" rx="3" fill="#ddd2f6"/>
+<text x="640" y="286" class="code-2xs" text-anchor="end" style="fill:#8a8a8a">.c-card</text>
+<text x="190" y="340" class="sm" text-anchor="middle">same .c-card, more padding (dashed) on home only</text>
+<text x="510" y="340" class="sm" text-anchor="middle">untouched everywhere else</text>
+<rect x="700" y="64" width="370" height="102" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="716" y="88" class="xs" text-anchor="start">pages/_home.scss</text>
+<text x="716" y="110" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#d4589f">.p-home</tspan><tspan> {</tspan></text>
+<text x="716" y="128" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#3b74d4">.c-card</tspan><tspan> { padding: $space-lg; }</tspan></text>
+<text x="716" y="146" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<text x="700" y="194" class="t15" text-anchor="start">Where does this rule go?</text>
+<text x="700" y="232" class="sm" text-anchor="start">only on one page</text>
+<line x1="864" y1="227" x2="890" y2="227" stroke="#8a8a8a" stroke-width="1.4" marker-end="url(#m8a8a8a)"/>
+<rect x="896" y="210" width="174" height="30" rx="15" fill="#fbe4f1" stroke="#d4589f" stroke-width="1.5"/>
+<text x="983" y="230" class="code-2xs" text-anchor="middle">pages/_&lt;page&gt;.scss</text>
+<text x="700" y="278" class="sm" text-anchor="start">same tweak on 2+ pages</text>
+<line x1="864" y1="273" x2="890" y2="273" stroke="#8a8a8a" stroke-width="1.4" marker-end="url(#m8a8a8a)"/>
+<rect x="896" y="256" width="174" height="30" rx="15" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.5"/>
+<text x="983" y="276" class="code-2xs" text-anchor="middle">a modifier .c-card--roomy</text>
+<text x="700" y="324" class="sm" text-anchor="start">it places or flows boxes</text>
+<line x1="864" y1="319" x2="890" y2="319" stroke="#8a8a8a" stroke-width="1.4" marker-end="url(#m8a8a8a)"/>
+<rect x="896" y="302" width="174" height="30" rx="15" fill="#e3ecf8" stroke="#3b74d4" stroke-width="1.5"/>
+<text x="983" y="322" class="code-2xs" text-anchor="middle">layout/  (l-)</text>
+<text x="700" y="370" class="sm" text-anchor="start">one property, one-off</text>
+<line x1="864" y1="365" x2="890" y2="365" stroke="#8a8a8a" stroke-width="1.4" marker-end="url(#m8a8a8a)"/>
+<rect x="896" y="348" width="174" height="30" rx="15" fill="#fde4e4" stroke="#e04848" stroke-width="1.5"/>
+<text x="983" y="368" class="code-2xs" text-anchor="middle">a utility .u-*</text>
+<text x="550" y="420" class="xs" text-anchor="middle">Proposal: prefix page hooks with p- so the four prefixes read l- · c- · p- · u-</text>
+</svg>

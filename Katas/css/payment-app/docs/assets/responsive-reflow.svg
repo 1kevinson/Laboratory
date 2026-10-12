@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" width="1100" height="540" role="img" aria-labelledby="title">
+<title id="title">One set of area names, three templates</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+<rect width="1100" height="540" rx="16" fill="#ffffff"/>
+<text x="190" y="40" class="h" text-anchor="middle">≥ 1280px</text>
+<text x="190" y="62" class="code-xs" text-anchor="middle" style="fill:#8a5cd1">base styles</text>
+<text x="190" y="82" class="sm" text-anchor="middle">3 columns</text>
+<rect x="60.0" y="100" width="34" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="100.0" y="100" width="56" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="162.0" y="100" width="56" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="224.0" y="100" width="56" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="286.0" y="100" width="34" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="60.0" y="127" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="100.0" y="127" width="56" height="104" rx="7" fill="#e1f2e9" stroke="#3fa874" stroke-width="2.2"/>
+<text x="128.0" y="183.0" class="code-2xs" text-anchor="middle">first</text>
+<rect x="162.0" y="127" width="56" height="104" rx="7" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2.2"/>
+<text x="190.0" y="183.0" class="code-2xs" text-anchor="middle">second</text>
+<rect x="224.0" y="127" width="56" height="104" rx="7" fill="#fbe8df" stroke="#e0703f" stroke-width="2.2"/>
+<text x="252.0" y="183.0" class="code-2xs" text-anchor="middle">third</text>
+<rect x="286.0" y="127" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="60.0" y="234" width="34" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="100.0" y="234" width="56" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="162.0" y="234" width="56" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="224.0" y="234" width="56" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="286.0" y="234" width="34" height="24" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="560" y="40" class="h" text-anchor="middle">&lt; 1280px</text>
+<text x="560" y="62" class="code-xs" text-anchor="middle" style="fill:#8a5cd1">@include desktop-first(laptop)</text>
+<text x="560" y="82" class="sm" text-anchor="middle">2 columns</text>
+<rect x="461.0" y="100" width="34" height="10" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="501.0" y="100" width="56" height="10" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="563.0" y="100" width="56" height="10" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="625.0" y="100" width="34" height="10" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="461.0" y="118" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="501.0" y="118" width="56" height="104" rx="7" fill="#e1f2e9" stroke="#3fa874" stroke-width="2.2"/>
+<text x="529.0" y="174.0" class="code-2xs" text-anchor="middle">first</text>
+<rect x="563.0" y="118" width="56" height="104" rx="7" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2.2"/>
+<text x="591.0" y="174.0" class="code-2xs" text-anchor="middle">second</text>
+<rect x="625.0" y="118" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="461.0" y="230" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="501.0" y="230" width="56" height="104" rx="7" fill="#fbe8df" stroke="#e0703f" stroke-width="2.2"/>
+<text x="529.0" y="286.0" class="code-2xs" text-anchor="middle">third</text>
+<rect x="563.0" y="230" width="56" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="625.0" y="230" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="461.0" y="342" width="34" height="10" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="501.0" y="342" width="56" height="10" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="563.0" y="342" width="56" height="10" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="625.0" y="342" width="34" height="10" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="920" y="40" class="h" text-anchor="middle">&lt; 768px</text>
+<text x="920" y="62" class="code-xs" text-anchor="middle" style="fill:#8a5cd1">@include desktop-first(tablet-portrait)</text>
+<text x="920" y="82" class="sm" text-anchor="middle">1 column</text>
+<rect x="854.0" y="100" width="34" height="6" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="892.0" y="100" width="56" height="6" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="952.0" y="100" width="34" height="6" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="854.0" y="114" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="892.0" y="114" width="56" height="104" rx="7" fill="#e1f2e9" stroke="#3fa874" stroke-width="2.2"/>
+<text x="920.0" y="170.0" class="code-2xs" text-anchor="middle">first</text>
+<rect x="952.0" y="114" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="854.0" y="226" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="892.0" y="226" width="56" height="104" rx="7" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2.2"/>
+<text x="920.0" y="282.0" class="code-2xs" text-anchor="middle">second</text>
+<rect x="952.0" y="226" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="854.0" y="338" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="892.0" y="338" width="56" height="104" rx="7" fill="#fbe8df" stroke="#e0703f" stroke-width="2.2"/>
+<text x="920.0" y="394.0" class="code-2xs" text-anchor="middle">third</text>
+<rect x="952.0" y="338" width="34" height="104" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="854.0" y="450" width="34" height="6" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="892.0" y="450" width="56" height="6" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="952.0" y="450" width="34" height="6" rx="3" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="345" y1="170" x2="445" y2="170" stroke="#8a8a8a" stroke-width="2" marker-end="url(#m8a8a8a)"/>
+<line x1="675" y1="170" x2="790" y2="170" stroke="#8a8a8a" stroke-width="2" marker-end="url(#m8a8a8a)"/>
+<text x="560" y="500" class="lbl" text-anchor="middle">Only .l-global-wrapper changes its template — the .l-phone-view-* classes keep the same grid-area names.</text>
+<text x="560" y="522" class="sm" text-anchor="middle">Responsive layout = re-drawing the map, never touching the components.</text>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="1100" height="560" role="img" aria-labelledby="title">
+<title id="title">Decoupling: the same component in three layouts, the same layout with three screens</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m3b74d4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3b74d4"/></marker><marker id="m3b74d4s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3b74d4"/></marker></defs>
+<rect width="1100" height="560" rx="16" fill="#ffffff"/>
+<text x="20" y="40" class="title" text-anchor="start">1 · Same component (.c-card), three layouts</text>
+<rect x="20" y="58" width="340" height="186" rx="14" fill="#f6f8fc" stroke="#3b74d4" stroke-width="1.6" stroke-dasharray="6 5"/>
+<text x="34" y="80" class="code-xs" text-anchor="start" style="fill:#3b74d4">.l-stack</text>
+<rect x="40" y="94" width="300" height="38" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="190.0" y="117.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="40" y="142" width="300" height="38" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="190.0" y="165.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="40" y="190" width="300" height="38" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="190.0" y="213.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="380" y="58" width="340" height="186" rx="14" fill="#f6f8fc" stroke="#3b74d4" stroke-width="1.6" stroke-dasharray="6 5"/>
+<text x="394" y="80" class="code-xs" text-anchor="start" style="fill:#3b74d4">.l-grid</text>
+<rect x="400.0" y="94" width="93.33333333333333" height="64" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="446.6666666666667" y="130.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="503.3333333333333" y="94" width="93.33333333333333" height="64" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="550.0" y="130.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="606.6666666666666" y="94" width="93.33333333333333" height="64" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="653.3333333333333" y="130.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="400.0" y="168" width="93.33333333333333" height="64" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="446.6666666666667" y="204.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="503.3333333333333" y="168" width="93.33333333333333" height="64" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="550.0" y="204.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="606.6666666666666" y="168" width="93.33333333333333" height="64" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="653.3333333333333" y="204.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="740" y="58" width="340" height="186" rx="14" fill="#f6f8fc" stroke="#3b74d4" stroke-width="1.6" stroke-dasharray="6 5"/>
+<text x="754" y="80" class="code-xs" text-anchor="start" style="fill:#3b74d4">.l-scroller</text>
+<clipPath id="dsc"><rect x="741" y="59" width="338" height="184" rx="14"/></clipPath><g clip-path="url(#dsc)">
+<rect x="760" y="98" width="108" height="124" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="814.0" y="164.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="880" y="98" width="108" height="124" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="934.0" y="164.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="1000" y="98" width="108" height="124" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="1054.0" y="164.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+<rect x="1120" y="98" width="108" height="124" rx="10" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="1174.0" y="164.0" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">c-card</text>
+</g>
+<line x1="940" y1="234" x2="860" y2="234" stroke="#3b74d4" stroke-width="1.4" marker-end="url(#m3b74d4)"/>
+<text x="550" y="270" class="sub" text-anchor="middle">The component&#x27;s CSS is identical in all three. Only the parent&#x27;s l- class changed.</text>
+<text x="20" y="314" class="title" text-anchor="start">2 · Same layout (.l-phone-view-*), three different screens</text>
+<rect x="105" y="330" width="170" height="170" rx="16" fill="#d9eeee" stroke="#1f8a99" stroke-width="2"/>
+<rect x="111" y="336" width="158" height="158" rx="10" fill="none" stroke="#3b74d4" stroke-width="1.3" stroke-dasharray="4 4"/>
+<rect x="117" y="340" width="146" height="16" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="117" y="362" width="70" height="34" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="193" y="362" width="70" height="34" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="117" y="402" width="146" height="44" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="117" y="454.0" width="102.19999999999999" height="6" rx="3" fill="#c9b8ef"/>
+<rect x="117" y="468" width="146" height="22" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<text x="93" y="422" class="xs" text-anchor="end">screen 1</text>
+<rect x="465" y="330" width="170" height="170" rx="16" fill="#d9eeee" stroke="#1f8a99" stroke-width="2"/>
+<rect x="471" y="336" width="158" height="158" rx="10" fill="none" stroke="#3b74d4" stroke-width="1.3" stroke-dasharray="4 4"/>
+<rect x="477" y="340" width="146" height="14" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="477" y="362.0" width="102.19999999999999" height="6" rx="3" fill="#c9b8ef"/>
+<rect x="477" y="376" width="146" height="30" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="477" y="412" width="146" height="14" rx="7.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="477" y="432" width="33" height="12" rx="6.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<rect x="515" y="432" width="33" height="12" rx="6.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<rect x="553" y="432" width="33" height="12" rx="6.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<rect x="591" y="432" width="33" height="12" rx="6.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<rect x="477" y="450" width="146" height="34" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<text x="453" y="422" class="xs" text-anchor="end">screen 2</text>
+<rect x="825" y="330" width="170" height="170" rx="16" fill="#d9eeee" stroke="#1f8a99" stroke-width="2"/>
+<rect x="831" y="336" width="158" height="158" rx="10" fill="none" stroke="#3b74d4" stroke-width="1.3" stroke-dasharray="4 4"/>
+<rect x="837" y="340" width="33" height="14" rx="7.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<rect x="875" y="340" width="33" height="14" rx="7.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<rect x="913" y="340" width="33" height="14" rx="7.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<rect x="951" y="340" width="33" height="14" rx="7.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<circle cx="851" cy="369.0" r="8.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<circle cx="881" cy="369.0" r="8.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<circle cx="911" cy="369.0" r="8.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<circle cx="941" cy="369.0" r="8.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<circle cx="971" cy="369.0" r="8.0" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.2"/>
+<rect x="837" y="384" width="146" height="28" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="837" y="418" width="146" height="28" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="837" y="452" width="70" height="38" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<rect x="913" y="452" width="70" height="38" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.3"/>
+<text x="813" y="422" class="xs" text-anchor="end">screen 3</text>
+<text x="550" y="528" class="sub" text-anchor="middle">Same flex column + gap for all three. Only the children (the c- components) changed.</text>
+<text x="550" y="550" class="xs" text-anchor="middle">Context-free test: drop a component anywhere, it still looks right. Its parent decides where and how big.</text>
+</svg>

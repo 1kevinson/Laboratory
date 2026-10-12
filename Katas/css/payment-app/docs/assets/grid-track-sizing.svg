@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 610" width="1060" height="610" role="img" aria-labelledby="title">
+<title id="title">How grid-template-columns sizes tracks</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+<rect width="1060" height="610" rx="16" fill="#ffffff"/>
+<text x="30" y="44" class="code" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">grid-template-columns</tspan><tspan>:</tspan></text>
+<line x1="410" y1="40" x2="1010" y2="40" stroke="#8a8a8a" stroke-width="1.4" marker-end="url(#m8a8a8a)" marker-start="url(#m8a8a8as)"/>
+<text x="710.0" y="30" class="sm" text-anchor="middle">container = 600px</text>
+<line x1="20" y1="62" x2="1040" y2="62" stroke="#eeeeee" stroke-width="1"/>
+<text x="30" y="96" class="code" text-anchor="start">150px 1fr 1fr</text>
+<text x="30" y="117" class="sm" text-anchor="start">fixed track first, the rest is shared</text>
+<rect x="410" y="78" width="150" height="48" rx="6" fill="#fbe8df" stroke="#e0703f" stroke-width="2"/>
+<text x="485.0" y="99" class="code-xs" text-anchor="middle">150px</text>
+<text x="485.0" y="116" class="xs" text-anchor="middle">fixed</text>
+<rect x="560" y="78" width="225" height="48" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="672.5" y="99" class="code-xs" text-anchor="middle">1fr</text>
+<text x="672.5" y="116" class="xs" text-anchor="middle">225px</text>
+<rect x="785" y="78" width="225" height="48" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="897.5" y="99" class="code-xs" text-anchor="middle">1fr</text>
+<text x="897.5" y="116" class="xs" text-anchor="middle">225px</text>
+<line x1="20" y1="148" x2="1040" y2="148" stroke="#eeeeee" stroke-width="1"/>
+<text x="30" y="182" class="code" text-anchor="start">1fr 2fr 1fr</text>
+<text x="30" y="203" class="sm" text-anchor="start">fr = a share of the FREE space</text>
+<rect x="410" y="164" width="150" height="48" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="485.0" y="185" class="code-xs" text-anchor="middle">1fr</text>
+<text x="485.0" y="202" class="xs" text-anchor="middle">150px</text>
+<rect x="560" y="164" width="300" height="48" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="710.0" y="185" class="code-xs" text-anchor="middle">2fr</text>
+<text x="710.0" y="202" class="xs" text-anchor="middle">300px</text>
+<rect x="860" y="164" width="150" height="48" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="935.0" y="185" class="code-xs" text-anchor="middle">1fr</text>
+<text x="935.0" y="202" class="xs" text-anchor="middle">150px</text>
+<line x1="20" y1="234" x2="1040" y2="234" stroke="#eeeeee" stroke-width="1"/>
+<text x="30" y="268" class="code" text-anchor="start">auto 1fr auto</text>
+<text x="30" y="289" class="sm" text-anchor="start">auto = as big as the content  (.things-item)</text>
+<rect x="410" y="250" width="70" height="48" rx="6" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="445.0" y="271" class="code-2xs" text-anchor="middle">auto</text>
+<text x="445.0" y="288" class="xs" text-anchor="middle">icon</text>
+<rect x="480" y="250" width="460" height="48" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="710.0" y="271" class="code-xs" text-anchor="middle">1fr</text>
+<text x="710.0" y="288" class="xs" text-anchor="middle">460px</text>
+<rect x="940" y="250" width="70" height="48" rx="6" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="975.0" y="271" class="code-2xs" text-anchor="middle">auto</text>
+<text x="975.0" y="288" class="xs" text-anchor="middle">play</text>
+<line x1="20" y1="320" x2="1040" y2="320" stroke="#eeeeee" stroke-width="1"/>
+<text x="30" y="354" class="code" text-anchor="start">1fr repeat(3, 350px) 1fr</text>
+<text x="30" y="375" class="sm" text-anchor="start">centred fixed columns  (.l-global-wrapper @1440px)</text>
+<rect x="410" y="336" width="64.58333333333334" height="48" rx="6" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="2"/>
+<text x="442.2916666666667" y="357" class="code-2xs" text-anchor="middle">1fr</text>
+<text x="442.2916666666667" y="374" class="xs" text-anchor="middle">155</text>
+<rect x="474.58333333333337" y="336" width="8.333333333333334" height="48" rx="0" fill="#ececec"/>
+<rect x="482.9166666666667" y="336" width="145.83333333333334" height="48" rx="6" fill="#fbe8df" stroke="#e0703f" stroke-width="2"/>
+<text x="555.8333333333334" y="357" class="code-xs" text-anchor="middle">350px</text>
+<text x="555.8333333333334" y="374" class="xs" text-anchor="middle">phone</text>
+<rect x="628.75" y="336" width="8.333333333333334" height="48" rx="0" fill="#ececec"/>
+<rect x="637.0833333333334" y="336" width="145.83333333333334" height="48" rx="6" fill="#fbe8df" stroke="#e0703f" stroke-width="2"/>
+<text x="710.0" y="357" class="code-xs" text-anchor="middle">350px</text>
+<text x="710.0" y="374" class="xs" text-anchor="middle">phone</text>
+<rect x="782.9166666666667" y="336" width="8.333333333333334" height="48" rx="0" fill="#ececec"/>
+<rect x="791.25" y="336" width="145.83333333333334" height="48" rx="6" fill="#fbe8df" stroke="#e0703f" stroke-width="2"/>
+<text x="864.1666666666666" y="357" class="code-xs" text-anchor="middle">350px</text>
+<text x="864.1666666666666" y="374" class="xs" text-anchor="middle">phone</text>
+<rect x="937.0833333333334" y="336" width="8.333333333333334" height="48" rx="0" fill="#ececec"/>
+<rect x="945.4166666666667" y="336" width="64.58333333333334" height="48" rx="6" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="2"/>
+<text x="977.7083333333334" y="357" class="code-2xs" text-anchor="middle">1fr</text>
+<text x="977.7083333333334" y="374" class="xs" text-anchor="middle">155</text>
+<line x1="20" y1="406" x2="1040" y2="406" stroke="#eeeeee" stroke-width="1"/>
+<text x="30" y="440" class="code" text-anchor="start">repeat(auto-fit, minmax(160px, 1fr))</text>
+<text x="30" y="461" class="sm" text-anchor="start">as many ≥160px columns as fit, then stretch</text>
+<rect x="410" y="422" width="194.66666666666666" height="48" rx="6" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="507.3333333333333" y="443" class="code-xs" text-anchor="middle">1fr</text>
+<text x="507.3333333333333" y="460" class="xs" text-anchor="middle">≥160px</text>
+<rect x="604.6666666666666" y="422" width="8" height="48" rx="0" fill="#ececec"/>
+<rect x="612.6666666666666" y="422" width="194.66666666666666" height="48" rx="6" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="710.0" y="443" class="code-xs" text-anchor="middle">1fr</text>
+<text x="710.0" y="460" class="xs" text-anchor="middle">≥160px</text>
+<rect x="807.3333333333333" y="422" width="8" height="48" rx="0" fill="#ececec"/>
+<rect x="815.3333333333333" y="422" width="194.66666666666666" height="48" rx="6" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="912.6666666666666" y="443" class="code-xs" text-anchor="middle">1fr</text>
+<text x="912.6666666666666" y="460" class="xs" text-anchor="middle">≥160px</text>
+<line x1="20" y1="492" x2="1040" y2="492" stroke="#eeeeee" stroke-width="1"/>
+<text x="30" y="526" class="code" text-anchor="start">repeat(2, minmax(0, 1fr))</text>
+<text x="30" y="547" class="sm" text-anchor="start">truly equal halves, even with wide content  (.stats)</text>
+<rect x="410" y="508" width="296" height="48" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="558.0" y="529" class="code-xs" text-anchor="middle">minmax(0, 1fr)</text>
+<text x="558.0" y="546" class="xs" text-anchor="middle">296px</text>
+<rect x="706" y="508" width="8" height="48" rx="0" fill="#ececec"/>
+<rect x="714" y="508" width="296" height="48" rx="6" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="862.0" y="529" class="code-xs" text-anchor="middle">minmax(0, 1fr)</text>
+<text x="862.0" y="546" class="xs" text-anchor="middle">296px</text>
+<text x="530" y="600" class="xs" text-anchor="middle">1fr on its own means minmax(auto, 1fr): a track can never get smaller than its content → use minmax(0, 1fr) for strict equality</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" width="1100" height="520" role="img" aria-labelledby="title">
+<title id="title">Anatomy of a CSS grid: lines, tracks, cells, areas and gaps</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+<rect width="1100" height="520" rx="16" fill="#ffffff"/>
+<rect x="420" y="100" width="40" height="300" rx="0" fill="#ececec"/>
+<rect x="680" y="100" width="40" height="300" rx="0" fill="#ececec"/>
+<rect x="200" y="230" width="740" height="40" rx="0" fill="#ececec"/>
+<rect x="200" y="100" width="220" height="300" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2.5"/>
+<rect x="460" y="100" width="220" height="130" rx="6" fill="#fbe8df" stroke="#e0703f" stroke-width="2.5"/>
+<rect x="720" y="100" width="220" height="130" rx="6" fill="#ffffff" stroke="#c9c9c9" stroke-width="2"/>
+<rect x="460" y="270" width="480" height="130" rx="6" fill="#e1f2e9" stroke="#3fa874" stroke-width="2.5"/>
+<line x1="200" y1="64" x2="200" y2="420" stroke="#9a9a9a" stroke-width="1.4" stroke-dasharray="5 5"/>
+<line x1="440" y1="64" x2="440" y2="420" stroke="#9a9a9a" stroke-width="1.4" stroke-dasharray="5 5"/>
+<line x1="700" y1="64" x2="700" y2="420" stroke="#9a9a9a" stroke-width="1.4" stroke-dasharray="5 5"/>
+<line x1="940" y1="64" x2="940" y2="420" stroke="#9a9a9a" stroke-width="1.4" stroke-dasharray="5 5"/>
+<line x1="166" y1="100" x2="970" y2="100" stroke="#9a9a9a" stroke-width="1.4" stroke-dasharray="5 5"/>
+<line x1="166" y1="250" x2="970" y2="250" stroke="#9a9a9a" stroke-width="1.4" stroke-dasharray="5 5"/>
+<line x1="166" y1="400" x2="970" y2="400" stroke="#9a9a9a" stroke-width="1.4" stroke-dasharray="5 5"/>
+<text x="200" y="54" class="num" text-anchor="middle">1</text>
+<text x="440" y="54" class="num" text-anchor="middle">2</text>
+<text x="700" y="54" class="num" text-anchor="middle">3</text>
+<text x="940" y="54" class="num" text-anchor="middle">4</text>
+<text x="148" y="106" class="num" text-anchor="middle">1</text>
+<text x="148" y="256" class="num" text-anchor="middle">2</text>
+<text x="148" y="406" class="num" text-anchor="middle">3</text>
+<text x="180" y="30" class="sm" text-anchor="end">column lines</text>
+<path d="M184 26 C 194 26, 198 34, 199 40" fill="none" stroke="#8a8a8a" stroke-width="1.4" marker-end="url(#m8a8a8a)"/>
+<text x="108" y="250" class="sm" text-anchor="middle" transform="rotate(-90 108 250)">row lines</text>
+<text x="310" y="168" class="title" text-anchor="middle" style="fill:#3b74d4">Track</text>
+<text x="310" y="190" class="sm" text-anchor="middle">a whole column</text>
+<text x="310" y="330" class="xs" text-anchor="middle">(column 1, rows 1 → 3)</text>
+<text x="570" y="160" class="title" text-anchor="middle" style="fill:#e0703f">Cell</text>
+<text x="570" y="182" class="sm" text-anchor="middle">1 column × 1 row</text>
+<text x="830" y="160" class="title" text-anchor="middle" style="fill:#8a8a8a">Cell</text>
+<text x="830" y="182" class="sm" text-anchor="middle">empty cells still exist</text>
+<text x="580" y="330" class="title" text-anchor="middle" style="fill:#3fa874">Area</text>
+<text x="580" y="352" class="sm" text-anchor="middle">several cells merged</text>
+<text x="820" y="332" class="code-xs" text-anchor="middle">grid-area:</text>
+<text x="820" y="350" class="code-xs" text-anchor="middle">2 / 2 / 3 / 4</text>
+<line x1="440" y1="462" x2="440" y2="406" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<line x1="700" y1="462" x2="700" y2="406" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<text x="440" y="480" class="sm" text-anchor="middle">column-gap</text>
+<text x="700" y="480" class="sm" text-anchor="middle">column-gap</text>
+<line x1="1000" y1="250" x2="946" y2="250" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<text x="1006" y="254" class="sm" text-anchor="start">row-gap</text>
+<text x="570" y="508" class="code-xs" text-anchor="middle" xml:space="preserve"><tspan style="fill:#8a5cd1">grid-template-columns</tspan><tspan>: repeat(3, 1fr);  </tspan><tspan style="fill:#8a5cd1">grid-template-rows</tspan><tspan>: repeat(2, 130px);  </tspan><tspan style="fill:#8a5cd1">gap</tspan><tspan>: 40px;</tspan></text>
+</svg>

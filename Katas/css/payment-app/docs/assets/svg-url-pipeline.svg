@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" width="1100" height="590" role="img" aria-labelledby="title">
+<title id="title">svg-url(): from a Sass string to a CSS background, without JS or extra requests</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+<rect width="1100" height="590" rx="16" fill="#ffffff"/>
+<circle cx="44" cy="52" r="13" fill="#1f2a33" stroke="#1f2a33" stroke-width="0"/>
+<text x="44" y="56.5" class="t13" text-anchor="middle" style="fill:#fff">1</text>
+<text x="70" y="57" class="t15" text-anchor="start">Write the SVG as a private Sass string — tokens are interpolated with #{…}</text>
+<rect x="70" y="72" width="1000" height="62" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="86" y="96" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#1f8a99">$-stress-wave</tspan><tspan>: &#x27;</tspan><tspan style="fill:#e0703f">&lt;</tspan><tspan>svg xmlns=</tspan><tspan style="fill:#e0703f">&quot;</tspan><tspan>http://www.w3.org/2000/svg</tspan><tspan style="fill:#e0703f">&quot;</tspan><tspan> viewBox=</tspan><tspan style="fill:#e0703f">&quot;</tspan><tspan>0 0 200 60</tspan><tspan style="fill:#e0703f">&quot;</tspan><tspan style="fill:#e0703f">&gt;</tspan></text>
+<text x="86" y="114" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#e0703f">&lt;</tspan><tspan>path d=</tspan><tspan style="fill:#e0703f">&quot;</tspan><tspan>M0 44C25 40 45 26 75 22S115 44 140 12S175 30 200 16</tspan><tspan style="fill:#e0703f">&quot;</tspan><tspan> stroke=</tspan><tspan style="fill:#e0703f">&quot;</tspan><tspan style="fill:#e0703f">#</tspan><tspan style="fill:#8a5cd1">{$color-plum}</tspan><tspan style="fill:#e0703f">&quot;</tspan><tspan> … /</tspan><tspan style="fill:#e0703f">&gt;</tspan><tspan style="fill:#e0703f">&lt;</tspan><tspan>/svg</tspan><tspan style="fill:#e0703f">&gt;</tspan><tspan>&#x27;;</tspan></text>
+<line x1="550" y1="140" x2="550" y2="168" stroke="#8a8a8a" stroke-width="1.8" marker-end="url(#m8a8a8a)"/>
+<circle cx="44" cy="192" r="13" fill="#1f2a33" stroke="#1f2a33" stroke-width="0"/>
+<text x="44" y="196.5" class="t13" text-anchor="middle" style="fill:#fff">2</text>
+<text x="70" y="197" class="t15" text-anchor="start">svg-url() walks the string char by char and swaps the 4 characters that break a CSS url()</text>
+<rect x="70" y="212" width="40" height="30" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="1.8"/>
+<text x="90" y="232" class="code" text-anchor="middle">&lt;</text>
+<line x1="116" y1="227" x2="154" y2="227" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="160" y="212" width="60" height="30" rx="8" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<text x="190" y="232" class="code" text-anchor="middle">%3C</text>
+<text x="70" y="262" class="xs" text-anchor="start">read as markup otherwise</text>
+<rect x="320" y="212" width="40" height="30" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="1.8"/>
+<text x="340" y="232" class="code" text-anchor="middle">&gt;</text>
+<line x1="366" y1="227" x2="404" y2="227" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="410" y="212" width="60" height="30" rx="8" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<text x="440" y="232" class="code" text-anchor="middle">%3E</text>
+<text x="320" y="262" class="xs" text-anchor="start">read as markup otherwise</text>
+<rect x="570" y="212" width="40" height="30" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="1.8"/>
+<text x="590" y="232" class="code" text-anchor="middle">#</text>
+<line x1="616" y1="227" x2="654" y2="227" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="660" y="212" width="60" height="30" rx="8" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<text x="690" y="232" class="code" text-anchor="middle">%23</text>
+<text x="570" y="262" class="xs" text-anchor="start">starts a URL #fragment → cuts the SVG</text>
+<rect x="820" y="212" width="40" height="30" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="1.8"/>
+<text x="840" y="232" class="code" text-anchor="middle">&quot;</text>
+<line x1="866" y1="227" x2="904" y2="227" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="910" y="212" width="60" height="30" rx="8" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<text x="940" y="232" class="code" text-anchor="middle">&#x27;</text>
+<text x="820" y="262" class="xs" text-anchor="start">would close url(&quot;…&quot;) too early</text>
+<line x1="550" y1="274" x2="550" y2="302" stroke="#8a8a8a" stroke-width="1.8" marker-end="url(#m8a8a8a)"/>
+<circle cx="44" cy="326" r="13" fill="#1f2a33" stroke="#1f2a33" stroke-width="0"/>
+<text x="44" y="330.5" class="t13" text-anchor="middle" style="fill:#fff">3</text>
+<text x="70" y="331" class="t15" text-anchor="start">It returns a ready-to-use data URI (the escaped characters are in green)</text>
+<rect x="70" y="346" width="1000" height="62" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="86" y="370" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>url(&quot;data:image/svg+xml,</tspan><tspan style="fill:#3fa874">%3C</tspan><tspan>svg xmlns=</tspan><tspan style="fill:#3fa874">&#x27;</tspan><tspan>http://www.w3.org/2000/svg</tspan><tspan style="fill:#3fa874">&#x27;</tspan><tspan> viewBox=</tspan><tspan style="fill:#3fa874">&#x27;</tspan><tspan>0 0 200 60</tspan><tspan style="fill:#3fa874">&#x27;</tspan><tspan style="fill:#3fa874">%3E</tspan></text>
+<text x="86" y="388" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#3fa874">%3C</tspan><tspan>path d=</tspan><tspan style="fill:#3fa874">&#x27;</tspan><tspan>M0 44C25 40 …</tspan><tspan style="fill:#3fa874">&#x27;</tspan><tspan> stroke=</tspan><tspan style="fill:#3fa874">&#x27;</tspan><tspan style="fill:#3fa874">%23</tspan><tspan>a97ea8</tspan><tspan style="fill:#3fa874">&#x27;</tspan><tspan> … /</tspan><tspan style="fill:#3fa874">%3E</tspan><tspan style="fill:#3fa874">%3C</tspan><tspan>/svg</tspan><tspan style="fill:#3fa874">%3E</tspan><tspan>&quot;)</tspan></text>
+<line x1="550" y1="414" x2="550" y2="442" stroke="#8a8a8a" stroke-width="1.8" marker-end="url(#m8a8a8a)"/>
+<circle cx="44" cy="466" r="13" fill="#1f2a33" stroke="#1f2a33" stroke-width="0"/>
+<text x="44" y="470.5" class="t13" text-anchor="middle" style="fill:#fff">4</text>
+<text x="70" y="471" class="t15" text-anchor="start">Consume it like any image — no extra HTTP request, no JS, colors stay in sync with tokens</text>
+<rect x="70" y="486" width="640" height="80" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="86" y="510" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.stress-indicator-chart::before</tspan><tspan> {</tspan></text>
+<text x="86" y="528" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>  </tspan><tspan style="fill:#8a5cd1">background</tspan><tspan>: </tspan><tspan style="fill:#1f8a99">svg-url</tspan><tspan>(</tspan><tspan style="fill:#1f8a99">$-stress-wave</tspan><tspan>) center / 100% 100% no-repeat;</tspan></text>
+<text x="86" y="546" class="code-xs" text-anchor="start" xml:space="preserve"><tspan>}</tspan></text>
+<rect x="740" y="486" width="330" height="80" rx="10" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<path d="M0 44C25 40 45 26 75 22S115 44 140 12S175 30 200 16" transform="translate(755 490) scale(1.5 1.15)" fill="none" stroke="#a97ea8" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+<text x="905" y="582" class="xs" text-anchor="middle">the rendered background</text>
+</svg>

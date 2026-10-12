@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 540" width="1100" height="540" role="img" aria-labelledby="title">
+<title id="title">Eight layout patterns that build any interface</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m3b74d4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3b74d4"/></marker><marker id="m3b74d4s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3b74d4"/></marker><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="md4589f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d4589f"/></marker><marker id="md4589fs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d4589f"/></marker></defs>
+<rect width="1100" height="540" rx="16" fill="#ffffff"/>
+<rect x="20" y="20" width="252" height="245" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="34" y="34" width="224" height="118" rx="10" fill="#f7f8fa" stroke="#bdbdbd" stroke-width="0"/>
+<text x="38" y="178" class="t15" text-anchor="start">1 · Stack</text>
+<text x="38" y="200" class="code-xs" text-anchor="start">@include stack($space-md);</text>
+<text x="38" y="217" class="code-xs" text-anchor="start">// flex column + gap</text>
+<text x="38" y="252" class="xs" text-anchor="start">used: .l-phone-view-*</text>
+<rect x="64" y="48" width="164" height="24" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="1.8"/>
+<rect x="64" y="80" width="164" height="24" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="1.8"/>
+<rect x="64" y="112" width="164" height="24" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="1.8"/>
+<line x1="244" y1="50" x2="244" y2="134" stroke="#3b74d4" stroke-width="1.6" marker-end="url(#m3b74d4)"/>
+<rect x="286" y="20" width="252" height="245" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="300" y="34" width="224" height="118" rx="10" fill="#f7f8fa" stroke="#bdbdbd" stroke-width="0"/>
+<text x="304" y="178" class="t15" text-anchor="start">2 · Cluster</text>
+<text x="304" y="200" class="code-xs" text-anchor="start">display: flex;</text>
+<text x="304" y="217" class="code-xs" text-anchor="start">flex-wrap: wrap; gap: $space-xs;</text>
+<text x="304" y="252" class="xs" text-anchor="start">used: tags, filters, chips</text>
+<rect x="318" y="52" width="50" height="22" rx="11" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<rect x="376" y="52" width="70" height="22" rx="11" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<rect x="454" y="52" width="40" height="22" rx="11" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<rect x="318" y="84" width="80" height="22" rx="11" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<rect x="406" y="84" width="46" height="22" rx="11" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<rect x="318" y="116" width="36" height="22" rx="11" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<rect x="362" y="116" width="60" height="22" rx="11" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<rect x="430" y="116" width="54" height="22" rx="11" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<rect x="552" y="20" width="252" height="245" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="566" y="34" width="224" height="118" rx="10" fill="#f7f8fa" stroke="#bdbdbd" stroke-width="0"/>
+<text x="570" y="178" class="t15" text-anchor="start">3 · Split</text>
+<text x="570" y="200" class="code-xs" text-anchor="start">display: flex;</text>
+<text x="570" y="217" class="code-xs" text-anchor="start">justify-content: space-between;</text>
+<text x="570" y="252" class="xs" text-anchor="start">used: .hello, .advice, .next-task-header</text>
+<rect x="580" y="76" width="64" height="34" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="1.8"/>
+<rect x="726" y="76" width="50" height="34" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="1.8"/>
+<line x1="650" y1="93" x2="720" y2="93" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)" marker-start="url(#m8a8a8as)"/>
+<text x="685" y="132" class="xs" text-anchor="middle">free space</text>
+<rect x="818" y="20" width="252" height="245" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="832" y="34" width="224" height="118" rx="10" fill="#f7f8fa" stroke="#bdbdbd" stroke-width="0"/>
+<text x="836" y="178" class="t15" text-anchor="start">4 · Center</text>
+<text x="836" y="200" class="code-xs" text-anchor="start">@include flex-center;</text>
+<text x="836" y="217" class="code-xs" text-anchor="start">// or grid + place-items: center</text>
+<text x="836" y="252" class="xs" text-anchor="start">used: icon buttons, .hello-bell</text>
+<line x1="944" y1="42" x2="944" y2="144" stroke="#cfcfcf" stroke-width="1.2" stroke-dasharray="3 3"/>
+<line x1="840" y1="93" x2="1048" y2="93" stroke="#cfcfcf" stroke-width="1.2" stroke-dasharray="3 3"/>
+<rect x="914" y="73" width="60" height="40" rx="8" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.8"/>
+<rect x="20" y="279" width="252" height="245" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="34" y="293" width="224" height="118" rx="10" fill="#f7f8fa" stroke="#bdbdbd" stroke-width="0"/>
+<text x="38" y="437" class="t15" text-anchor="start">5 · Media object</text>
+<text x="38" y="459" class="code-xs" text-anchor="start">grid-template-columns:</text>
+<text x="38" y="476" class="code-xs" text-anchor="start">  auto 1fr auto;</text>
+<text x="38" y="511" class="xs" text-anchor="start">used: .things-item, .task</text>
+<rect x="46" y="321" width="200" height="62" rx="10" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.6"/>
+<rect x="54" y="329" width="46" height="46" rx="8" fill="#e3ecf8" stroke="#3b74d4" stroke-width="1.8"/>
+<rect x="110" y="337" width="90" height="10" rx="4" fill="#c9d6ea"/>
+<rect x="110" y="355" width="70" height="8" rx="4" fill="#dfe6f1"/>
+<circle cx="226" cy="352" r="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.8"/>
+<line x1="104" y1="313" x2="104" y2="391" stroke="#9a9a9a" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="206" y1="313" x2="206" y2="391" stroke="#9a9a9a" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="286" y="279" width="252" height="245" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="300" y="293" width="224" height="118" rx="10" fill="#f7f8fa" stroke="#bdbdbd" stroke-width="0"/>
+<text x="304" y="437" class="t15" text-anchor="start">6 · Scroller</text>
+<text x="304" y="459" class="code-xs" text-anchor="start">@include scroll-x($gap, $bleed);</text>
+<text x="304" y="476" class="code-xs" text-anchor="start">// overflow-x + scroll-snap</text>
+<text x="304" y="511" class="xs" text-anchor="start">used: .categories, .footer-boxes</text>
+<rect x="310" y="319" width="178" height="66" rx="8" fill="none" stroke="#bdbdbd" stroke-width="1.4" stroke-dasharray="4 4"/>
+<rect x="318" y="327" width="50" height="50" rx="8" fill="#fbe4f1" stroke="#d4589f" stroke-width="1.8" opacity="1"/>
+<rect x="376" y="327" width="50" height="50" rx="8" fill="#fbe4f1" stroke="#d4589f" stroke-width="1.8" opacity="1"/>
+<rect x="434" y="327" width="50" height="50" rx="8" fill="#fbe4f1" stroke="#d4589f" stroke-width="1.8" opacity="1"/>
+<rect x="492" y="327" width="32" height="50" rx="8" fill="#fbe4f1" stroke="#d4589f" stroke-width="1.8" stroke-dasharray="4 3" opacity="0.45"/>
+<line x1="450" y1="397" x2="370" y2="397" stroke="#d4589f" stroke-width="1.6" marker-end="url(#md4589f)"/>
+<rect x="552" y="279" width="252" height="245" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="566" y="293" width="224" height="118" rx="10" fill="#f7f8fa" stroke="#bdbdbd" stroke-width="0"/>
+<text x="570" y="437" class="t15" text-anchor="start">7 · Auto-grid</text>
+<text x="570" y="459" class="code-xs" text-anchor="start">grid-template-columns: repeat(</text>
+<text x="570" y="476" class="code-xs" text-anchor="start">  auto-fit, minmax(160px, 1fr));</text>
+<text x="570" y="511" class="xs" text-anchor="start">used: galleries, dashboards</text>
+<rect x="582" y="307" width="58" height="40" rx="6" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.8"/>
+<rect x="648" y="307" width="58" height="40" rx="6" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.8"/>
+<rect x="714" y="307" width="58" height="40" rx="6" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.8"/>
+<rect x="582" y="355" width="58" height="40" rx="6" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.8"/>
+<rect x="648" y="355" width="58" height="40" rx="6" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.8"/>
+<rect x="714" y="355" width="58" height="40" rx="6" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.8"/>
+<rect x="818" y="279" width="252" height="245" rx="14" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.5"/>
+<rect x="832" y="293" width="224" height="118" rx="10" fill="#f7f8fa" stroke="#bdbdbd" stroke-width="0"/>
+<text x="836" y="437" class="t15" text-anchor="start">8 · Overlay</text>
+<text x="836" y="459" class="code-xs" text-anchor="start">display: grid;</text>
+<text x="836" y="476" class="code-xs" text-anchor="start">&gt; * { grid-area: 1 / 1; }</text>
+<text x="836" y="511" class="xs" text-anchor="start">used: hero image + caption, badges</text>
+<rect x="872" y="307" width="144" height="90" rx="10" fill="#ddf1f3" stroke="#1f8a99" stroke-width="1.8"/>
+<rect x="892" y="347" width="104" height="36" rx="8" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.8" opacity="0.95"/>
+<text x="944" y="370" class="xs" text-anchor="middle">same cell</text>
+</svg>

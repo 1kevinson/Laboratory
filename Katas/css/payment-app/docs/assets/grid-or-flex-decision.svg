@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" width="980" height="600" role="img" aria-labelledby="title">
+<title id="title">Decision tree: grid or flex?</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m3b74d4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3b74d4"/></marker><marker id="m3b74d4s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3b74d4"/></marker><marker id="m3fa874" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3fa874"/></marker><marker id="m3fa874s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3fa874"/></marker><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+<rect width="980" height="600" rx="16" fill="#ffffff"/>
+<rect x="330" y="24" width="220" height="44" rx="22" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="2"/>
+<text x="440" y="51" class="t15" text-anchor="middle">A box with children</text>
+<rect x="240" y="100" width="400" height="60" rx="12" fill="#fff4cc" stroke="#cf9a00" stroke-width="2"/>
+<text x="440" y="126" class="t13" text-anchor="middle">Must children line up in</text>
+<text x="440" y="145" class="t13" text-anchor="middle">rows AND columns at once?</text>
+<rect x="686" y="102" width="280" height="56" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="826" y="125" class="t15" text-anchor="middle">GRID</text>
+<text x="826" y="144" class="code-xs" text-anchor="middle">grid-template-columns / rows</text>
+<line x1="640" y1="130" x2="684" y2="130" stroke="#3fa874" stroke-width="2" marker-end="url(#m3fa874)"/>
+<text x="662" y="122" class="sm" text-anchor="middle">yes</text>
+<rect x="240" y="200" width="400" height="60" rx="12" fill="#fff4cc" stroke="#cf9a00" stroke-width="2"/>
+<text x="440" y="226" class="t13" text-anchor="middle">Do children sit in named zones</text>
+<text x="440" y="245" class="t13" text-anchor="middle">or overlap (icon | title | action)?</text>
+<rect x="686" y="202" width="280" height="56" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="826" y="225" class="t15" text-anchor="middle">GRID + AREAS</text>
+<text x="826" y="244" class="code-xs" text-anchor="middle">grid-template-areas, grid-area: 1/1</text>
+<line x1="640" y1="230" x2="684" y2="230" stroke="#3fa874" stroke-width="2" marker-end="url(#m3fa874)"/>
+<text x="662" y="222" class="sm" text-anchor="middle">yes</text>
+<rect x="240" y="300" width="400" height="60" rx="12" fill="#fff4cc" stroke="#cf9a00" stroke-width="2"/>
+<text x="440" y="326" class="t13" text-anchor="middle">Is it ONE line of things sized</text>
+<text x="440" y="345" class="t13" text-anchor="middle">by their content?</text>
+<rect x="686" y="302" width="280" height="56" rx="12" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="826" y="325" class="t15" text-anchor="middle">FLEX</text>
+<text x="826" y="344" class="code-xs" text-anchor="middle">flex-direction, gap, align-items</text>
+<line x1="640" y1="330" x2="684" y2="330" stroke="#3b74d4" stroke-width="2" marker-end="url(#m3b74d4)"/>
+<text x="662" y="322" class="sm" text-anchor="middle">yes</text>
+<rect x="240" y="400" width="400" height="60" rx="12" fill="#fff4cc" stroke="#cf9a00" stroke-width="2"/>
+<text x="440" y="426" class="t13" text-anchor="middle">Must wrapped items form</text>
+<text x="440" y="445" class="t13" text-anchor="middle">equal columns that align?</text>
+<rect x="686" y="402" width="280" height="56" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="826" y="425" class="t15" text-anchor="middle">GRID AUTO-FIT</text>
+<text x="826" y="444" class="code-xs" text-anchor="middle">repeat(auto-fit, minmax(160px, 1fr))</text>
+<line x1="640" y1="430" x2="684" y2="430" stroke="#3fa874" stroke-width="2" marker-end="url(#m3fa874)"/>
+<text x="662" y="422" class="sm" text-anchor="middle">yes</text>
+<line x1="440" y1="68" x2="440" y2="98" stroke="#8a8a8a" stroke-width="2" marker-end="url(#m8a8a8a)"/>
+<line x1="440" y1="160" x2="440" y2="198" stroke="#8a8a8a" stroke-width="2" marker-end="url(#m8a8a8a)"/>
+<line x1="440" y1="260" x2="440" y2="298" stroke="#8a8a8a" stroke-width="2" marker-end="url(#m8a8a8a)"/>
+<line x1="440" y1="360" x2="440" y2="398" stroke="#8a8a8a" stroke-width="2" marker-end="url(#m8a8a8a)"/>
+<text x="452" y="184" class="sm" text-anchor="start">no</text>
+<text x="452" y="284" class="sm" text-anchor="start">no</text>
+<text x="452" y="384" class="sm" text-anchor="start">no</text>
+<line x1="440" y1="460" x2="440" y2="498" stroke="#8a8a8a" stroke-width="2" marker-end="url(#m8a8a8a)"/>
+<text x="452" y="484" class="sm" text-anchor="start">no</text>
+<rect x="300" y="500" width="280" height="56" rx="12" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="440" y="523" class="t15" text-anchor="middle">FLEX + WRAP</text>
+<text x="440" y="542" class="code-xs" text-anchor="middle">flex-wrap: wrap; gap</text>
+<text x="30" y="120" class="sm" text-anchor="start">Rule of thumb</text>
+<text x="30" y="139" class="sm" text-anchor="start"></text>
+<text x="30" y="158" class="sm" text-anchor="start">Grid = the parent</text>
+<text x="30" y="177" class="sm" text-anchor="start">decides the sizes.</text>
+<text x="30" y="196" class="sm" text-anchor="start"></text>
+<text x="30" y="215" class="sm" text-anchor="start">Flex = the children</text>
+<text x="30" y="234" class="sm" text-anchor="start">decide their sizes.</text>
+</svg>

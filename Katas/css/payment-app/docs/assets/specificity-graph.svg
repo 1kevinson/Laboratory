@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 420" width="940" height="420" role="img" aria-labelledby="title">
+<title id="title">Healthy versus unhealthy specificity graph</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m1f1f1f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker><marker id="m1f1f1fs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker></defs>
+<rect width="940" height="420" rx="16" fill="#ffffff"/>
+<line x1="90" y1="300" x2="910" y2="300" stroke="#1f1f1f" stroke-width="1.8" marker-end="url(#m1f1f1f)"/>
+<line x1="90" y1="300" x2="90" y2="30" stroke="#1f1f1f" stroke-width="1.8" marker-end="url(#m1f1f1f)"/>
+<text x="495.0" y="362" class="lbl" text-anchor="middle">position in the compiled CSS (top of main.scss → bottom)</text>
+<text x="40" y="170" class="lbl" text-anchor="middle" transform="rotate(-90 40 170)">specificity</text>
+<line x1="150" y1="300" x2="150" y2="306" stroke="#1f1f1f" stroke-width="1.5"/>
+<text x="150" y="324" class="code-xs" text-anchor="middle">vendors</text>
+<line x1="270" y1="300" x2="270" y2="306" stroke="#1f1f1f" stroke-width="1.5"/>
+<text x="270" y="324" class="code-xs" text-anchor="middle">base</text>
+<line x1="390" y1="300" x2="390" y2="306" stroke="#1f1f1f" stroke-width="1.5"/>
+<text x="390" y="324" class="code-xs" text-anchor="middle">layout</text>
+<line x1="510" y1="300" x2="510" y2="306" stroke="#1f1f1f" stroke-width="1.5"/>
+<text x="510" y="324" class="code-xs" text-anchor="middle">components</text>
+<line x1="630" y1="300" x2="630" y2="306" stroke="#1f1f1f" stroke-width="1.5"/>
+<text x="630" y="324" class="code-xs" text-anchor="middle">pages</text>
+<line x1="750" y1="300" x2="750" y2="306" stroke="#1f1f1f" stroke-width="1.5"/>
+<text x="750" y="324" class="code-xs" text-anchor="middle">themes</text>
+<line x1="870" y1="300" x2="870" y2="306" stroke="#1f1f1f" stroke-width="1.5"/>
+<text x="870" y="324" class="code-xs" text-anchor="middle">utils</text>
+<path d="M110 288 C 260 285, 330 268, 390 248 S 560 200, 630 180 S 760 140, 820 60" fill="none" stroke="#3fa874" stroke-width="3"/>
+<path d="M110 280 L170 130 L230 276 L330 90 L400 250 L510 70 L560 240 L640 210 L700 150 L860 230" fill="none" stroke="#e04848" stroke-width="2.2" stroke-dasharray="7 5"/>
+<line x1="200" y1="392" x2="236" y2="392" stroke="#3fa874" stroke-width="3"/>
+<text x="246" y="396" class="sm" text-anchor="start">healthy: only goes up</text>
+<line x1="460" y1="392" x2="496" y2="392" stroke="#e04848" stroke-width="2.2" stroke-dasharray="7 5"/>
+<text x="506" y="396" class="sm" text-anchor="start">spiky: #id, deep nesting, !important</text>
+<text x="330" y="82" class="code-xs" text-anchor="middle" style="fill:#e04848">#root</text>
+<text x="510" y="62" class="code-xs" text-anchor="middle" style="fill:#e04848">.a .b .c .d</text>
+<text x="820" y="50" class="code-xs" text-anchor="middle" style="fill:#3fa874">u-* !important</text>
+</svg>

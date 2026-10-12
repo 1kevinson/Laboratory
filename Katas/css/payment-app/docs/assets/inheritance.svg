@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 555" width="1100" height="555" role="img" aria-labelledby="title">
+<title id="title">Inheritance flows down the DOM tree, and how a base rule can interrupt it</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="me04848" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e04848"/></marker><marker id="me04848s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e04848"/></marker></defs>
+<rect width="1100" height="555" rx="16" fill="#ffffff"/>
+<text x="30" y="40" class="title" text-anchor="start">Inheritance flows down the DOM</text>
+<rect x="40" y="66" width="340" height="44" rx="10" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.6"/>
+<text x="54" y="93" class="code-sm" text-anchor="start">body</text>
+<text x="342" y="93" class="xs" text-anchor="end">color: $color-text</text>
+<circle cx="362" cy="88" r="8" fill="#1d1d1f" stroke="#1d1d1f" stroke-width="0"/>
+<rect x="70" y="130" width="340" height="44" rx="10" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.6"/>
+<text x="84" y="157" class="code-sm" text-anchor="start">.c-phone-view-second</text>
+<text x="372" y="157" class="xs" text-anchor="end">color inherited</text>
+<circle cx="392" cy="152" r="8" fill="#1d1d1f" stroke="#1d1d1f" stroke-width="0"/>
+<path d="M56 110 V152 H70" fill="none" stroke="#8a8a8a" stroke-width="1.5"/>
+<rect x="100" y="194" width="340" height="44" rx="10" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.6"/>
+<text x="114" y="221" class="code-sm" text-anchor="start">figure.quote</text>
+<text x="402" y="221" class="xs" text-anchor="end">color inherited</text>
+<circle cx="422" cy="216" r="8" fill="#1d1d1f" stroke="#1d1d1f" stroke-width="0"/>
+<path d="M86 174 V216 H100" fill="none" stroke="#8a8a8a" stroke-width="1.5"/>
+<rect x="130" y="258" width="340" height="44" rx="10" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.6"/>
+<text x="144" y="285" class="code-sm" text-anchor="start">blockquote.quote-text</text>
+<text x="432" y="285" class="xs" text-anchor="end">+ font-size, bold</text>
+<circle cx="452" cy="280" r="8" fill="#1d1d1f" stroke="#1d1d1f" stroke-width="0"/>
+<path d="M116 238 V280 H130" fill="none" stroke="#8a8a8a" stroke-width="1.5"/>
+<rect x="160" y="322" width="340" height="44" rx="10" fill="#fde4e4" stroke="#e04848" stroke-width="2"/>
+<text x="174" y="349" class="code-sm" text-anchor="start">p</text>
+<text x="462" y="349" class="xs" text-anchor="end" style="fill:#e04848">color: $color-muted ✗</text>
+<circle cx="482" cy="344" r="8" fill="#6e6e73" stroke="#6e6e73" stroke-width="0"/>
+<path d="M146 302 V344 H160" fill="none" stroke="#8a8a8a" stroke-width="1.5"/>
+<rect x="40" y="400" width="530" height="56" rx="10" fill="#ffffff" stroke="#e04848" stroke-width="1.6"/>
+<text x="56" y="424" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a8a8a">// base/_typography.scss</tspan></text>
+<text x="56" y="444" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">p</tspan><tspan> { color: </tspan><tspan style="fill:#1f8a99">$color-muted</tspan><tspan>; }   </tspan><tspan style="fill:#e04848">← a declaration beats inheritance</tspan></text>
+<line x1="300" y1="400" x2="300" y2="380" stroke="#e04848" stroke-width="1.8" marker-end="url(#me04848)"/>
+<rect x="40" y="472" width="530" height="56" rx="10" fill="#ffffff" stroke="#3fa874" stroke-width="1.6"/>
+<text x="56" y="496" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a8a8a">// components/_phone-view-second.scss</tspan></text>
+<text x="56" y="516" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.quote-text p</tspan><tspan> { color: </tspan><tspan style="fill:#3fa874">inherit</tspan><tspan>; }   </tspan><tspan style="fill:#3fa874">← take the parent&#x27;s again</tspan></text>
+<rect x="600" y="30" width="470" height="90" rx="12" fill="#ffffff" stroke="#e04848" stroke-width="1.6"/>
+<text x="616" y="54" class="xs" text-anchor="start" style="fill:#e04848">✗ without the fix — the quote turns grey</text>
+<text x="616" y="94" style="font:700 21px -apple-system, Segoe UI, Inter, sans-serif;fill:#6e6e73">“Patience is the companion of wisdom.”</text>
+<rect x="600" y="134" width="470" height="90" rx="12" fill="#ffffff" stroke="#3fa874" stroke-width="1.6"/>
+<text x="616" y="158" class="xs" text-anchor="start" style="fill:#3fa874">✓ with color: inherit — the quote keeps the text color</text>
+<text x="616" y="198" style="font:700 21px -apple-system, Segoe UI, Inter, sans-serif;fill:#1d1d1f">“Patience is the companion of wisdom.”</text>
+<text x="600" y="262" class="t13" text-anchor="start" style="fill:#3fa874">Inherited by default</text>
+<rect x="600" y="276" width="49.0" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="624.5" y="292" class="code-xs" text-anchor="middle">color</text>
+<rect x="655.0" y="276" width="55.599999999999994" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="682.8" y="292" class="code-xs" text-anchor="middle">font-*</text>
+<rect x="716.6" y="276" width="88.6" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="760.9" y="292" class="code-xs" text-anchor="middle">line-height</text>
+<rect x="600" y="308" width="108.39999999999999" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="654.2" y="324" class="code-xs" text-anchor="middle">letter-spacing</text>
+<rect x="714.4" y="308" width="82.0" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="755.4" y="324" class="code-xs" text-anchor="middle">text-align</text>
+<rect x="600" y="340" width="88.6" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="644.3" y="356" class="code-xs" text-anchor="middle">white-space</text>
+<rect x="694.6" y="340" width="82.0" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="735.6" y="356" class="code-xs" text-anchor="middle">visibility</text>
+<rect x="600" y="372" width="55.599999999999994" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="627.8" y="388" class="code-xs" text-anchor="middle">cursor</text>
+<rect x="661.6" y="372" width="82.0" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="702.6" y="388" class="code-xs" text-anchor="middle">list-style</text>
+<rect x="600" y="404" width="108.39999999999999" height="24" rx="12" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.4"/>
+<text x="654.2" y="420" class="code-xs" text-anchor="middle">--custom-props</text>
+<text x="850" y="262" class="t13" text-anchor="start" style="fill:#e0703f">Not inherited</text>
+<rect x="850" y="276" width="55.599999999999994" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="877.8" y="292" class="code-xs" text-anchor="middle">margin</text>
+<rect x="911.6" y="276" width="62.199999999999996" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="942.7" y="292" class="code-xs" text-anchor="middle">padding</text>
+<rect x="979.8" y="276" width="55.599999999999994" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="1007.5999999999999" y="292" class="code-xs" text-anchor="middle">border</text>
+<rect x="850" y="308" width="82.0" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="891.0" y="324" class="code-xs" text-anchor="middle">background</text>
+<rect x="938.0" y="308" width="49.0" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="962.5" y="324" class="code-xs" text-anchor="middle">width</text>
+<rect x="993.0" y="308" width="55.599999999999994" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="1020.8" y="324" class="code-xs" text-anchor="middle">height</text>
+<rect x="850" y="340" width="62.199999999999996" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="881.1" y="356" class="code-xs" text-anchor="middle">display</text>
+<rect x="918.2" y="340" width="35.8" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="936.1" y="356" class="code-xs" text-anchor="middle">gap</text>
+<rect x="960.0" y="340" width="68.8" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="994.4" y="356" class="code-xs" text-anchor="middle">overflow</text>
+<rect x="850" y="372" width="68.8" height="24" rx="12" fill="#fbe8df" stroke="#e0703f" stroke-width="1.4"/>
+<text x="884.4" y="388" class="code-xs" text-anchor="middle">position</text>
+<text x="600" y="456" class="sm" text-anchor="start">Typography travels down the tree, the box does not.</text>
+<text x="600" y="476" class="sm" text-anchor="start">Set text styles high (body), boxes on each element.</text>
+<text x="600" y="496" class="sm" text-anchor="start">Keywords: inherit · initial · unset · revert</text>
+</svg>

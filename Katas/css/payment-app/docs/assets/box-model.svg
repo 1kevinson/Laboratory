@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 380" width="940" height="380" role="img" aria-labelledby="title">
+<title id="title">CSS box model and the three kinds of space</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style></defs>
+<rect width="940" height="380" rx="16" fill="#ffffff"/>
+<rect x="30" y="40" width="520" height="300" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="76" y="82" width="428" height="216" rx="8" fill="#fff4cc" stroke="#cf9a00" stroke-width="2"/>
+<rect x="100" y="106" width="380" height="168" rx="6" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<rect x="150" y="146" width="280" height="88" rx="6" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="44" y="64" class="t13" text-anchor="start" style="fill:#e0703f">margin</text>
+<text x="88" y="100" class="t13" text-anchor="start" style="fill:#cf9a00">border</text>
+<text x="112" y="128" class="t13" text-anchor="start" style="fill:#3fa874">padding</text>
+<text x="290" y="186" class="title" text-anchor="middle">content</text>
+<text x="290" y="208" class="sub" text-anchor="middle">width × height</text>
+<text x="580" y="64" class="t15" text-anchor="start">box-sizing: border-box (our reset)</text>
+<text x="580" y="88" class="lbl" text-anchor="start">width = content + padding + border</text>
+<text x="580" y="106" class="lbl" text-anchor="start">→ a 350px phone is 350px, padding included</text>
+<text x="580" y="150" class="t15" text-anchor="start">Three kinds of space</text>
+<rect x="580" y="172" width="26" height="26" rx="5" fill="#fbe8df" stroke="#e0703f" stroke-width="2"/>
+<text x="618" y="184" class="t13" text-anchor="start">margin</text>
+<text x="618" y="201" class="sm" text-anchor="start">space OUTSIDE a box — avoid in components</text>
+<rect x="580" y="222" width="26" height="26" rx="5" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="618" y="234" class="t13" text-anchor="start">padding</text>
+<text x="618" y="251" class="sm" text-anchor="start">space INSIDE a box — component skin (c-)</text>
+<rect x="580" y="272" width="26" height="26" rx="5" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="618" y="284" class="t13" text-anchor="start">gap</text>
+<text x="618" y="301" class="sm" text-anchor="start">space BETWEEN children — layout flow (l-)</text>
+</svg>

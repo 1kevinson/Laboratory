@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" width="1100" height="640" role="img" aria-labelledby="title">
+<title id="title">Mobile-first versus desktop-first breakpoints</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m1f1f1f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker><marker id="m1f1f1fs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker><marker id="m3fa874" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3fa874"/></marker><marker id="m3fa874s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3fa874"/></marker><marker id="m8a5cd1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a5cd1"/></marker><marker id="m8a5cd1s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a5cd1"/></marker></defs>
+<rect width="1100" height="640" rx="16" fill="#ffffff"/>
+<line x1="60" y1="300" x2="982.5" y2="300" stroke="#1f1f1f" stroke-width="2" marker-end="url(#m1f1f1f)"/>
+<text x="60" y="322" class="code-xs" text-anchor="middle">0</text>
+<line x1="276.0" y1="294" x2="276.0" y2="306" stroke="#1f1f1f" stroke-width="2"/>
+<text x="276.0" y="322" class="code-xs" text-anchor="middle">480</text>
+<text x="276.0" y="338" class="xs" text-anchor="middle">phone-large</text>
+<line x1="405.6" y1="294" x2="405.6" y2="306" stroke="#1f1f1f" stroke-width="2"/>
+<text x="405.6" y="322" class="code-xs" text-anchor="middle">768</text>
+<text x="405.6" y="338" class="xs" text-anchor="middle">tablet-portrait</text>
+<line x1="520.8" y1="294" x2="520.8" y2="306" stroke="#1f1f1f" stroke-width="2"/>
+<text x="520.8" y="322" class="code-xs" text-anchor="middle">1024</text>
+<text x="520.8" y="338" class="xs" text-anchor="middle">tablet-landscape</text>
+<line x1="636.0" y1="294" x2="636.0" y2="306" stroke="#1f1f1f" stroke-width="2"/>
+<text x="636.0" y="322" class="code-xs" text-anchor="middle">1280</text>
+<text x="636.0" y="338" class="xs" text-anchor="middle">laptop</text>
+<line x1="708.0" y1="294" x2="708.0" y2="306" stroke="#1f1f1f" stroke-width="2"/>
+<text x="708.0" y="322" class="code-xs" text-anchor="middle">1440</text>
+<text x="708.0" y="338" class="xs" text-anchor="middle">desktop</text>
+<line x1="924.0" y1="294" x2="924.0" y2="306" stroke="#1f1f1f" stroke-width="2"/>
+<text x="924.0" y="322" class="code-xs" text-anchor="middle">1920</text>
+<text x="924.0" y="338" class="xs" text-anchor="middle">widescreen</text>
+<text x="982.5" y="290" class="xs" text-anchor="end">viewport width</text>
+<line x1="276.0" y1="270" x2="978.0" y2="270" stroke="#3fa874" stroke-width="2" marker-end="url(#m3fa874)"/>
+<circle cx="276.0" cy="270" r="3.5" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="284.0" y="264" class="code-2xs" text-anchor="start" style="fill:#3fa874">min-width: 480px</text>
+<line x1="405.6" y1="246" x2="978.0" y2="246" stroke="#3fa874" stroke-width="2" marker-end="url(#m3fa874)"/>
+<circle cx="405.6" cy="246" r="3.5" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="413.6" y="240" class="code-2xs" text-anchor="start" style="fill:#3fa874">min-width: 768px</text>
+<line x1="520.8" y1="222" x2="978.0" y2="222" stroke="#3fa874" stroke-width="2" marker-end="url(#m3fa874)"/>
+<circle cx="520.8" cy="222" r="3.5" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="528.8" y="216" class="code-2xs" text-anchor="start" style="fill:#3fa874">min-width: 1024px</text>
+<line x1="636.0" y1="198" x2="978.0" y2="198" stroke="#3fa874" stroke-width="2" marker-end="url(#m3fa874)"/>
+<circle cx="636.0" cy="198" r="3.5" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="644.0" y="192" class="code-2xs" text-anchor="start" style="fill:#3fa874">min-width: 1280px</text>
+<line x1="708.0" y1="174" x2="978.0" y2="174" stroke="#3fa874" stroke-width="2" marker-end="url(#m3fa874)"/>
+<circle cx="708.0" cy="174" r="3.5" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="716.0" y="168" class="code-2xs" text-anchor="start" style="fill:#3fa874">min-width: 1440px</text>
+<line x1="924.0" y1="150" x2="978.0" y2="150" stroke="#3fa874" stroke-width="2" marker-end="url(#m3fa874)"/>
+<circle cx="924.0" cy="150" r="3.5" fill="#3fa874" stroke="#3fa874" stroke-width="0"/>
+<text x="916.0" y="154" class="code-2xs" text-anchor="end" style="fill:#3fa874">min-width: 1920px</text>
+<line x1="923.0" y1="366" x2="60" y2="366" stroke="#8a5cd1" stroke-width="2" marker-end="url(#m8a5cd1)"/>
+<circle cx="923.0" cy="366" r="3.5" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="914.0" y="360" class="code-2xs" text-anchor="end" style="fill:#8a5cd1">max-width: 1919.98px</text>
+<line x1="707.0" y1="390" x2="60" y2="390" stroke="#8a5cd1" stroke-width="2" marker-end="url(#m8a5cd1)"/>
+<circle cx="707.0" cy="390" r="3.5" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="698.0" y="384" class="code-2xs" text-anchor="end" style="fill:#8a5cd1">max-width: 1439.98px</text>
+<line x1="635.0" y1="414" x2="60" y2="414" stroke="#8a5cd1" stroke-width="2" marker-end="url(#m8a5cd1)"/>
+<circle cx="635.0" cy="414" r="3.5" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="626.0" y="408" class="code-2xs" text-anchor="end" style="fill:#8a5cd1">max-width: 1279.98px</text>
+<line x1="519.8" y1="438" x2="60" y2="438" stroke="#8a5cd1" stroke-width="2" marker-end="url(#m8a5cd1)"/>
+<circle cx="519.8" cy="438" r="3.5" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="510.79999999999995" y="432" class="code-2xs" text-anchor="end" style="fill:#8a5cd1">max-width: 1023.98px</text>
+<line x1="404.6" y1="462" x2="60" y2="462" stroke="#8a5cd1" stroke-width="2" marker-end="url(#m8a5cd1)"/>
+<circle cx="404.6" cy="462" r="3.5" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="395.6" y="456" class="code-2xs" text-anchor="end" style="fill:#8a5cd1">max-width: 767.98px</text>
+<line x1="275.0" y1="486" x2="60" y2="486" stroke="#8a5cd1" stroke-width="2" marker-end="url(#m8a5cd1)"/>
+<circle cx="275.0" cy="486" r="3.5" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="266.0" y="480" class="code-2xs" text-anchor="end" style="fill:#8a5cd1">max-width: 479.98px</text>
+<rect x="30" y="24" width="420" height="70" rx="10" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.2"/>
+<line x1="46" y1="48" x2="80" y2="48" stroke="#3fa874" stroke-width="3"/>
+<text x="90" y="52" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3fa874;font-weight:800">mobile-first</tspan><tspan>(name)  → adds styles from bp up</tspan></text>
+<line x1="46" y1="74" x2="80" y2="74" stroke="#8a5cd1" stroke-width="3"/>
+<text x="90" y="78" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1;font-weight:800">desktop-first</tspan><tspan>(name) → overrides below bp</tspan></text>
+<rect x="240" y="506" width="620" height="108" rx="12" fill="#fff4cc" stroke="#cf9a00" stroke-width="1.5"/>
+<text x="260" y="528" class="t13" text-anchor="start">Zoom at 768px</text>
+<line x1="300" y1="556" x2="548" y2="556" stroke="#8a5cd1" stroke-width="6" stroke-linecap="round"/>
+<line x1="560" y1="556" x2="800" y2="556" stroke="#3fa874" stroke-width="6" stroke-linecap="round"/>
+<text x="424" y="544" class="code-2xs" text-anchor="middle" style="fill:#8a5cd1">… 767.98px  ← desktop-first(tablet-portrait)</text>
+<text x="680" y="544" class="code-2xs" text-anchor="middle" style="fill:#3fa874">mobile-first(tablet-portrait) → 768px …</text>
+<text x="554" y="580" class="sm" text-anchor="middle">0.02px seam: at exactly 768px only ONE query matches — never both</text>
+<text x="554" y="598" class="xs" text-anchor="middle">(max-width: 768px) + (min-width: 768px) would both apply at 768px</text>
+</svg>

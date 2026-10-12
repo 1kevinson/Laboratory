@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 560" width="1160" height="560" role="img" aria-labelledby="title">
+<title id="title">Sass module graph: main.scss, _index.scss and partials</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m8a5cd1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a5cd1"/></marker><marker id="m8a5cd1s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a5cd1"/></marker><marker id="m8a8a8a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker><marker id="m8a8a8as" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#8a8a8a"/></marker></defs>
+<rect width="1160" height="560" rx="16" fill="#ffffff"/>
+<rect x="490" y="24" width="180" height="44" rx="10" fill="#1f2a33" stroke="#1f2a33" stroke-width="2"/>
+<text x="580" y="51" class="code" text-anchor="middle" style="fill:#ffffff">main.scss</text>
+<path d="M580 68 C 580 100, 82.0 100, 82.0 128" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="22" y="130" width="120" height="44" rx="8" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="82.0" y="149" class="code-xs" text-anchor="middle">abstracts/</text>
+<text x="82.0" y="165" class="xs" text-anchor="middle">_index.scss</text>
+<line x1="82.0" y1="174" x2="82.0" y2="200" stroke="#8a5cd1" stroke-width="1.4"/>
+<rect x="26" y="200" width="112" height="26" rx="6" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.5"/>
+<text x="82.0" y="217" class="code-2xs" text-anchor="middle">_variables</text>
+<line x1="82.0" y1="226" x2="82.0" y2="234" stroke="#8a5cd1" stroke-width="1.4"/>
+<rect x="26" y="234" width="112" height="26" rx="6" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.5"/>
+<text x="82.0" y="251" class="code-2xs" text-anchor="middle">_functions</text>
+<line x1="82.0" y1="260" x2="82.0" y2="268" stroke="#8a5cd1" stroke-width="1.4"/>
+<rect x="26" y="268" width="112" height="26" rx="6" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.5"/>
+<text x="82.0" y="285" class="code-2xs" text-anchor="middle">_mixins</text>
+<path d="M580 68 C 580 100, 206.0 100, 206.0 128" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="146" y="130" width="120" height="44" rx="8" fill="#eee6fa" stroke="#8a5cd1" stroke-width="2"/>
+<text x="206.0" y="149" class="code-xs" text-anchor="middle">responsive/</text>
+<text x="206.0" y="165" class="xs" text-anchor="middle">_index.scss</text>
+<line x1="206.0" y1="174" x2="206.0" y2="200" stroke="#8a5cd1" stroke-width="1.4"/>
+<rect x="150" y="200" width="112" height="26" rx="6" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.5"/>
+<text x="206.0" y="217" class="code-2xs" text-anchor="middle">_mobile-first</text>
+<line x1="206.0" y1="226" x2="206.0" y2="234" stroke="#8a5cd1" stroke-width="1.4"/>
+<rect x="150" y="234" width="112" height="26" rx="6" fill="#ffffff" stroke="#8a5cd1" stroke-width="1.5"/>
+<text x="206.0" y="251" class="code-2xs" text-anchor="middle">_desktop-first</text>
+<path d="M580 68 C 580 100, 330.0 100, 330.0 128" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="270" y="130" width="120" height="44" rx="8" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="2"/>
+<text x="330.0" y="149" class="code-xs" text-anchor="middle">vendors/</text>
+<text x="330.0" y="165" class="xs" text-anchor="middle">_index.scss</text>
+<path d="M580 68 C 580 100, 454.0 100, 454.0 128" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="394" y="130" width="120" height="44" rx="8" fill="#f2f2f2" stroke="#bdbdbd" stroke-width="2"/>
+<text x="454.0" y="149" class="code-xs" text-anchor="middle">base/</text>
+<text x="454.0" y="165" class="xs" text-anchor="middle">_index.scss</text>
+<line x1="454.0" y1="174" x2="454.0" y2="200" stroke="#bdbdbd" stroke-width="1.4"/>
+<rect x="398" y="200" width="112" height="26" rx="6" fill="#ffffff" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="454.0" y="217" class="code-2xs" text-anchor="middle">_reset</text>
+<line x1="454.0" y1="226" x2="454.0" y2="234" stroke="#bdbdbd" stroke-width="1.4"/>
+<rect x="398" y="234" width="112" height="26" rx="6" fill="#ffffff" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="454.0" y="251" class="code-2xs" text-anchor="middle">_typography</text>
+<path d="M580 68 C 580 100, 578.0 100, 578.0 128" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="518" y="130" width="120" height="44" rx="8" fill="#e1f2e9" stroke="#3fa874" stroke-width="2"/>
+<text x="578.0" y="149" class="code-xs" text-anchor="middle">layout/</text>
+<text x="578.0" y="165" class="xs" text-anchor="middle">_index.scss</text>
+<line x1="578.0" y1="174" x2="578.0" y2="200" stroke="#3fa874" stroke-width="1.4"/>
+<rect x="522" y="200" width="112" height="26" rx="6" fill="#ffffff" stroke="#3fa874" stroke-width="1.5"/>
+<text x="578.0" y="217" class="code-2xs" text-anchor="middle">_global-wrapper</text>
+<line x1="578.0" y1="226" x2="578.0" y2="234" stroke="#3fa874" stroke-width="1.4"/>
+<rect x="522" y="234" width="112" height="26" rx="6" fill="#ffffff" stroke="#3fa874" stroke-width="1.5"/>
+<text x="578.0" y="251" class="code-2xs" text-anchor="middle">_phone-view</text>
+<path d="M580 68 C 580 100, 702.0 100, 702.0 128" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="642" y="130" width="120" height="44" rx="8" fill="#e3ecf8" stroke="#3b74d4" stroke-width="2"/>
+<text x="702.0" y="149" class="code-xs" text-anchor="middle">components/</text>
+<text x="702.0" y="165" class="xs" text-anchor="middle">_index.scss</text>
+<line x1="702.0" y1="174" x2="702.0" y2="200" stroke="#3b74d4" stroke-width="1.4"/>
+<rect x="646" y="200" width="112" height="26" rx="6" fill="#ffffff" stroke="#3b74d4" stroke-width="1.5"/>
+<text x="702.0" y="217" class="code-2xs" text-anchor="middle">_global-wrapper</text>
+<line x1="702.0" y1="226" x2="702.0" y2="234" stroke="#3b74d4" stroke-width="1.4"/>
+<rect x="646" y="234" width="112" height="26" rx="6" fill="#ffffff" stroke="#3b74d4" stroke-width="1.5"/>
+<text x="702.0" y="251" class="code-2xs" text-anchor="middle">_icon</text>
+<line x1="702.0" y1="260" x2="702.0" y2="268" stroke="#3b74d4" stroke-width="1.4"/>
+<rect x="646" y="268" width="112" height="26" rx="6" fill="#ffffff" stroke="#3b74d4" stroke-width="1.5"/>
+<text x="702.0" y="285" class="code-2xs" text-anchor="middle">_app-bar</text>
+<line x1="702.0" y1="294" x2="702.0" y2="302" stroke="#3b74d4" stroke-width="1.4"/>
+<rect x="646" y="302" width="112" height="26" rx="6" fill="#ffffff" stroke="#3b74d4" stroke-width="1.5"/>
+<text x="702.0" y="319" class="code-2xs" text-anchor="middle">_phone-view</text>
+<line x1="702.0" y1="328" x2="702.0" y2="336" stroke="#3b74d4" stroke-width="1.4"/>
+<rect x="646" y="336" width="112" height="26" rx="6" fill="#ffffff" stroke="#3b74d4" stroke-width="1.5"/>
+<text x="702.0" y="353" class="code-2xs" text-anchor="middle">_phone-view-first</text>
+<line x1="702.0" y1="362" x2="702.0" y2="370" stroke="#3b74d4" stroke-width="1.4"/>
+<rect x="646" y="370" width="112" height="26" rx="6" fill="#ffffff" stroke="#3b74d4" stroke-width="1.5"/>
+<text x="702.0" y="387" class="code-2xs" text-anchor="middle">_phone-view-second</text>
+<line x1="702.0" y1="396" x2="702.0" y2="404" stroke="#3b74d4" stroke-width="1.4"/>
+<rect x="646" y="404" width="112" height="26" rx="6" fill="#ffffff" stroke="#3b74d4" stroke-width="1.5"/>
+<text x="702.0" y="421" class="code-2xs" text-anchor="middle">_phone-view-third</text>
+<path d="M580 68 C 580 100, 826.0 100, 826.0 128" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="766" y="130" width="120" height="44" rx="8" fill="#fff4cc" stroke="#cf9a00" stroke-width="2"/>
+<text x="826.0" y="149" class="code-xs" text-anchor="middle">pages/</text>
+<text x="826.0" y="165" class="xs" text-anchor="middle">_index.scss</text>
+<line x1="826.0" y1="174" x2="826.0" y2="200" stroke="#cf9a00" stroke-width="1.4"/>
+<rect x="770" y="200" width="112" height="26" rx="6" fill="#ffffff" stroke="#cf9a00" stroke-width="1.5"/>
+<text x="826.0" y="217" class="code-2xs" text-anchor="middle">_home</text>
+<path d="M580 68 C 580 100, 950.0 100, 950.0 128" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="890" y="130" width="120" height="44" rx="8" fill="#fbe4f1" stroke="#d4589f" stroke-width="2"/>
+<text x="950.0" y="149" class="code-xs" text-anchor="middle">themes/</text>
+<text x="950.0" y="165" class="xs" text-anchor="middle">_index.scss</text>
+<line x1="950.0" y1="174" x2="950.0" y2="200" stroke="#d4589f" stroke-width="1.4"/>
+<rect x="894" y="200" width="112" height="26" rx="6" fill="#ffffff" stroke="#d4589f" stroke-width="1.5"/>
+<text x="950.0" y="217" class="code-2xs" text-anchor="middle">_default</text>
+<path d="M580 68 C 580 100, 1074.0 100, 1074.0 128" fill="none" stroke="#8a8a8a" stroke-width="1.6" marker-end="url(#m8a8a8a)"/>
+<rect x="1014" y="130" width="120" height="44" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="2"/>
+<text x="1074.0" y="149" class="code-xs" text-anchor="middle">utils/</text>
+<text x="1074.0" y="165" class="xs" text-anchor="middle">_index.scss</text>
+<line x1="1074.0" y1="174" x2="1074.0" y2="200" stroke="#e0703f" stroke-width="1.4"/>
+<rect x="1018" y="200" width="112" height="26" rx="6" fill="#ffffff" stroke="#e0703f" stroke-width="1.5"/>
+<text x="1074.0" y="217" class="code-2xs" text-anchor="middle">_helpers</text>
+<text x="300" y="100" class="sm" text-anchor="middle">@use</text>
+<text x="88" y="190" class="xs" text-anchor="start" style="fill:#8a5cd1">@forward</text>
+<path d="M672.0 430 C 672.0 470, 72 490, 72 304" fill="none" stroke="#8a5cd1" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#m8a5cd1)"/>
+<text x="380" y="505" class="code-sm" text-anchor="middle" style="fill:#8a5cd1">@use &quot;../abstracts&quot; as *;</text>
+<text x="380" y="528" class="sm" text-anchor="middle">every partial pulls tokens &amp; mixins — free, because abstracts emit no CSS</text>
+</svg>

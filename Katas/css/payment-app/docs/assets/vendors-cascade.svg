@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 490" width="1100" height="490" role="img" aria-labelledby="title">
+<title id="title">Where vendor CSS sits in the cascade and how to override it cleanly</title>
+<defs><style>
+.h{font:700 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.title{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t15{font:700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.t13{font:700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.sub{font:400 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.lbl{font:400 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.sm{font:400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.xs{font:400 11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#5c5c5c}
+.num{font:700 17px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;fill:#1f1f1f}
+.code{font:500 13px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f1f1f}
+.code-sm{font:500 12px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-xs{font:500 11px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.code-2xs{font:500 10px 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;fill:#333}
+.tag{font:700 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;letter-spacing:.06em}
+</style><marker id="m1f1f1f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker><marker id="m1f1f1fs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f1f1f"/></marker></defs>
+<rect width="1100" height="490" rx="16" fill="#ffffff"/>
+<text x="40" y="40" class="title" text-anchor="start">main.css, top → bottom</text>
+<rect x="40" y="62" width="380" height="36" rx="8" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="56" y="85" class="t13" text-anchor="start" style="fill:#8a8a8a">1 · abstracts</text>
+<text x="406" y="85" class="xs" text-anchor="end">no CSS output</text>
+<rect x="40" y="104" width="380" height="36" rx="8" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="56" y="127" class="t13" text-anchor="start" style="fill:#8a8a8a">2 · responsive</text>
+<text x="406" y="127" class="xs" text-anchor="end">no CSS output</text>
+<rect x="40" y="146" width="380" height="36" rx="8" fill="#fbe8df" stroke="#e0703f" stroke-width="3"/>
+<text x="56" y="169" class="t13" text-anchor="start">3 · vendors</text>
+<text x="406" y="169" class="xs" text-anchor="end">third-party CSS, as-is</text>
+<rect x="40" y="188" width="380" height="36" rx="8" fill="#e1f2e9" stroke="#3fa874" stroke-width="1.6"/>
+<text x="56" y="211" class="t13" text-anchor="start">4 · base</text>
+<text x="406" y="211" class="xs" text-anchor="end">element selectors</text>
+<rect x="40" y="230" width="380" height="36" rx="8" fill="#e3ecf8" stroke="#3b74d4" stroke-width="1.6"/>
+<text x="56" y="253" class="t13" text-anchor="start">5 · layout</text>
+<text x="406" y="253" class="xs" text-anchor="end">.l-*  objects</text>
+<rect x="40" y="272" width="380" height="36" rx="8" fill="#eee6fa" stroke="#8a5cd1" stroke-width="1.6"/>
+<text x="56" y="295" class="t13" text-anchor="start">6 · components</text>
+<text x="406" y="295" class="xs" text-anchor="end">.c-*  components</text>
+<rect x="40" y="314" width="380" height="36" rx="8" fill="#fbe4f1" stroke="#d4589f" stroke-width="1.6"/>
+<text x="56" y="337" class="t13" text-anchor="start">7 · pages</text>
+<text x="406" y="337" class="xs" text-anchor="end">page-scoped tweaks</text>
+<rect x="40" y="356" width="380" height="36" rx="8" fill="#ddf1f3" stroke="#1f8a99" stroke-width="1.6"/>
+<text x="56" y="379" class="t13" text-anchor="start">8 · themes</text>
+<text x="406" y="379" class="xs" text-anchor="end">palette overrides</text>
+<rect x="40" y="398" width="380" height="36" rx="8" fill="#fde4e4" stroke="#e04848" stroke-width="1.6"/>
+<text x="56" y="421" class="t13" text-anchor="start">9 · utils</text>
+<text x="406" y="421" class="xs" text-anchor="end">.u-*  + !important</text>
+<line x1="446" y1="66" x2="446" y2="432" stroke="#1f1f1f" stroke-width="2" marker-end="url(#m1f1f1f)"/>
+<text x="466" y="250" class="sm" text-anchor="middle" transform="rotate(-90 466 250)">later in the file wins at equal specificity</text>
+<text x="500" y="40" class="title" text-anchor="start">Using a library without fighting it</text>
+<rect x="500" y="62" width="570" height="102" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
+<text x="516" y="86" class="xs" text-anchor="start">load it once, before base/</text>
+<text x="516" y="108" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a8a8a">// vendors/_index.scss</tspan></text>
+<text x="516" y="126" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a5cd1">@forward</tspan><tspan> &quot;../../../node_modules/normalize.css/normalize&quot;;</tspan></text>
+<text x="516" y="144" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#8a8a8a">// a plain .css file, loaded without its extension, copied as-is</tspan></text>
+<rect x="500" y="186" width="570" height="82" rx="10" fill="#ffffff" stroke="#3fa874" stroke-width="1.6"/>
+<text x="516" y="210" class="t13" text-anchor="start" style="fill:#3fa874">✓ Scope overrides inside your component</text>
+<text x="516" y="234" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.c-carousel .swiper-pagination</tspan><tspan> { bottom: 0; }</tspan></text>
+<text x="516" y="254" class="xs" text-anchor="start">(0,2,0) beats the vendor&#x27;s (0,1,0) and the override stays local</text>
+<rect x="500" y="280" width="570" height="82" rx="10" fill="#ffffff" stroke="#3fa874" stroke-width="1.6"/>
+<text x="516" y="304" class="t13" text-anchor="start" style="fill:#3fa874">✓ Turn the vendor&#x27;s own knobs first</text>
+<text x="516" y="328" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#3b74d4">.c-carousel</tspan><tspan> { </tspan><tspan style="fill:#8a5cd1">--swiper-theme-color</tspan><tspan>: #{$color-teal-dark}; }</tspan></text>
+<text x="516" y="348" class="xs" text-anchor="start">custom properties or Sass config: @use &quot;lib&quot; with ($primary: …)</text>
+<rect x="500" y="374" width="570" height="82" rx="10" fill="#ffffff" stroke="#e04848" stroke-width="1.6"/>
+<text x="516" y="398" class="t13" text-anchor="start" style="fill:#e04848">✗ Never edit node_modules, never reach for !important</text>
+<text x="516" y="422" class="code-xs" text-anchor="start" xml:space="preserve"><tspan style="fill:#e04848">node_modules/…/swiper.css</tspan><tspan>  ·  </tspan><tspan style="fill:#e04848">color: red !important;</tspan></text>
+<text x="516" y="442" class="xs" text-anchor="start">lost on the next install · breaks the cascade for everyone after you</text>
+</svg>
